@@ -1,0 +1,113 @@
+name: 收盘选股推送微信
+
+# 每个交易日 15:10（北京时间）自动跑全市场选股，结果推送到微信。
+# 前置：仓库 Settings → Secrets → Actions 里要有 SERVERCHAN_KEY
+# 手动测试：Actions 页面点 Run workflow（手动触发会自动忽略交易日）
+
+on:
+  schedule:
+    - cron: '10 7 * * 1-5'   # UTC 时间，等于北京时间 15:10，周一到周五
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: data
+          key: db-${{ github.run_id }}
+          restore-keys: db-
+      - name: 初始化数据（只在第一次跑）
+        timeout-minutes: 80
+        run: |
+          [ -f data/stock_selection.db ] || python main.py init
+      - name: 选股并推送
+        timeout-minutes: 40
+        env:
+          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+        run: |
+          cat > /tmp/go.py <<'EOF'
+          import os, sys, requests
+          from datetime import datetime
+
+          os.chdir(os.environ.get("GITHUB_WORKSPACE", "."))
+          sys.path.insert(0, os.getcwd())
+          got = {}
+
+          class Notifier:
+              def __init__(self, url=""): pass
+              def send_text(self, text):
+                  got["t"] = text
+                  return True
+              def send_post(self, title, lines):
+                  got["t"] = title + "\n" + "\n".join(lines)
+                  return True
+
+          import utils.feishu_notifier as fm
+          fm.FeishuNotifier = Notifier      # 把发飞书的出口换成"拦下来"
+
+          if os.environ.get("FORCE") == "1":
+              import utils.trade_date_utils as td
+              td.is_trading_day = lambda *a, **k: True
+
+          sys.argv = ["main.py", "run"]
+          import main
+          try:
+              main.main()
+          except SystemExit:
+              pass
+
+          text = got.get("t") or ""
+          if not text:
+              print("非交易日或未选出股票，本次不推送。")
+              sys.exit(0)
+
+          with open("/tmp/report.txt", "w", encoding="utf-8") as f:
+              f.write(text)
+          print(text[:1200])
+          print("=== 正文共", len(text), "字符 ===")
+
+          key = (os.environ.get("SERVERCHAN_KEY") or "").strip()
+          if not key:
+              print("!! 没有配置 SERVERCHAN_KEY（去 Settings → Secrets → Actions 添加）")
+              sys.exit(1)
+          if len(text) > 28000:
+              text = text[:27800] + "\n\n……内容过长已截断"
+
+          r = requests.post(
+              "https://sctapi.ftqq.com/%s.send" % key,
+              data={"title": "缅A每日推送 " + datetime.now().strftime("%Y-%m-%d"), "desp": text},
+              timeout=30,
+          )
+          print("Server酱 返回:", r.status_code, r.text[:200])
+          try:
+              ok = r.json().get("code") == 0
+          except Exception:
+              ok = False
+          if not ok:
+              print("!! 推送失败：SendKey 错 / 或当天 5 条免费用完了")
+              sys.exit(1)
+          print("推送成功")
+          EOF
+          python /tmp/go.py
+
+      - name: 保存报告（保留 30 天）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 选股报告-${{ github.run_number }}
+          path: /tmp/report.txt
+          if-no-files-found: ignore
+          retention-days: 30
