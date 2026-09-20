@@ -1,7 +1,8 @@
 name: 收盘选股推送微信
 
-# 每个交易日 15:10（北京时间）自动跑全市场选股，结果推送到微信。
-# 前置：仓库 Settings → Secrets → Actions 里要有 SERVERCHAN_KEY
+# 每个交易日 15:10（北京时间）自动跑全市场选股 + 生成策略成绩单，推送到微信。
+# 前置 1：仓库根目录要有 strategy_scorecard.py（成绩单模块）
+# 前置 2：Settings → Secrets → Actions 里有 SERVERCHAN_KEY
 # 手动测试：Actions 页面点 Run workflow（手动触发会自动忽略交易日）
 
 on:
@@ -15,7 +16,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -32,19 +33,19 @@ jobs:
         timeout-minutes: 80
         run: |
           [ -f data/stock_selection.db ] || python main.py init
-      - name: 选股并推送
-        timeout-minutes: 40
+      - name: 选股 + 成绩单 + 推送
+        timeout-minutes: 50
         env:
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
           FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: |
           cat > /tmp/go.py <<'EOF'
-          import os, sys, requests
+          import os, sqlite3, sys, requests
           from datetime import datetime
 
           os.chdir(os.environ.get("GITHUB_WORKSPACE", "."))
           sys.path.insert(0, os.getcwd())
-          got = {}
+          got, box = {}, {}
 
           class Notifier:
               def __init__(self, url=""): pass
@@ -56,16 +57,44 @@ jobs:
                   return True
 
           import utils.feishu_notifier as fm
-          fm.FeishuNotifier = Notifier      # 把发飞书的出口换成"拦下来"
+          fm.FeishuNotifier = Notifier       # 把发飞书的出口换成"拦下来"
+
+          # 买入建议分析原本每只股票都发一次实时请求给腾讯的 K 线接口，
+          # 那个接口会被腾讯 WAF 拦（501），一失败整段就静默消失。
+          # 改成从本地数据库读——数据库里本来就有 250+ 天的日线，够算均线/RSI/MACD。
+          try:
+              import sqlite3
+              import simple_analyzer as sa
+              _kl = sqlite3.connect("data/stock_selection.db")
+
+              def _kline_from_db(code, _c=_kl):
+                  rows = _c.execute(
+                      "SELECT date, open, high, low, close, volume FROM stock_kline"
+                      " WHERE code=? ORDER BY date DESC LIMIT 60", (str(code),)).fetchall()
+                  return [{"date": r[0], "open": r[1], "high": r[2],
+                           "low": r[3], "close": r[4], "volume": r[5] or 0}
+                          for r in reversed(rows)]
+
+              sa.get_stock_kline = _kline_from_db
+              print("[patch] 买入建议分析改为读本地数据库（不再依赖腾讯接口）")
+          except Exception as exc:
+              print("!! 本地K线补丁失败（买入建议分析可能缺失）:", exc)
 
           if os.environ.get("FORCE") == "1":
               import utils.trade_date_utils as td
               td.is_trading_day = lambda *a, **k: True
 
+          import main as app
+          _orig_run_full = app.QuantSystem.run_full       # 顺手截获选股结果
+          def _patched(self, *a, **k):
+              r = _orig_run_full(self, *a, **k)
+              box["results"] = r
+              return r
+          app.QuantSystem.run_full = _patched
+
           sys.argv = ["main.py", "run"]
-          import main
           try:
-              main.main()
+              app.main()
           except SystemExit:
               pass
 
@@ -74,9 +103,35 @@ jobs:
               print("非交易日或未选出股票，本次不推送。")
               sys.exit(0)
 
+          # ---------- 策略成绩单：记录今天的选股，回看历史选股的真实涨跌 ----------
+          try:
+              import strategy_scorecard as sc
+              conn = sqlite3.connect("data/stock_selection.db")
+              sel_date = conn.execute("SELECT MAX(date) FROM stock_kline").fetchone()[0]
+
+              if box.get("results"):
+                  sc.record_picks(conn, box["results"], sel_date)
+
+              names = {}
+              try:
+                  import yaml
+                  with open("config/strategy_params.yaml", encoding="utf-8") as f:
+                      cfg = yaml.safe_load(f) or {}
+                  for k, v in (cfg.get("strategies") or {}).items():
+                      names[k] = (v or {}).get("display_name", k)
+              except Exception as exc:
+                  print("策略中文名映射读取失败(忽略):", exc)
+
+              card, _ = sc.build(conn, lookback_days=60, display_names=names, horizons=(1, 5))
+              text = text + "\n" + card
+              conn.close()
+              print("[成绩单] 已并入推送正文")
+          except Exception as exc:
+              print("!! 成绩单生成失败（不影响推送）:", type(exc).__name__, exc)
+
           with open("/tmp/report.txt", "w", encoding="utf-8") as f:
               f.write(text)
-          print(text[:1200])
+          print(text[:1500])
           print("=== 正文共", len(text), "字符 ===")
 
           key = (os.environ.get("SERVERCHAN_KEY") or "").strip()
