@@ -4,6 +4,10 @@ name: 收盘选股推送微信
 # 前置 1：仓库根目录要有 strategy_scorecard.py（成绩单模块）
 # 前置 2：Settings → Secrets → Actions 里有 SERVERCHAN_KEY
 # 手动测试：Actions 页面点 Run workflow（手动触发会自动忽略交易日）
+#
+# ⚠️ TZ: Asia/Shanghai 是必须的！GitHub 服务器时钟是 UTC，不设时区的话：
+#   ① 推送里的时间戳全比北京慢 8 小时（显示成"早上 10:54"）；
+#   ② main.py 的「15 点前不更新数据」判断会永远成立 → 每天用旧数据选股（已实测踩坑）。
 
 on:
   schedule:
@@ -17,6 +21,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 150
+    env:
+      TZ: Asia/Shanghai
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -40,12 +46,21 @@ jobs:
           FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: |
           cat > /tmp/go.py <<'EOF'
-          import os, sqlite3, sys, requests
+          import os, sqlite3, sys, time, requests
           from datetime import datetime
+
+          # GitHub 服务器是 UTC。这里再兜一层时区，确保 main.py 里的
+          # 「15 点前不更新数据」判断按北京时间走（不设的话云端永远认为没收盘）。
+          os.environ.setdefault("TZ", "Asia/Shanghai")
+          try:
+              time.tzset()
+          except Exception:
+              pass
 
           os.chdir(os.environ.get("GITHUB_WORKSPACE", "."))
           sys.path.insert(0, os.getcwd())
           got, box = {}, {}
+          scores = {}
 
           class Notifier:
               def __init__(self, url=""): pass
@@ -80,6 +95,25 @@ jobs:
           except Exception as exc:
               print("!! 本地K线补丁失败（买入建议分析可能缺失）:", exc)
 
+          # 把「买入建议分析」每天给出的评分记下来，之后才能统计每个分数段的真实胜率
+          # （现在只记录，不影响推送；统计留到数据攒够以后）。
+          try:
+              import simple_analyzer as _sa
+              _orig_analyze = _sa.analyze_stock
+
+              def _analyze_recording(code, name, _f=_orig_analyze):
+                  r = _f(code, name)
+                  try:
+                      scores[str(code)] = r
+                  except Exception:
+                      pass
+                  return r
+
+              _sa.analyze_stock = _analyze_recording
+              print("[patch] 买入建议评分开始记录")
+          except Exception as exc:
+              print("!! 评分记录补丁失败（不影响推送）:", exc)
+
           if os.environ.get("FORCE") == "1":
               import utils.trade_date_utils as td
               td.is_trading_day = lambda *a, **k: True
@@ -102,6 +136,28 @@ jobs:
           if not text:
               print("非交易日或未选出股票，本次不推送。")
               sys.exit(0)
+
+          # ---------- 买入建议评分入库：为将来的「评分段胜率」攒数据 ----------
+          if scores:
+              try:
+                  _c = sqlite3.connect("data/stock_selection.db")
+                  _c.execute(
+                      "CREATE TABLE IF NOT EXISTS advice_log ("
+                      " trade_date TEXT, code TEXT, name TEXT, score INTEGER,"
+                      " advice TEXT, reasons TEXT, recorded_at TEXT,"
+                      " PRIMARY KEY (trade_date, code))")
+                  _day = _c.execute("SELECT MAX(date) FROM stock_kline").fetchone()[0]
+                  for _code, _r in scores.items():
+                      _c.execute(
+                          "INSERT OR REPLACE INTO advice_log VALUES (?,?,?,?,?,?,?)",
+                          (_day, _code, _r.get("name"), _r.get("score"),
+                           _r.get("advice"), ", ".join(_r.get("reasons") or []),
+                           datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+                  _c.commit()
+                  _c.close()
+                  print("[评分记录] 已入库 %d 条（%s）" % (len(scores), _day))
+              except Exception as exc:
+                  print("!! 评分入库失败（不影响推送）:", type(exc).__name__, exc)
 
           # ---------- 策略成绩单：记录今天的选股，回看历史选股的真实涨跌 ----------
           try:
