@@ -1,0 +1,65 @@
+name: 推送看门狗
+
+# 背景：GitHub 免费版的定时任务在高负载时会被延迟甚至直接丢弃
+# （实测 2026-09-21 15:10 的定时推送整条没触发；keep-alive 定时也晚了 2 小时 15 分）。
+# 这个工作流在收盘后再看两次：如果最近 14 小时内没有“成功”的推送运行，
+# 就用仓库内置令牌（GITHUB_TOKEN，不需要用户令牌）手动触发一次主任务补上。
+# 交易日/非交易日由主任务自己判断；本工作流只在周一到周五运行。
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-5'    # 北京时间 16:30 第一次检查
+    - cron: '0 10 * * 1-5'    # 北京时间 18:00 第二次兜底
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查是否需要补跑
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, sys, urllib.request
+          from datetime import datetime, timezone
+
+          API = "https://api.github.com/repos/Mike89code/bigApush"
+          req = urllib.request.Request(
+              API + "/actions/workflows/push-wechat.yml/runs?per_page=30",
+              headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"],
+                       "Accept": "application/vnd.github+json",
+                       "User-Agent": "watchdog"})
+          data = json.loads(urllib.request.urlopen(req, timeout=30).read())
+          runs = data.get("workflow_runs", [])
+          now = datetime.now(timezone.utc).timestamp()
+          need, why = 1, "最近 14 小时内没有成功的推送运行，开始补跑"
+          for r in runs:
+              created = datetime.strptime(
+                  r["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc).timestamp()
+              if r["status"] in ("queued", "in_progress", "waiting", "requested", "pending"):
+                  need, why = 0, "已有运行在进行中（run #%s），不重复触发" % r["run_number"]
+                  break
+              if r["status"] == "completed" and r["conclusion"] == "success" and now - created < 14 * 3600:
+                  need, why = 0, "最近已成功推送（run #%s），无需补跑" % r["run_number"]
+                  break
+          print(why, file=sys.stderr)
+          print("need=%d" % need)
+          PY
+
+      - name: 补触发主任务
+        if: steps.check.outputs.need == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -sS -o /dev/null -w "dispatch HTTP %{http_code}\n" -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/Mike89code/bigApush/actions/workflows/push-wechat.yml/dispatches" \
+            -d '{"ref":"main"}'
