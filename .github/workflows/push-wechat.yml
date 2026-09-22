@@ -114,6 +114,73 @@ jobs:
           except Exception as exc:
               print("!! 评分记录补丁失败（不影响推送）:", exc)
 
+          # ---------- 今日精选：策略胜率 × 买入评分 交叉筛选 ----------
+          # 每天推送开头先给"该看哪几只"：只有历史胜率≥55%且跑赢大盘的策略才有资格
+          # 推荐股票；评分≥80 才入选；胜率<40% 的差策略选出的票进"避开"名单。
+          # 样本不足 8 个的策略不算战绩（既不推荐也不拉黑），避免小样本误导。
+          try:
+              def _build_curated(results, scores, card_data, names):
+                  if not card_data or card_data.get("empty") or not results:
+                      return ""
+                  bench = ((card_data.get("bench") or {}).get(1) or {}).get("avg")
+                  tiers = {}
+                  for strat, st in card_data.get("strategies", []):
+                      ref = None
+                      for h in (1, 5):
+                          s = st.get(h)
+                          if s and s.get("n", 0) >= (8 if h == 1 else 5):
+                              ref = s
+                              break
+                      if ref:
+                          tiers[strat] = ref
+                  good = {s for s, r in tiers.items()
+                          if r["win"] >= 0.55 and (bench is None or r["avg"] > bench)}
+                  bad = {s for s, r in tiers.items() if r["win"] < 0.40}
+                  stock_strats = {}
+                  for strat, signals in (results or {}).items():
+                      for sig in signals or []:
+                          code = str(sig.get("code", ""))
+                          if code:
+                              stock_strats.setdefault(code, set()).add(strat)
+                  if not stock_strats:
+                      return ""
+                  rows = []
+                  for code, strats in stock_strats.items():
+                      info = scores.get(code) or {}
+                      rows.append({"code": code, "name": info.get("name") or code,
+                                   "score": info.get("score") or 0,
+                                   "good": sorted(strats & good),
+                                   "all": sorted(strats),
+                                   "bad": sorted(strats & bad)})
+                  grp_a = sorted([r for r in rows if r["good"] and r["score"] >= 80],
+                                 key=lambda r: -r["score"])[:8]
+                  picked = {r["code"] for r in grp_a}
+                  grp_b = sorted([r for r in rows
+                                  if r["code"] not in picked and r["score"] >= 90],
+                                 key=lambda r: -r["score"])[:4]
+                  avoid = sorted({r["name"] for r in rows
+                                  if r["bad"] and not r["good"] and r["score"] < 80})[:6]
+                  if not grp_a and not grp_b:
+                      return ""
+                  def cn(s):
+                      return (names or {}).get(s, s)
+                  L = ["━━━━━━━━━━━━━━━━━━━━",
+                       "⭐ 今日精选（策略胜率×评分交叉筛选）", ""]
+                  for i, r in enumerate(grp_a + grp_b, 1):
+                      tag = "🥇" if r["score"] >= 90 else "🥈"
+                      st = "·".join(cn(s) for s in (r["good"] or ["评分达标"]))
+                      if len(r.get("all") or []) > 1:
+                          st += "·共振"
+                      extra = "" if r["good"] else "（策略暂无足够战绩，仅高分）"
+                      L.append(f"{tag} {r['code']} {r['name']} {r['score']}分 [{st}]{extra}")
+                  if avoid:
+                      L.append("")
+                      L.append("🚫 避开：" + "、".join(avoid) + "（所属策略历史胜率差）")
+                  L.append("")
+                  return "\n".join(L)
+          except Exception as exc:
+              print("!! 精选函数定义失败:", exc)
+
           if os.environ.get("FORCE") == "1":
               import utils.trade_date_utils as td
               td.is_trading_day = lambda *a, **k: True
@@ -253,10 +320,25 @@ jobs:
               except Exception as exc:
                   print("策略中文名映射读取失败(忽略):", exc)
 
-              card, _ = sc.build(conn, lookback_days=60, display_names=names, horizons=(1, 5))
+              card, card_data = sc.build(conn, lookback_days=60, display_names=names, horizons=(1, 5))
               text = text + "\n" + card
               conn.close()
               print("[成绩单] 已并入推送正文")
+
+              # 把精选板块插到"共 X 只股票入选"之后（推送顶部）
+              try:
+                  cur = _build_curated(box.get("results") or {}, scores, card_data, names)
+                  if cur:
+                      _ls = text.split("\n")
+                      _idx = 0
+                      for _i, _l in enumerate(_ls[:6]):
+                          if "只股票入选" in _l:
+                              _idx = _i
+                              break
+                      text = "\n".join(_ls[:_idx + 1]) + "\n" + cur + "\n" + "\n".join(_ls[_idx + 1:])
+                      print("[精选] 已插入推送顶部")
+              except Exception as exc:
+                  print("!! 精选插入失败（不影响推送）:", exc)
           except Exception as exc:
               print("!! 成绩单生成失败（不影响推送）:", type(exc).__name__, exc)
 
