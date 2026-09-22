@@ -46,7 +46,7 @@ jobs:
           FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: |
           cat > /tmp/go.py <<'EOF'
-          import os, sqlite3, sys, time, requests
+          import os, re, sqlite3, sys, time, requests
           from datetime import datetime
 
           # GitHub 服务器是 UTC。这里再兜一层时区，确保 main.py 里的
@@ -114,72 +114,255 @@ jobs:
           except Exception as exc:
               print("!! 评分记录补丁失败（不影响推送）:", exc)
 
-          # ---------- 今日精选：策略胜率 × 买入评分 交叉筛选 ----------
-          # 每天推送开头先给"该看哪几只"：只有历史胜率≥55%且跑赢大盘的策略才有资格
-          # 推荐股票；评分≥80 才入选；胜率<40% 的差策略选出的票进"避开"名单。
-          # 样本不足 8 个的策略不算战绩（既不推荐也不拉黑），避免小样本误导。
+          # ---------- 今日榜单：完全照「高胜率策略选股」HTML 的六段式结构 ----------
+          # ① 策略梯队（胜率+均值，分一/二梯队/避开）
+          # ② 今日优先关注（好策略 + 评分≥75）
+          # ③ 可以看但别追（好策略但评分中等 / RSI 超买）
+          # ④ 高分但策略没战绩（分数仅供参考）
+          # ⑤ 避开名单（差策略选出的票 / 好策略但超买严重）
+          # ⑥ 一句话总结
+          #
+          # ⚠️ 样本门槛取「n≥5 用 T+1，否则退回 T+5」，不要卡到 8：
+          #    云端数据库才刚开始积累（每个策略十几个样本），门槛太严会导致
+          #    全部策略都变"无战绩"，整张榜单一梯队全空 —— 已实测踩过。
           try:
               def _build_curated(results, scores, card_data, names):
                   if not card_data or card_data.get("empty") or not results:
                       return ""
+                  def cn(s):
+                      return (names or {}).get(s, s)
                   bench = ((card_data.get("bench") or {}).get(1) or {}).get("avg")
+
+                  # --- 每个策略取一个"可参照"的持有期：优先 T+1(n≥5)，退回 T+5(n≥5) ---
                   tiers = {}
                   for strat, st in card_data.get("strategies", []):
-                      ref = None
+                      ref, refh = None, None
                       for h in (1, 5):
                           s = st.get(h)
-                          if s and s.get("n", 0) >= (8 if h == 1 else 5):
-                              ref = s
+                          if s and s.get("n", 0) >= 5:
+                              ref, refh = s, h
                               break
                       if ref:
-                          tiers[strat] = ref
+                          tiers[strat] = dict(ref, h=refh)
+
                   good = {s for s, r in tiers.items()
                           if r["win"] >= 0.55 and (bench is None or r["avg"] > bench)}
+                  # 避开：只有"胜率差"才算差策略。跑不过大盘但胜率尚可的（如 75% 胜率
+                  # 撞上普涨日的高基准）不算差，只是"当日不占优"，不能拉黑 —— 实测踩过。
                   bad = {s for s, r in tiers.items() if r["win"] < 0.40}
-                  stock_strats = {}
+                  # 一梯队：胜率≥75% 且跑赢大盘；二梯队：胜率≥55% 且跑赢大盘
+                  tier1 = {s for s, r in tiers.items()
+                           if r["win"] >= 0.75 and (bench is None or r["avg"] > bench)}
+                  tier2 = {s for s, r in tiers.items()
+                           if s not in tier1 and r["win"] >= 0.55
+                           and (bench is None or r["avg"] > bench)}
+                  # 胜率高但当日没跑赢大盘 → 中性（既不推荐也不拉黑）
+                  neutral = {s for s, r in tiers.items()
+                             if s not in tier1 and s not in tier2 and s not in bad}
+                  nobattle = {s for s in results if s not in tiers}
+
+                  # --- 个股 × 策略 交叉 ---
+                  stock_strats, count = {}, {}
                   for strat, signals in (results or {}).items():
                       for sig in signals or []:
                           code = str(sig.get("code", ""))
-                          if code:
-                              stock_strats.setdefault(code, set()).add(strat)
+                          if not code:
+                              continue
+                          stock_strats.setdefault(code, set()).add(strat)
+                          count[strat] = count.get(strat, 0) + 1
                   if not stock_strats:
                       return ""
+
+                  def _clean_reason(txt):
+                      """形态理由只留核心几项，去掉冗长的重复修饰。"""
+                      parts = [x.strip() for x in (txt or "").replace("、", ",").split(",") if x.strip()]
+                      keep, seen = [], set()
+                      for p in parts:
+                          # "均线多头排列" 归一到 "均线多头"
+                          p = p.replace("均线多头排列", "均线多头")
+                          if p not in seen:
+                              seen.add(p)
+                              keep.append(p)
+                      return "，".join(keep[:3])
+
                   rows = []
                   for code, strats in stock_strats.items():
                       info = scores.get(code) or {}
-                      rows.append({"code": code, "name": info.get("name") or code,
-                                   "score": info.get("score") or 0,
-                                   "good": sorted(strats & good),
-                                   "all": sorted(strats),
-                                   "bad": sorted(strats & bad)})
-                  grp_a = sorted([r for r in rows if r["good"] and r["score"] >= 80],
-                                 key=lambda r: -r["score"])[:8]
-                  picked = {r["code"] for r in grp_a}
-                  grp_b = sorted([r for r in rows
-                                  if r["code"] not in picked and r["score"] >= 90],
-                                 key=lambda r: -r["score"])[:4]
-                  avoid = sorted({r["name"] for r in rows
-                                  if r["bad"] and not r["good"] and r["score"] < 80})[:6]
-                  if not grp_a and not grp_b:
+                      # 名称去掉中间多余空格（"万  科Ａ" → "万科Ａ"）
+                      nm_ = re.sub(r"\s+", "", str(info.get("name") or code)) or code
+                      rows.append({
+                          "code": code, "name": nm_,
+                          "score": info.get("score") or 0,
+                          "reason": _clean_reason("、".join(info.get("reasons") or [])),
+                          "good": sorted(strats & good), "all": sorted(strats),
+                          "bad": sorted(strats & bad),
+                          "nobattle": sorted(strats & nobattle),
+                      })
+
+                  def _tier_of(strats):
+                      """取该票所属策略里的最高梯队（1 最好）。"""
+                      ss = set(strats or [])
+                      if ss & tier1:
+                          return 1
+                      if ss & tier2:
+                          return 2
+                      return 3
+
+                  def _hot(r):
+                      return "超买" in r["reason"]
+
+                  grp_b = sorted([r for r in rows if r["good"] and r["score"] >= 75],
+                                 key=lambda r: (-r["score"], _tier_of(r["good"])))[:8]
+                  picked = {r["code"] for r in grp_b}
+                  # ③ 可看别追：好策略但评分中等（含超买）；先算出来，⑤ 避开要排除它们
+                  grp_c = sorted([r for r in rows if r["code"] not in picked and r["good"]
+                                  and 60 <= r["score"] < 75],
+                                 key=lambda r: -r["score"])[:5]
+                  # ④ 只有"完全不属于好策略、且所属策略无战绩"的高分股才进这组
+                  grp_d = sorted([r for r in rows if r["code"] not in picked
+                                  and not r["good"] and r["nobattle"] and r["score"] >= 80],
+                                 key=lambda r: -r["score"])[:5]
+                  # ⑤ 避开：差策略选出的票（最严重）。已在③列过的不再重复列。
+                  _seen = {r["code"] for r in grp_c}
+                  avoid1 = [r for r in rows if r["bad"] and not r["good"]
+                            and r["code"] not in _seen][:4]
+                  avoid2 = sorted([r for r in rows
+                                   if r["code"] not in _seen and r["code"] not in {x["code"] for x in avoid1}
+                                   and r["good"] and _hot(r) and r["score"] < 60],
+                                  key=lambda r: -r["score"])[:7]
+                  if not grp_b and not grp_c:
                       return ""
-                  def cn(s):
-                      return (names or {}).get(s, s)
-                  L = ["━━━━━━━━━━━━━━━━━━━━",
-                       "⭐ 今日精选（策略胜率×评分交叉筛选）", ""]
-                  for i, r in enumerate(grp_a + grp_b, 1):
-                      tag = "🥇" if r["score"] >= 90 else "🥈"
-                      st = "·".join(cn(s) for s in (r["good"] or ["评分达标"]))
-                      if len(r.get("all") or []) > 1:
-                          st += "·共振"
-                      extra = "" if r["good"] else "（策略暂无足够战绩，仅高分）"
-                      L.append(f"{tag} {r['code']} {r['name']} {r['score']}分 [{st}]{extra}")
-                  if avoid:
-                      L.append("")
-                      L.append("🚫 避开：" + "、".join(avoid) + "（所属策略历史胜率差）")
+
+                  def nm(r):
+                      return f"{r['code']} {r['name']}"
+
+                  L = ["## 🎯 高胜率策略 · 今日选股榜单", ""]
+
+                  # ① 策略梯队：一梯队 → 二梯队 → 无战绩 → 避开
+                  L += ["### ① 策略梯队（先选策略，再选票）", "",
+                        "| 策略 | 梯队 | 胜率/均值 | 今日入选 |", "|---|---|---|---|"]
+
+                  def _rank(kv):
+                      strat, r = kv
+                      if strat in tier1:
+                          g = 0
+                      elif strat in tier2:
+                          g = 1
+                      elif strat in neutral:
+                          g = 2
+                      elif strat in bad:
+                          g = 3
+                      else:
+                          g = 4
+                      return (g, -r["win"], -r["avg"])
+
+                  for strat, r in sorted(tiers.items(), key=_rank):
+                      if strat in tier1:
+                          tg = "一梯队"
+                      elif strat in tier2:
+                          tg = "二梯队"
+                      elif strat in bad:
+                          tg = "避开"
+                      else:
+                          tg = "中性"
+                      L.append("| %s | %s | T+%d %.0f%% / %+.2f%% | %d 只 |"
+                               % (cn(strat), tg, r["h"], r["win"] * 100, r["avg"] * 100,
+                                  count.get(strat, 0)))
+                  for strat in sorted(nobattle):
+                      _st = dict(card_data["strategies"]).get(strat) or {}
+                      _mx = max((s.get("n", 0) for s in _st.values() if s), default=0)
+                      L.append("| %s | 无战绩 | 样本不足（%d 个） | %d 只 |"
+                               % (cn(strat), _mx, count.get(strat, 0)))
+
+                  # ② 今日优先关注
+                  if grp_b:
+                      L += ["", "### ② 今日优先关注（好策略 + 评分≥75）", "",
+                            "| 股票 | 评分 | 入选策略 | 形态理由 |", "|---|---|---|---|"]
+                      for a, r in enumerate(grp_b, 1):
+                          st = "·".join(cn(s) for s in r["good"])
+                          marks = []
+                          if len(r["all"]) > 1:
+                              marks.append("双策略共振")
+                          if r["good"] and _tier_of(r["good"]) == 1:
+                              marks.append("⭐最高梯队")
+                          if marks:
+                              st += "（" + "·".join(marks) + "）"
+                          L.append("| %d. %s | **%d** | %s | %s |"
+                                   % (a, nm(r), r["score"], st, r["reason"] or "—"))
+
+                  # ③ 可以看但别追
+                  if grp_c:
+                      L += ["", "### ③ 可以看但别追（好策略，评分中等或超买）",
+                            "", "| 股票 | 评分 | 入选策略 | 注意点 |", "|---|---|---|---|"]
+                      for r in grp_c:
+                          st = "·".join(cn(s) for s in r["good"])
+                          note = ("⚠️ " + r["reason"]) if _hot(r) else (r["reason"] or "形态尚可")
+                          L.append("| %s | %d | %s | %s |"
+                                   % (nm(r), r["score"], st, note))
+
+                  # ④ 高分但策略没战绩
+                  if grp_d:
+                      L += ["", "### ④ 高分但策略没战绩（分数仅供参考，谨慎）", "",
+                            "| 股票 | 评分 | 所属策略 | 说明 |", "|---|---|---|---|"]
+                      for r in grp_d:
+                          st = "·".join(cn(s) for s in r["nobattle"])
+                          L.append("| %s | %d | %s | 该策略历史样本不足，无胜率可依 |"
+                                   % (nm(r), r["score"], st))
+
+                  # ⑤ 避开名单
+                  if avoid1 or avoid2:
+                      L += ["", "### ⑤ 避开名单", "",
+                            "| 股票 | 评分 | 策略 | 原因 |", "|---|---|---|---|"]
+                      for r in avoid1:
+                          badn = "、".join(cn(s) for s in r["bad"])
+                          wr = ["%s %.0f%%/%.2f%%"
+                                % (cn(s), tiers[s]["win"] * 100, tiers[s]["avg"] * 100)
+                                for s in r["bad"] if s in tiers]
+                          L.append("| %s | %d | 🚫%s | 该策略历史 %s，评分再高也不碰 |"
+                                   % (nm(r), r["score"], badn, "、".join(wr)))
+                      if avoid2:
+                          L.append("| %s | %s | 好策略但 RSI 超买 | 等回踩再看，不追高 |"
+                                   % ("、".join(nm(r) for r in avoid2),
+                                      "/".join(str(r["score"]) for r in avoid2)))
+
+                  # ⑥ 一句话总结
+                  top = grp_b[:2]
+                  hoth = [r["name"] for r in grp_c if _hot(r)][:3]
+                  summ = []
+                  if top:
+                      summ.append("最值得看：**%s**（%s，%d 分）。"
+                                  % ("、".join(r["name"] for r in top),
+                                     "、".join(cn(s) for r in top for s in r["good"][:1]),
+                                     top[0]["score"]))
+                  if grp_b:
+                      _best = None
+                      for _r in grp_b:
+                          if len(_r["all"]) > 1:
+                              _best = _r
+                              break
+                      if _best:
+                          summ.append("双策略共振加分：**%s**（%s）。"
+                                      % (_best["name"],
+                                         "、".join(cn(s) for s in _best["all"])))
+                  if grp_d:
+                      summ.append("高分但策略无战绩的 %s（%d 分）只作参考，别单凭分数追。"
+                                  % ("、".join(r["name"] for r in grp_d[:2]), grp_d[0]["score"]))
+                  if avoid1:
+                      summ.append("**%s 一律避开**——所属策略历史胜率差。"
+                                  % "、".join(r["name"] for r in avoid1))
+                  if hoth:
+                      summ.append("RSI 超买的 %s 等回踩，不追高。" % "、".join(hoth))
+                  if summ:
+                      L += ["", "### ⑥ 一句话总结", ""]
+                      for i, s in enumerate(summ[:4]):
+                          L.append("%s %s" % ("①②③④"[i], s))
+
+                  L.append("")
+                  L.append("⚠️ 样本少时胜率波动极大；本榜为历史统计，不构成投资建议。")
                   L.append("")
                   return "\n".join(L)
           except Exception as exc:
-              print("!! 精选函数定义失败:", exc)
+              print("!! 榜单函数定义失败:", exc)
 
           if os.environ.get("FORCE") == "1":
               import utils.trade_date_utils as td
@@ -337,6 +520,15 @@ jobs:
                               break
                       text = "\n".join(_ls[:_idx + 1]) + "\n" + cur + "\n" + "\n".join(_ls[_idx + 1:])
                       print("[精选] 已插入推送顶部")
+                      # 精选已覆盖逐票评分，原始"买入建议分析"长清单不再推送
+                      _i1 = text.find("🎯 买入建议分析")
+                      if _i1 >= 0:
+                          _i0 = text.rfind("━━━", 0, _i1)
+                          _i3 = text.find("📈 今日大盘复盘", _i1)
+                          if _i0 >= 0 and _i3 > _i1:
+                              text = (text[:_i0] + "━━━━━━━━━━━━━━━━━━━━\n"
+                                      + text[_i3:])
+                              print("[精简] 买入建议长清单已由精选替代，不再推送")
               except Exception as exc:
                   print("!! 精选插入失败（不影响推送）:", exc)
           except Exception as exc:
