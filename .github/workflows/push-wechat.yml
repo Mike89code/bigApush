@@ -126,6 +126,81 @@ jobs:
               return r
           app.QuantSystem.run_full = _patched
 
+          # ---------- 快车道：腾讯批量行情补当日收盘 ----------
+          # 旧通道逐批拉K线要 20-30 分钟；qt.gtimg.cn 一次查 60 只，
+          # 全市场约 88 次请求、1 分钟内写完全部当日收盘。
+          # 覆盖率 ≥90% 才接管 _smart_update，否则照旧走旧通道兜底。
+          try:
+              if datetime.now().weekday() < 5:   # 周末直接跳过
+                  import urllib.request as _ur
+
+                  def _fast_update_today(db_path="data/stock_selection.db"):
+                      today = datetime.now().strftime("%Y-%m-%d")
+                      ymd = today.replace("-", "")
+                      conn = sqlite3.connect(db_path)
+                      codes = [r[0] for r in conn.execute(
+                          "SELECT DISTINCT code FROM stock_kline ORDER BY code")]
+                      conn.close()
+                      total = len(codes)
+                      updated, rows = 0, []
+                      for i in range(0, total, 60):
+                          batch = codes[i:i + 60]
+                          syms = ",".join(("sh" if c.startswith(("6", "9")) else "sz") + c
+                                          for c in batch)
+                          try:
+                              _req = _ur.Request("https://qt.gtimg.cn/q=" + syms,
+                                                 headers={"User-Agent": "Mozilla/5.0"})
+                              raw = _ur.urlopen(_req, timeout=10).read().decode("gbk", "replace")
+                          except Exception:
+                              continue
+                          q = {}
+                          for line in raw.strip().split(";"):
+                              line = line.strip()
+                              if "=" not in line:
+                                  continue
+                              f = line.split("=", 1)[1].strip().strip('"').split("~")
+                              if len(f) >= 46 and f[2]:
+                                  q[f[2]] = f
+                          for code in batch:
+                              f = q.get(code)
+                              if not f or not str(f[30]).startswith(ymd):
+                                  continue      # 非今日快照（节假日/停牌），不写
+                              try:
+                                  close = float(f[3])
+                                  if close <= 0:
+                                      continue
+                                  o = float(f[5]) or close
+                                  h = float(f[33]) or close
+                                  lo = float(f[34]) or close
+                                  v = int(float(f[6] or 0))
+                              except Exception:
+                                  continue
+                              rows.append((code, today, o, h, lo, close, v))
+                              updated += 1
+                          time.sleep(0.25)
+                      if rows:
+                          conn = sqlite3.connect(db_path)
+                          with conn:
+                              conn.executemany(
+                                  "DELETE FROM stock_kline WHERE code=? AND date=?",
+                                  [(r[0], r[1]) for r in rows])
+                              conn.executemany(
+                                  "INSERT INTO stock_kline"
+                                  " (code,date,open,high,low,close,volume,market_cap,K,D,J)"
+                                  " VALUES (?,?,?,?,?,?,?,NULL,NULL,NULL,NULL)", rows)
+                          conn.close()
+                      return {"total": total, "updated": updated,
+                              "ok": total > 0 and updated >= total * 0.9}
+
+                  _stats = _fast_update_today()
+                  print("[fastlane]", _stats)
+                  if _stats["ok"]:
+                      def _skip_update(self, max_stocks=None, check_latest=True):
+                          print("[fastlane] 当日数据已由腾讯批量行情写好，跳过旧通道")
+                      app.QuantSystem._smart_update = _skip_update
+          except Exception as exc:
+              print("!! 快车道失败（不影响，走旧通道）:", exc)
+
           sys.argv = ["main.py", "run"]
           try:
               app.main()
