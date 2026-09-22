@@ -529,6 +529,29 @@ jobs:
                               text = (text[:_i0] + "━━━━━━━━━━━━━━━━━━━━\n"
                                       + text[_i3:])
                               print("[精简] 买入建议长清单已由精选替代，不再推送")
+                      # ---------- 推送前自检：格式跑偏就报警，不悄悄发出去 ----------
+                      try:
+                          _chk = []
+                          if "🎯 高胜率策略 · 今日选股榜单" not in text:
+                              _chk.append("榜单标题缺失")
+                          if "### ① 策略梯队" not in text:
+                              _chk.append("① 策略梯队缺失")
+                          if "### ② 今日优先关注" not in text:
+                              _chk.append("② 今日优先关注缺失（可能今天没有 ≥75 分的好票）")
+                          if "### ⑥ 一句话总结" not in text:
+                              _chk.append("⑥ 一句话总结缺失")
+                          if "🎯 买入建议分析" in text:
+                              _chk.append("买入建议长清单未删除")
+                          if len(text) > 26000:
+                              _chk.append("正文过长(%d 字符)，可能被截断" % len(text))
+                          if _chk:
+                              print("!! [自检不通过] " + "；".join(_chk))
+                              text = ("⚠️ **本次推送格式自检未通过**："
+                                      + "；".join(_chk) + "\n\n") + text
+                          else:
+                              print("[自检] 格式检查全部通过 ✓")
+                      except Exception as exc:
+                          print("!! 自检异常(不影响推送):", exc)
               except Exception as exc:
                   print("!! 精选插入失败（不影响推送）:", exc)
           except Exception as exc:
