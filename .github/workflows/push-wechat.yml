@@ -9,37 +9,132 @@ name: 收盘选股推送微信
 #   ① 推送里的时间戳全比北京慢 8 小时（显示成"早上 10:54"）；
 #   ② main.py 的「15 点前不更新数据」判断会永远成立 → 每天用旧数据选股（已实测踩坑）。
 
+# ⚠️⚠️ 关于"准时"的重要设计（2026-09-23 实测后改）：
+#   GitHub 免费版的定时任务是「尽力而为」，本仓库实测会被整体推后 2~7 小时：
+#     9/19 Keep Alive  预定 01:00 → 实际 03:14（+2h14m）
+#     9/21 收盘推送     预定 15:10 → 实际 21:56（+6h46m）
+#     9/22 收盘推送     预定 15:10 → 实际 20:32（+5h22m）
+#     9/23 收盘推送     预定 15:10 → 实际 20:42（+5h32m）→ 微信 21:05 才收到
+#   对策：把 cron 提前到早上，谁先被调度器放行，谁就 sleep 到 15:10 再跑；
+#   后面的时间点作兜底。这样即使被延迟几小时，也能在 15:10 附近推送。
+#   （实测手动/workflow_dispatch 触发是"立即启动"的，不受这个延迟影响。）
+
 on:
   schedule:
-    - cron: '10 7 * * 1-5'   # UTC 时间，等于北京时间 15:10，周一到周五
+    - cron: '0 0 * * 1-5'    # 北京 08:00 最早一班（守到 15:10）
+    - cron: '0 2 * * 1-5'    # 北京 10:00 第二班
+    - cron: '0 4 * * 1-5'    # 北京 12:00 第三班
+    - cron: '0 6 * * 1-5'    # 北京 14:00 第四班
+    - cron: '10 7 * * 1-5'   # 北京 15:10 兜底（万一前面全被丢）
   workflow_dispatch:
+
+# 同一个组里的运行排队执行，避免多个时间点同时推送
+concurrency:
+  group: push-wechat
+  cancel-in-progress: false
 
 permissions:
   contents: read
+  actions: read         # 读取 artifact 列表，用来判断"今天是不是已经推过了"
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 355        # 最长等 5h20m + 推送时间（GitHub 单任务上限 6 小时）
     env:
       TZ: Asia/Shanghai
     steps:
+      # ---------- 1) 今天是不是已经推送过了？（多时间点防重复） ----------
+      - name: 检查今天是否已推送
+        id: guard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.request
+          from datetime import datetime
+
+          API = "https://api.github.com/repos/Mike89code/bigApush"
+          today = datetime.now().strftime("%Y-%m-%d")     # 本 job 已设 TZ=Asia/Shanghai
+          mark = "推送成功-" + today
+          tok = os.environ["GH_TOKEN"]
+          found = False
+          for page in (1, 2, 3):
+              req = urllib.request.Request(
+                  API + "/actions/artifacts?per_page=100&page=%d" % page,
+                  headers={"Authorization": "Bearer " + tok,
+                           "Accept": "application/vnd.github+json",
+                           "User-Agent": "guard"})
+              d = json.loads(urllib.request.urlopen(req, timeout=30).read())
+              arts = d.get("artifacts", [])
+              if any(mark in a["name"] for a in arts):
+                  found = True
+                  break
+              if len(arts) < 100:
+                  break
+          print("[检查] 今天(%s)是否已推送: %s" % (today, found))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write("skip=%d\n" % (1 if found else 0))
+          PY
+
+      # ---------- 2) 守到 15:10 再跑（手动触发不等待，立刻跑） ----------
+      - name: 等收盘 15:10（抵消 GitHub 定时延迟）
+        id: wait
+        if: steps.guard.outputs.skip != '1' && github.event_name == 'schedule'
+        timeout-minutes: 340
+        run: |
+          python3 - <<'PY'
+          import os, time
+          from datetime import datetime
+
+          CAP = 5 * 3600 + 20 * 60          # 最多等 5h20m（留出选股+推送时间）
+          now = datetime.now()
+          target = now.replace(hour=15, minute=10, second=0, microsecond=0)
+          wait = int((target - now).total_seconds())
+          if wait <= 0:
+              giveup = 0
+              print("[等待] 现在 %s，已过 15:10，直接开始" % now.strftime("%H:%M"))
+          elif wait > CAP:
+              giveup = 1
+              print("[等待] 现在 %s，还要等 %.1f 小时太久了，本次放弃（交给后面的时间点）"
+                    % (now.strftime("%H:%M"), wait / 3600.0))
+          else:
+              giveup = 0
+              print("[等待] 现在 %s，守到 15:10 再推送（等 %.1f 小时）"
+                    % (now.strftime("%H:%M"), wait / 3600.0), flush=True)
+              while True:
+                  left = int((target - datetime.now()).total_seconds())
+                  if left <= 0:
+                      break
+                  time.sleep(min(left, 600))
+              print("[等待] 到点，开始选股推送", flush=True)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write("giveup=%d\n" % giveup)
+          PY
+
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
         with:
           python-version: '3.11'
           cache: pip
       - run: pip install -r requirements.txt
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
       - uses: actions/cache@v4
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
         with:
           path: data
           key: db-${{ github.run_id }}
           restore-keys: db-
       - name: 初始化数据（只在第一次跑）
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
         timeout-minutes: 80
         run: |
           [ -f data/stock_selection.db ] || python main.py init
       - name: 选股 + 成绩单 + 推送
+        id: push
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
         timeout-minutes: 50
         env:
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
@@ -583,6 +678,13 @@ jobs:
               print("!! 推送失败：SendKey 错 / 或当天 5 条免费用完了")
               sys.exit(1)
           print("推送成功")
+          # 记一个"今天已推送"的标记（写入 artifact 名称，供多时间点去重判断）
+          try:
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as _f:
+                  _f.write("pushed=1\n")
+                  _f.write("pushdate=%s\n" % datetime.now().strftime("%Y-%m-%d"))
+          except Exception as exc:
+              print("!! 写推送标记失败（不影响推送）:", exc)
           EOF
           python /tmp/go.py
 
@@ -590,7 +692,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 选股报告-${{ github.run_number }}
+          name: ${{ steps.push.outputs.pushed == '1' && format('推送成功-{0}', steps.push.outputs.pushdate) || '选股报告' }}-${{ github.run_number }}
           path: /tmp/report.txt
           if-no-files-found: ignore
           retention-days: 30
