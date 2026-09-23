@@ -1,16 +1,22 @@
 name: 推送看门狗
 
-# 背景：GitHub 免费版的定时任务在高负载时会被延迟甚至直接丢弃
-# （实测 2026-09-21 15:10 的定时推送整条没触发；keep-alive 定时也晚了 2 小时 15 分）。
-# 这个工作流在收盘后再看两次：如果最近 14 小时内没有“成功”的推送运行，
-# 就用仓库内置令牌（GITHUB_TOKEN，不需要用户令牌）手动触发一次主任务补上。
+# 背景：GitHub 免费版的定时任务在高负载时会延迟甚至直接丢弃
+# （实测 2026-09-19~23：预定 15:10 的推送被推迟到 20:32 / 20:42 才启动；
+#   看门狗自己的定时在 9/23 一次都没跑）。
+# 这个工作流在收盘后再看几次：如果"今天还没有推送成功"，就用仓库内置令牌
+# （GITHUB_TOKEN，不需要用户令牌）手动触发一次主任务补上。
+#
+# ⚠️ 判断依据是「主任务是否真的推送成功」——主任务推送成功时会把 artifact
+#    命名成 "推送成功-YYYY-MM-DD"，这里就找这个标记。
+#    不要用"最近有没有成功的运行"来判断：主任务被提前唤醒但还没到 15:10 时会
+#    正常退出（success），那种成功并不代表推送过了，旧写法会被骗。
 # 交易日/非交易日由主任务自己判断；本工作流只在周一到周五运行。
 
 on:
   schedule:
-    - cron: '30 8 * * 1-5'    # 北京时间 16:30 第一次检查
-    - cron: '0 10 * * 1-5'    # 北京时间 18:00 第二次兜底
-    - cron: '30 11 * * 1-5'   # 北京时间 19:30 第三次兜底（前两次也被调度丢弃时）
+    - cron: '30 8 * * 1-5'    # UTC，北京 16:30 第一次检查
+    - cron: '0 10 * * 1-5'    # 北京 18:00 第二次兜底
+    - cron: '30 11 * * 1-5'   # 北京 19:30 第三次兜底
   workflow_dispatch:
 
 permissions:
@@ -26,31 +32,38 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          python3 - <<'PY'
           import json, os, sys, urllib.request
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
 
           API = "https://api.github.com/repos/Mike89code/bigApush"
-          req = urllib.request.Request(
-              API + "/actions/workflows/push-wechat.yml/runs?per_page=30",
-              headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"],
-                       "Accept": "application/vnd.github+json",
-                       "User-Agent": "watchdog"})
-          data = json.loads(urllib.request.urlopen(req, timeout=30).read())
-          runs = data.get("workflow_runs", [])
-          now = datetime.now(timezone.utc).timestamp()
-          need, why = 1, "最近 14 小时内没有成功的推送运行，开始补跑"
-          for r in runs:
-              created = datetime.strptime(
-                  r["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc).timestamp()
-              if r["status"] in ("queued", "in_progress", "waiting", "requested", "pending"):
-                  need, why = 0, "已有运行在进行中（run #%s），不重复触发" % r["run_number"]
+          # 看门狗 job 没设 TZ，自己按北京时间算"今天"
+          today = (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d")
+          mark = "推送成功-" + today
+          tok = os.environ["GH_TOKEN"]
+
+          found = False
+          for page in (1, 2, 3):
+              req = urllib.request.Request(
+                  API + "/actions/artifacts?per_page=100&page=%d" % page,
+                  headers={"Authorization": "Bearer " + tok,
+                           "Accept": "application/vnd.github+json",
+                           "User-Agent": "watchdog"})
+              d = json.loads(urllib.request.urlopen(req, timeout=30).read())
+              arts = d.get("artifacts", [])
+              if any(mark in a["name"] for a in arts):
+                  found = True
                   break
-              if r["status"] == "completed" and r["conclusion"] == "success" and now - created < 14 * 3600:
-                  need, why = 0, "最近已成功推送（run #%s），无需补跑" % r["run_number"]
+              if len(arts) < 100:
                   break
+
+          if found:
+              why = "今天(%s)已推送成功（找到 %s），无需补跑" % (today, mark)
+          else:
+              why = "今天(%s)还没推送成功，补触发一次主任务" % today
           print(why, file=sys.stderr)
-          print("need=%d" % need)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write("need=%d\n" % (0 if found else 1))
           PY
 
       - name: 补触发主任务
