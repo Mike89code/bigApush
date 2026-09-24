@@ -382,6 +382,18 @@ def main(env=None, review=None, cur=None, news=None):
                 {"A": "A·无瑕疵", "B": "B·轻微", "C": "C·跟踪"}.get(d.get("grade") or "C", d.get("grade"))))
         L.append("")
         L.append("> 本简报为技术面机械过滤结果，不构成任何投资建议。")
+        # 暴跌日也要能复盘全部候选（纯清单，无操作建议）
+        L.append("")
+        L.append("### 📋 全部候选（%d 只，仅复盘勿动手）" % n_total)
+        L.append("")
+        L.append("相对择优 %d：%s" % (len(low), "  ".join(
+            "%s%s" % (d["code"], d["name"]) for d in low)))
+        L.append("可以看 %d：%s" % (len(watch), "  ".join(
+            "%s%s" % (d["code"], d["name"]) for d in watch)))
+        L.append("避开 %d：%s" % (len(excl), "  ".join(
+            "%s%s" % (d["code"], d["name"]) for d in excl)))
+        L.append("")
+        L.append("暴跌日清单只作复盘标记，等大盘评分回到 45 分以上再按完整版执行。")
         text = "\n".join(L)
         out = os.path.join(HERE, "微信推送-v5风格-%s.md" % date)
         with open(out, "w", encoding="utf-8") as f:
