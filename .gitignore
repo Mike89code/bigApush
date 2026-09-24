@@ -24,3 +24,10 @@ Thumbs.db
 # 环境配置
 .env
 config/config.yaml
+
+# v4 六层过滤：每日生成的临时产物（基线 bt_backtest_baseline.json 需保留）
+sixlayer/bt_20*.json
+sixlayer/s6_flow.json
+sixlayer/bt_ann_cache.json
+sixlayer/s3e_f10.json
+sixlayer/微信推送-v4风格-*.md
