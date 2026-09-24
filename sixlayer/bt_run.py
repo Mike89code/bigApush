@@ -17,7 +17,8 @@ import os, json, sys, time, ssl, urllib.request, statistics, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from bt_common import (build_pool, indicators, classify_anns, ensure_anns,
-                       fwd_return, DB)
+                       fwd_return, DB, idx_pct20, fetch_market_caps,
+                       s6_score, grade_from_score)
 from s6_bridge import EM2SINA
 
 # ---------- F10 行业（复用 + 增量） ----------
@@ -72,7 +73,7 @@ def load_flow():
 FLOW = load_flow()
 
 # ---------- 过滤引擎（新规则，含分级） ----------
-def run_filter(items, use_flow=True):
+def run_filter(items, use_flow=True, idx20=None):
     G = {"low": [], "watch": [], "exclude": []}
     for d in items:
         ex, wt = [], []
@@ -81,6 +82,19 @@ def run_filter(items, use_flow=True):
         amt = d.get("avg_amt20_wan")
         if amt is not None and amt < 5000:
             ex.append("流动性不足（20日日均 %.0f 万，低于 5000 万门槛）" % amt)
+
+        # 层⓪ 前置过滤（v5.2 新增：次新 / 近期跌停 / 市值 / 大幅跑输大盘）
+        kn = d.get("kline_n")
+        if kn is not None and kn < 120:
+            ex.append("次新股（K线仅 %d 根，上市不满 120 个交易日）" % kn)
+        if d.get("hit_limit_down"):
+            ex.append("近 20 日内出现过跌停（出货/风险信号）")
+        mv = d.get("mktcap_yi")
+        if mv is not None and mv < 30:
+            ex.append("总市值 %.1f 亿，低于 30 亿门槛（易被操纵）" % mv)
+        ex20 = d.get("rs_excess")
+        if ex20 is not None and idx20 is not None and ex20 < -5:
+            ex.append("20日跑输沪深300 %.1f 个百分点（相对强度过弱）" % abs(ex20))
 
         # 层④ 公告分级
         ann = d.get("ann") or {"S1": [], "S2": [], "S3": []}
@@ -107,6 +121,11 @@ def run_filter(items, use_flow=True):
                 wt.append("所属【%s】当日资金净流出 %.2f 亿"
                           % (d.get("industry") or "?", abs(sn)))
 
+        # 量能标注（先攒数据，不做硬门槛）：缩量突破可靠性打折
+        vr = d.get("vol_ratio")
+        if vr is not None and vr < 0.8:
+            wt.append("量比 %.2f 缩量（突破可靠性打折）" % vr)
+
         d["exclude_reasons"] = ex
         d["watch_reasons"] = wt
         if ex:
@@ -115,28 +134,28 @@ def run_filter(items, use_flow=True):
             G["watch"].append(d)
         else:
             G["low"].append(d)
+
+    # 行业分散：low 组同行业只留评分最高 1 只，其余降观望（防板块一起挨打）
+    best = {}
+    for d in G["low"]:
+        ind = d.get("industry") or "?"
+        if ind not in best or (d.get("score") or 0) > (best[ind].get("score") or 0):
+            best[ind] = d
+    demoted = [d for d in G["low"]
+               if best.get(d.get("industry") or "?") is not d]
+    if demoted:
+        for d in demoted:
+            top = best.get(d.get("industry") or "?")
+            d.setdefault("watch_reasons", []).append(
+                "同行业（%s）已有更高分 %s %s，分散风险降级"
+                % (d.get("industry") or "?", top["code"], top["name"]))
+        G["low"] = [d for d in G["low"] if d not in demoted]
+        G["watch"].extend(demoted)
     return G
 
-# ---------- 风险分级（A/B/C）用于"相对择优"组 ----------
+# ---------- 风险分级（v5.4：评级纯由 s6 评分推导，消灭倒挂） ----------
 def grade(d):
-    """A=无附加风险 | B=有单项轻微瑕疵 | C=仍有需跟踪的实质事项"""
-    sn = d.get("sector_net_yi")
-    amt = d.get("avg_amt20_wan") or 0
-    rsi = d.get("rsi") or 0
-    rd = d.get("res_dist_pct")
-    ann = d.get("ann") or {}
-    pts = 0
-    if ann.get("S3"):
-        pts += 1
-    if amt < 8000:
-        pts += 1
-    if rsi > 70:
-        pts += 1
-    if rd is not None and rd < 4:
-        pts += 1
-    if sn is not None and sn < 0:
-        pts += 1
-    return "A" if pts == 0 else ("B" if pts <= 2 else "C")
+    return grade_from_score(d.get("score"))
 
 # ================= 主流程 =================
 def run(date, fwd=None, label=""):
@@ -172,7 +191,19 @@ def run(date, fwd=None, label=""):
         for d in items:
             d["fwd_ret"] = fwd_return(d["code"], date, fwd)
 
-    G = run_filter(items, use_flow=(fwd is None))   # 回测时剔除层①
+    # 相对强度基准（沪深300 20日涨幅）+ 超额收益；总市值批量抓取
+    idx20 = idx_pct20(date)
+    print("沪深300 20日涨幅: %s" % ("+%s%%" % idx20 if idx20 is not None and idx20 > 0 else ("%s%%" % idx20 if idx20 is not None else "获取失败（跳过 RS 过滤）")))
+    caps = fetch_market_caps([d["code"] for d in items]) if items else {}
+    for d in items:
+        if d.get("pct20") is not None and idx20 is not None:
+            d["rs_excess"] = round(d["pct20"] - idx20, 2)
+        if d["code"] in caps:
+            d["mktcap_yi"] = caps[d["code"]]
+        # 六层评分（因子真实参与决策）：覆盖展示分（advice_log 的 score 恒为空）
+        d["score"] = s6_score(d)
+
+    G = run_filter(items, use_flow=(fwd is None), idx20=idx20)   # 回测时剔除层①
     for k in G:
         G[k].sort(key=lambda x: (-(x.get("score") or 0), x["code"]))
     for d in G["low"]:
