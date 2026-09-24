@@ -113,15 +113,14 @@ jobs:
         timeout-minutes: 80
         run: |
           [ -f data/stock_selection.db ] || python main.py init
-      - name: 刷新今日选股数据（main.py run）
+      - name: 选股并持久化到 strategy_pick_log（供六层过滤读取）
         id: refresh
         if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
-        timeout-minutes: 50
+        timeout-minutes: 90
         env:
           TZ: Asia/Shanghai
-          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: |
-          python main.py run
+          python sixlayer/persist_pool.py
       - name: 六层过滤 + 推送(v4)
         id: v4
         if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
