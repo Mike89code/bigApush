@@ -1,0 +1,6271 @@
+{
+ "date": "2026-09-18",
+ "fwd": "2026-09-22",
+ "total": 69,
+ "groups": {
+  "low": [
+   {
+    "code": "002806",
+    "name": "华锋股份",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 90,
+    "last_date": "2026-09-18",
+    "close": 15.02,
+    "avg_amt20_wan": 10108.7,
+    "rsi": 55.3,
+    "res_price": 15.63,
+    "res_dist_pct": 4.06,
+    "res_touch": 8,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "汽车零部件",
+    "sector_net_yi": 5.51,
+    "fwd_ret": 2.3968042609853613,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "A"
+   },
+   {
+    "code": "002285",
+    "name": "世联行",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 2.89,
+    "avg_amt20_wan": 27518.8,
+    "rsi": 70.1,
+    "res_price": 3.05,
+    "res_dist_pct": 5.54,
+    "res_touch": 12,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-07-09",
+       "title": "世联行:关于累计诉讼情况的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202607081826816975",
+       "url": "https://data.eastmoney.com/notices/detail/002285/AN202607081826816975.html"
+      }
+     ]
+    },
+    "industry": "房地产服务",
+    "sector_net_yi": 39.95,
+    "fwd_ret": 10.726643598615919,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "B"
+   },
+   {
+    "code": "002762",
+    "name": "金发拉比",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 10.18,
+    "avg_amt20_wan": 7923.7,
+    "rsi": 60.5,
+    "res_price": 10.53,
+    "res_dist_pct": 3.44,
+    "res_touch": 7,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-08-27",
+       "title": "金发拉比:关于强制执行暨仲裁事项的进展公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608261828476542",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202608261828476542.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "*ST金比:2026-033号关于对深圳证券交易所2025年年报问询函回复的公告",
+       "col": "回复问询函公告",
+       "art": "AN202606171823640711",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640711.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "*ST金比:关于对深圳证券交易所2025年年报问询函(二)回复的公告",
+       "col": "回复问询函公告",
+       "art": "AN202606171823640704",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640704.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "*ST金比:2026-032号关于公司股票交易撤销退市风险警示暨停复牌的公告",
+       "col": "撤销退市风险警示 停牌公告 复牌公告 其它风险提示公告",
+       "art": "AN202606171823640716",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640716.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "*ST金比:关于对深圳证券交易所2025年年报问询函(二)回复之附件关于商誉减值测试说明",
+       "col": "回复问询函公告",
+       "art": "AN202606171823640706",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640706.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "*ST金比:华兴会计师事务所(特殊普通合伙)关于对金发拉比妇婴童用品股份有限公司2025年年报问询函的回复",
+       "col": "会计师事务所问询函回复公告",
+       "art": "AN202606171823640709",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640709.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "*ST金比:华兴会计师事务所(特殊普通合伙)关于对金发拉比妇婴童用品股份有限公司2025年年报问询函(二)的回复",
+       "col": "会计师事务所问询函回复公告",
+       "art": "AN202606171823640707",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640707.html"
+      },
+      {
+       "date": "2026-05-20",
+       "title": "*ST金比:关于向深交所申请撤销退市风险警示的进展公告",
+       "col": "申请撤销风险警示及特别处理 其它风险提示公告",
+       "art": "AN202605191822444058",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202605191822444058.html"
+      },
+      {
+       "date": "2026-04-16",
+       "title": "*ST金比:关于申请撤销退市风险警示的公告",
+       "col": "申请撤销风险警示及特别处理 其它风险提示公告",
+       "art": "AN202604151821246807",
+       "url": "https://data.eastmoney.com/notices/detail/002762/AN202604151821246807.html"
+      }
+     ]
+    },
+    "industry": "纺织服装",
+    "sector_net_yi": -4.91,
+    "fwd_ret": 2.5540275049115895,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "C"
+   },
+   {
+    "code": "600593",
+    "name": "大连圣亚",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 44.15,
+    "avg_amt20_wan": 23762.2,
+    "rsi": 66.1,
+    "res_price": 46.23,
+    "res_dist_pct": 4.71,
+    "res_touch": 1,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-08-29",
+       "title": "大连圣亚:关于诉讼、仲裁进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608281828630827",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202608281828630827.html"
+      },
+      {
+       "date": "2026-07-14",
+       "title": "大连圣亚:关于向特定对象发行股票申请文件的审核问询函回复及募集说明书等文件更新的提示性公告",
+       "col": "回复问询函公告",
+       "art": "AN202607131826932917",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202607131826932917.html"
+      },
+      {
+       "date": "2026-07-14",
+       "title": "大连圣亚:广东司农会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复",
+       "col": "会计师事务所问询函回复公告",
+       "art": "AN202607131826932926",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202607131826932926.html"
+      },
+      {
+       "date": "2026-07-14",
+       "title": "大连圣亚:关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函的回复(修订稿)",
+       "col": "回复问询函公告",
+       "art": "AN202607131826932919",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202607131826932919.html"
+      },
+      {
+       "date": "2026-06-12",
+       "title": "7-2立信中联会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复(大连圣亚旅游控股股份有限公司)",
+       "col": "沪主板再融资问询与回复",
+       "art": "AN202606121823517913",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202606121823517913.html"
+      },
+      {
+       "date": "2026-06-03",
+       "title": "大连圣亚:关于向特定对象发行股票申请文件的审核问询函回复及募集说明书等文件更新的提示性公告",
+       "col": "回复问询函公告",
+       "art": "AN202606021823166669",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202606021823166669.html"
+      },
+      {
+       "date": "2026-06-03",
+       "title": "大连圣亚:关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函的回复(修订稿)",
+       "col": "回复问询函公告",
+       "art": "AN202606021823166671",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202606021823166671.html"
+      },
+      {
+       "date": "2026-06-03",
+       "title": "大连圣亚:立信中联会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复",
+       "col": "会计师事务所问询函回复公告",
+       "art": "AN202606021823166666",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202606021823166666.html"
+      },
+      {
+       "date": "2026-04-23",
+       "title": "大连圣亚:关于向特定对象发行股票申请文件的审核问询函回复及募集说明书等申请文件更新的提示性公告",
+       "col": "回复问询函公告",
+       "art": "AN202604221821461524",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202604221821461524.html"
+      },
+      {
+       "date": "2026-04-23",
+       "title": "大连圣亚:立信中联会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复",
+       "col": "会计师事务所问询函回复公告",
+       "art": "AN202604221821461529",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202604221821461529.html"
+      },
+      {
+       "date": "2026-04-23",
+       "title": "大连圣亚:关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函的回复",
+       "col": "回复问询函公告",
+       "art": "AN202604221821461525",
+       "url": "https://data.eastmoney.com/notices/detail/600593/AN202604221821461525.html"
+      }
+     ]
+    },
+    "industry": "旅游酒店",
+    "sector_net_yi": -4.11,
+    "fwd_ret": 6.727066817667042,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "B"
+   },
+   {
+    "code": "002730",
+    "name": "电光科技",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 24.1,
+    "avg_amt20_wan": 23192.9,
+    "rsi": 55.5,
+    "res_price": 25.13,
+    "res_dist_pct": 4.27,
+    "res_touch": 5,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "专用设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -5.0622406639004245,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "B"
+   },
+   {
+    "code": "600630",
+    "name": "龙头股份",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 8.29,
+    "avg_amt20_wan": 9657.0,
+    "rsi": 73.7,
+    "res_price": 9.076,
+    "res_dist_pct": 9.48,
+    "res_touch": 8,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "纺织服装",
+    "sector_net_yi": -4.91,
+    "fwd_ret": 14.354644149577823,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "B"
+   },
+   {
+    "code": "002685",
+    "name": "华东重机",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 5.66,
+    "avg_amt20_wan": 13351.9,
+    "rsi": 58.8,
+    "res_price": 5.84,
+    "res_dist_pct": 3.18,
+    "res_touch": 5,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-05-13",
+       "title": "华东重机:关于华东光能科技(徐州)有限公司提起诉讼情况的进展公告",
+       "col": "诉讼仲裁",
+       "art": "AN202605121822216270",
+       "url": "https://data.eastmoney.com/notices/detail/002685/AN202605121822216270.html"
+      }
+     ]
+    },
+    "industry": "机械行业",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -0.1766784452296782,
+    "exclude_reasons": [],
+    "watch_reasons": [],
+    "grade": "C"
+   }
+  ],
+  "watch": [
+   {
+    "code": "002137",
+    "name": "实益达",
+    "strats": [
+     "WBottomStrategy",
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 95,
+    "last_date": "2026-09-18",
+    "close": 8.67,
+    "avg_amt20_wan": 21152.5,
+    "rsi": 66.6,
+    "res_price": 8.81,
+    "res_dist_pct": 1.61,
+    "res_touch": 13,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-07-14",
+       "title": "实益达:关于控股股东及其一致行动人减持股份预披露的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202607131826935907",
+       "url": "https://data.eastmoney.com/notices/detail/002137/AN202607131826935907.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "电子元件",
+    "sector_net_yi": 49.03,
+    "fwd_ret": -1.9607843137254894,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：实益达:关于控股股东及其一致行动人减持股份预披露的公告",
+     "距上方 8.81 元压力位 1.61%"
+    ]
+   },
+   {
+    "code": "000782",
+    "name": "恒申新材",
+    "strats": [
+     "GoldenTriangleStrategy"
+    ],
+    "score": 90,
+    "last_date": "2026-09-18",
+    "close": 8.12,
+    "avg_amt20_wan": 11504.6,
+    "rsi": 61.4,
+    "res_price": 8.2,
+    "res_dist_pct": 0.99,
+    "res_touch": 17,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-09-15",
+       "title": "恒申新材:关于持股5%以上股东部分股份被司法拍卖的进展公告",
+       "col": "诉讼仲裁 收购出售资产/股权",
+       "art": "AN202609141829372208",
+       "url": "https://data.eastmoney.com/notices/detail/000782/AN202609141829372208.html"
+      },
+      {
+       "date": "2026-09-12",
+       "title": "恒申新材:关于持股5%以上股东部分股份被司法拍卖的提示性公告",
+       "col": "诉讼仲裁 收购出售资产/股权",
+       "art": "AN202609111829275817",
+       "url": "https://data.eastmoney.com/notices/detail/000782/AN202609111829275817.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "化纤行业",
+    "sector_net_yi": -2.29,
+    "fwd_ret": 1.8472906403940934,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：恒申新材:关于持股5%以上股东部分股份被司法拍卖的进展公告",
+     "距上方 8.2 元压力位 0.99%"
+    ]
+   },
+   {
+    "code": "002388",
+    "name": "新亚制程",
+    "strats": [
+     "GoldenTriangleStrategy"
+    ],
+    "score": 90,
+    "last_date": "2026-09-18",
+    "close": 7.23,
+    "avg_amt20_wan": 25641.8,
+    "rsi": 68.6,
+    "res_price": 7.35,
+    "res_dist_pct": 1.66,
+    "res_touch": 2,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-08-27",
+       "title": "新亚制程:关于诉讼进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608261828491601",
+       "url": "https://data.eastmoney.com/notices/detail/002388/AN202608261828491601.html"
+      },
+      {
+       "date": "2026-08-07",
+       "title": "新亚制程:关于公司涉及诉讼暨诉讼进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608061827720616",
+       "url": "https://data.eastmoney.com/notices/detail/002388/AN202608061827720616.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "新亚制程:关于诉讼进展暨终审判决的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202607101826876085",
+       "url": "https://data.eastmoney.com/notices/detail/002388/AN202607101826876085.html"
+      },
+      {
+       "date": "2026-07-08",
+       "title": "新亚制程:关于诉讼进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202607071826776811",
+       "url": "https://data.eastmoney.com/notices/detail/002388/AN202607071826776811.html"
+      },
+      {
+       "date": "2026-06-18",
+       "title": "新亚制程:关于子公司新增诉讼、达成调解暨逾期事项签署还款协议的公告",
+       "col": "签订协议 诉讼仲裁",
+       "art": "AN202606171823641970",
+       "url": "https://data.eastmoney.com/notices/detail/002388/AN202606171823641970.html"
+      }
+     ]
+    },
+    "industry": "电子元件",
+    "sector_net_yi": 49.03,
+    "fwd_ret": 9.958506224066387,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 7.35 元压力位 1.66%"
+    ]
+   },
+   {
+    "code": "603155",
+    "name": "新亚强",
+    "strats": [
+     "WBottomStrategy"
+    ],
+    "score": 90,
+    "last_date": "2026-09-18",
+    "close": 15.09,
+    "avg_amt20_wan": 15431.0,
+    "rsi": 60.0,
+    "res_price": 15.3,
+    "res_dist_pct": 1.39,
+    "res_touch": 6,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-06-23",
+       "title": "新亚强:关于持股5%以上股东减持计划期限届满暨减持股份结果公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606221823745518",
+       "url": "https://data.eastmoney.com/notices/detail/603155/AN202606221823745518.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-05-19",
+       "title": "新亚强:关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202605181822409383",
+       "url": "https://data.eastmoney.com/notices/detail/603155/AN202605181822409383.html"
+      }
+     ]
+    },
+    "industry": "化工行业",
+    "sector_net_yi": -2.31,
+    "fwd_ret": 1.3253810470510223,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：新亚强:关于持股5%以上股东减持计划期限届满暨减持股份结果公告",
+     "距上方 15.3 元压力位 1.39%"
+    ]
+   },
+   {
+    "code": "002120",
+    "name": "韵达股份",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 6.97,
+    "avg_amt20_wan": 19817.5,
+    "rsi": 62.4,
+    "res_price": 7.02,
+    "res_dist_pct": 0.72,
+    "res_touch": 24,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-07-07",
+       "title": "韵达股份:关于控股股东及其一致行动人权益变动触及1%整数倍的公告",
+       "col": "权益变动报告书",
+       "art": "AN202607061826752009",
+       "url": "https://data.eastmoney.com/notices/detail/002120/AN202607061826752009.html"
+      }
+     ]
+    },
+    "industry": "交运物流",
+    "sector_net_yi": null,
+    "fwd_ret": -1.4347202295552317,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 7.02 元压力位 0.72%"
+    ]
+   },
+   {
+    "code": "002232",
+    "name": "启明信息",
+    "strats": [
+     "ResistanceBreakoutStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 15.48,
+    "avg_amt20_wan": 11592.9,
+    "rsi": 57.2,
+    "res_price": 15.89,
+    "res_dist_pct": 2.65,
+    "res_touch": 6,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "互联网服务",
+    "sector_net_yi": -91.75,
+    "fwd_ret": 0.9043927648578732,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 15.89 元压力位 2.65%"
+    ]
+   },
+   {
+    "code": "600261",
+    "name": "阳光照明",
+    "strats": [
+     "Strategy2560Selection",
+     "TrendStartStrategy",
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 3.51,
+    "avg_amt20_wan": 5027.2,
+    "rsi": 69.8,
+    "res_price": 3.538,
+    "res_dist_pct": 0.81,
+    "res_touch": 17,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-04-21",
+       "title": "阳光照明:阳光照明2025年度商誉减值测试报告",
+       "col": "其他",
+       "art": "AN202604201821341202",
+       "url": "https://data.eastmoney.com/notices/detail/600261/AN202604201821341202.html"
+      }
+     ]
+    },
+    "industry": "家电行业",
+    "sector_net_yi": -4.43,
+    "fwd_ret": -1.4245014245014196,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 3.538 元压力位 0.81%"
+    ]
+   },
+   {
+    "code": "600545",
+    "name": "卓郎智能",
+    "strats": [
+     "WBottomStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 4.55,
+    "avg_amt20_wan": 38993.0,
+    "rsi": 55.4,
+    "res_price": 4.62,
+    "res_dist_pct": 1.54,
+    "res_touch": 8,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-08-08",
+       "title": "卓郎智能:关于上海证券交易所对公司2025年年度报告的信息披露监管问询函回复的公告",
+       "col": "回复问询函公告",
+       "art": "AN202608071827754794",
+       "url": "https://data.eastmoney.com/notices/detail/600545/AN202608071827754794.html"
+      },
+      {
+       "date": "2026-08-08",
+       "title": "卓郎智能:天衡会计师事务所(特殊普通合伙)关于卓郎智能技术股份有限公司2025年年度报告的信息披露监管工作函的回复",
+       "col": "会计师事务所问询函回复公告 会计师事务所关注函回复公告 监管工作函回复公告",
+       "art": "AN202608071827754793",
+       "url": "https://data.eastmoney.com/notices/detail/600545/AN202608071827754793.html"
+      },
+      {
+       "date": "2026-07-18",
+       "title": "卓郎智能:关于控股股东被动减持股份结果的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202607171827061813",
+       "url": "https://data.eastmoney.com/notices/detail/600545/AN202607171827061813.html"
+      },
+      {
+       "date": "2026-07-01",
+       "title": "卓郎智能:关于控股股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202606301826599549",
+       "url": "https://data.eastmoney.com/notices/detail/600545/AN202606301826599549.html"
+      },
+      {
+       "date": "2026-06-23",
+       "title": "卓郎智能:关于控股股东被动减持股份的提示性公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606221823741222",
+       "url": "https://data.eastmoney.com/notices/detail/600545/AN202606221823741222.html"
+      }
+     ]
+    },
+    "industry": "专用设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -1.098901098901095,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 4.62 元压力位 1.54%"
+    ]
+   },
+   {
+    "code": "000719",
+    "name": "中原传媒",
+    "strats": [
+     "GoldenCrossNotGreenStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 12.24,
+    "avg_amt20_wan": 6315.3,
+    "rsi": 52.2,
+    "res_price": 12.31,
+    "res_dist_pct": 0.57,
+    "res_touch": 47,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "文化传媒",
+    "sector_net_yi": -7.35,
+    "fwd_ret": 0.8986928104575118,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 12.31 元压力位 0.57%"
+    ]
+   },
+   {
+    "code": "002298",
+    "name": "中电鑫龙",
+    "strats": [
+     "GoldenCrossNotGreenStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 9.0,
+    "avg_amt20_wan": 29085.2,
+    "rsi": 60.6,
+    "res_price": 9.36,
+    "res_dist_pct": 4.0,
+    "res_touch": 7,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-08-25",
+       "title": "中电鑫龙:关于董事减持股份预披露的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202608241828371314",
+       "url": "https://data.eastmoney.com/notices/detail/002298/AN202608241828371314.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "电网设备",
+    "sector_net_yi": null,
+    "fwd_ret": -0.33333333333332626,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：中电鑫龙:关于董事减持股份预披露的公告"
+    ]
+   },
+   {
+    "code": "002803",
+    "name": "吉宏股份",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 20.49,
+    "avg_amt20_wan": 19761.5,
+    "rsi": 56.8,
+    "res_price": 20.77,
+    "res_dist_pct": 1.37,
+    "res_touch": 14,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-05-30",
+       "title": "吉宏股份:关于公司及相关人员收到厦门证监局行政监管措施决定书的公告",
+       "col": "其他",
+       "art": "AN202605291823029356",
+       "url": "https://data.eastmoney.com/notices/detail/002803/AN202605291823029356.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-07-22",
+       "title": "吉宏股份:关于控股股东、实际控制人及其一致行动人持股比例被动稀释触及1%及5%整数倍的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202607211827211784",
+       "url": "https://data.eastmoney.com/notices/detail/002803/AN202607211827211784.html"
+      }
+     ]
+    },
+    "industry": "文化传媒",
+    "sector_net_yi": -7.35,
+    "fwd_ret": 2.8794533918984864,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：吉宏股份:关于公司及相关人员收到厦门证监局行政监管措施决定书的公",
+     "距上方 20.77 元压力位 1.37%"
+    ]
+   },
+   {
+    "code": "600449",
+    "name": "宁夏建材",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 13.26,
+    "avg_amt20_wan": 15717.2,
+    "rsi": 58.4,
+    "res_price": 13.56,
+    "res_dist_pct": 2.26,
+    "res_touch": 15,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-08-15",
+       "title": "宁夏建材:宁夏建材关于2026年第三次临时股东会补充公告",
+       "col": "其他",
+       "art": "AN202608141827990774",
+       "url": "https://data.eastmoney.com/notices/detail/600449/AN202608141827990774.html"
+      }
+     ]
+    },
+    "industry": "水泥建材",
+    "sector_net_yi": 2.98,
+    "fwd_ret": -1.2066365007541489,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 13.56 元压力位 2.26%"
+    ]
+   },
+   {
+    "code": "600590",
+    "name": "泰豪科技",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 8.7,
+    "avg_amt20_wan": 19709.0,
+    "rsi": 51.8,
+    "res_price": 9.05,
+    "res_dist_pct": 4.02,
+    "res_touch": 12,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-08-25",
+       "title": "泰豪科技:关于持股5%以上股东减持计划实施完毕暨减持结果的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202608241828360653",
+       "url": "https://data.eastmoney.com/notices/detail/600590/AN202608241828360653.html"
+      },
+      {
+       "date": "2026-05-26",
+       "title": "泰豪科技:关于持股5%以上股东减持股份计划公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202605251822860737",
+       "url": "https://data.eastmoney.com/notices/detail/600590/AN202605251822860737.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-07-31",
+       "title": "泰豪科技:关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202607301827490160",
+       "url": "https://data.eastmoney.com/notices/detail/600590/AN202607301827490160.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "泰豪科技:关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202607101826872504",
+       "url": "https://data.eastmoney.com/notices/detail/600590/AN202607101826872504.html"
+      },
+      {
+       "date": "2026-06-27",
+       "title": "泰豪科技:关于持股5%以上股东权益变动触及5%整数倍的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202606261824750615",
+       "url": "https://data.eastmoney.com/notices/detail/600590/AN202606261824750615.html"
+      }
+     ]
+    },
+    "industry": "输配电气",
+    "sector_net_yi": null,
+    "fwd_ret": -0.9195402298850583,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：泰豪科技:关于持股5%以上股东减持计划实施完毕暨减持结果的公告"
+    ]
+   },
+   {
+    "code": "603212",
+    "name": "赛伍技术",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 11.82,
+    "avg_amt20_wan": 8524.7,
+    "rsi": 56.2,
+    "res_price": 11.89,
+    "res_dist_pct": 0.59,
+    "res_touch": 22,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "光伏设备",
+    "sector_net_yi": -16.99,
+    "fwd_ret": 1.0152284263959324,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 11.89 元压力位 0.59%"
+    ]
+   },
+   {
+    "code": "603626",
+    "name": "科森科技",
+    "strats": [
+     "GoldenTriangleStrategy",
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 23.42,
+    "avg_amt20_wan": 102541.1,
+    "rsi": 64.7,
+    "res_price": 24.07,
+    "res_dist_pct": 2.78,
+    "res_touch": 13,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-07-23",
+       "title": "科森科技:关于控股股东部分股份补充质押的公告",
+       "col": "股份质押、冻结",
+       "art": "AN202607221827257267",
+       "url": "https://data.eastmoney.com/notices/detail/603626/AN202607221827257267.html"
+      }
+     ]
+    },
+    "industry": "消费电子",
+    "sector_net_yi": 49.03,
+    "fwd_ret": -2.092228864218625,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 24.07 元压力位 2.78%"
+    ]
+   },
+   {
+    "code": "000410",
+    "name": "沈阳机床",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 5.57,
+    "avg_amt20_wan": 9881.1,
+    "rsi": 64.3,
+    "res_price": 5.66,
+    "res_dist_pct": 1.62,
+    "res_touch": 8,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "机械行业",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -4.129263913824064,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 5.66 元压力位 1.62%"
+    ]
+   },
+   {
+    "code": "000509",
+    "name": "华塑控股",
+    "strats": [
+     "TrendStartStrategy",
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 3.77,
+    "avg_amt20_wan": 8188.8,
+    "rsi": 67.0,
+    "res_price": 3.83,
+    "res_dist_pct": 1.59,
+    "res_touch": 7,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-08-18",
+       "title": "华塑控股:2026-052号关于大股东减持计划期限届满及实施情况的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202608171828059155",
+       "url": "https://data.eastmoney.com/notices/detail/000509/AN202608171828059155.html"
+      },
+      {
+       "date": "2026-04-20",
+       "title": "华塑控股:大股东减持股份预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202604191821321226",
+       "url": "https://data.eastmoney.com/notices/detail/000509/AN202604191821321226.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-08-14",
+       "title": "华塑控股:关于提起重大诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608131827943445",
+       "url": "https://data.eastmoney.com/notices/detail/000509/AN202608131827943445.html"
+      },
+      {
+       "date": "2026-05-28",
+       "title": "华塑控股:关于持股5%以上股东股份变动比例触及1%整数倍的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202605271822917582",
+       "url": "https://data.eastmoney.com/notices/detail/000509/AN202605271822917582.html"
+      }
+     ]
+    },
+    "industry": "光学光电子",
+    "sector_net_yi": 49.03,
+    "fwd_ret": 5.570291777188328,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：华塑控股:2026-052号关于大股东减持计划期限届满及实施情况",
+     "距上方 3.83 元压力位 1.59%"
+    ]
+   },
+   {
+    "code": "000880",
+    "name": "潍柴重机",
+    "strats": [
+     "GoldenCrossNotGreenStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 26.68,
+    "avg_amt20_wan": 36300.2,
+    "rsi": 63.8,
+    "res_price": 27.0,
+    "res_dist_pct": 1.2,
+    "res_touch": 13,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "机械行业",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -3.37331334332833,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 27.0 元压力位 1.20%"
+    ]
+   },
+   {
+    "code": "001324",
+    "name": "长青科技",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 20.67,
+    "avg_amt20_wan": 9584.4,
+    "rsi": 57.8,
+    "res_price": 20.99,
+    "res_dist_pct": 1.55,
+    "res_touch": 24,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-07-07",
+       "title": "长青科技:关于股东股份减持计划时间届满暨减持结果的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202607061826752928",
+       "url": "https://data.eastmoney.com/notices/detail/001324/AN202607061826752928.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-08-22",
+       "title": "长青科技:关于提前终止实施公司2024年员工持股计划的公告",
+       "col": "员工持股计划",
+       "art": "AN202608211828277890",
+       "url": "https://data.eastmoney.com/notices/detail/001324/AN202608211828277890.html"
+      },
+      {
+       "date": "2026-05-15",
+       "title": "长青科技:关于合计持股5%以上股东及其一致行动人权益变动触及1%整数倍的公告",
+       "col": "权益变动报告书",
+       "art": "AN202605141822317414",
+       "url": "https://data.eastmoney.com/notices/detail/001324/AN202605141822317414.html"
+      },
+      {
+       "date": "2026-05-08",
+       "title": "长青科技:关于合计持股5%以上股东及其一致行动人权益变动触及1%整数倍的公告",
+       "col": "权益变动报告书",
+       "art": "AN202605071822028864",
+       "url": "https://data.eastmoney.com/notices/detail/001324/AN202605071822028864.html"
+      }
+     ]
+    },
+    "industry": "交运设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": 4.692791485244309,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：长青科技:关于股东股份减持计划时间届满暨减持结果的公告",
+     "距上方 20.99 元压力位 1.55%"
+    ]
+   },
+   {
+    "code": "001356",
+    "name": "富岭股份",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 9.59,
+    "avg_amt20_wan": 5942.9,
+    "rsi": 59.6,
+    "res_price": 9.87,
+    "res_dist_pct": 2.92,
+    "res_touch": 3,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-09-09",
+       "title": "富岭股份:关于持股5%以上股东减持股份触及1%整数倍暨减持计划时间届满的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202609081829137385",
+       "url": "https://data.eastmoney.com/notices/detail/001356/AN202609081829137385.html"
+      },
+      {
+       "date": "2026-05-19",
+       "title": "富岭股份:关于持股5%以上股东减持股份的预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202605181822408188",
+       "url": "https://data.eastmoney.com/notices/detail/001356/AN202605181822408188.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-09-01",
+       "title": "富岭股份:关于持股5%以上股东减持股份触及5%整数倍的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202608311828827582",
+       "url": "https://data.eastmoney.com/notices/detail/001356/AN202608311828827582.html"
+      }
+     ]
+    },
+    "industry": "塑料制品",
+    "sector_net_yi": -4.96,
+    "fwd_ret": -0.4171011470281454,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：富岭股份:关于持股5%以上股东减持股份触及1%整数倍暨减持计划时",
+     "距上方 9.87 元压力位 2.92%"
+    ]
+   },
+   {
+    "code": "001360",
+    "name": "南矿集团",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 20.56,
+    "avg_amt20_wan": 12943.3,
+    "rsi": 65.0,
+    "res_price": 21.18,
+    "res_dist_pct": 3.02,
+    "res_touch": 23,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-06-10",
+       "title": "南矿集团:关于公司董事、高级管理人员减持股份计划期限届满未减持公司股份的公告",
+       "col": "高管人员持股变动 股东/实际控制人股份减持",
+       "art": "AN202606091823397110",
+       "url": "https://data.eastmoney.com/notices/detail/001360/AN202606091823397110.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "专用设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": 2.4319066147859925,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：南矿集团:关于公司董事、高级管理人员减持股份计划期限届满未减持公"
+    ]
+   },
+   {
+    "code": "002290",
+    "name": "禾盛新材",
+    "strats": [
+     "GoldenCrossNotGreenStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 67.22,
+    "avg_amt20_wan": 40867.6,
+    "rsi": 55.4,
+    "res_price": 68.46,
+    "res_dist_pct": 1.84,
+    "res_touch": 12,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "家电行业",
+    "sector_net_yi": -4.43,
+    "fwd_ret": 15.813745908955662,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 68.46 元压力位 1.84%"
+    ]
+   },
+   {
+    "code": "002471",
+    "name": "中超控股",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 5.96,
+    "avg_amt20_wan": 25506.0,
+    "rsi": 60.4,
+    "res_price": 6.09,
+    "res_dist_pct": 2.18,
+    "res_touch": 7,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-06-16",
+       "title": "中超控股:关于江苏中超控股股份有限公司申请向特定对象发行股票的审核问询函之回复(豁免版)",
+       "col": "回复问询函公告",
+       "art": "AN202606151823579665",
+       "url": "https://data.eastmoney.com/notices/detail/002471/AN202606151823579665.html"
+      },
+      {
+       "date": "2026-06-16",
+       "title": "中超控股:关于2023年度向特定对象发行股票审核问询函回复及募集说明书等申请文件更新的提示性公告",
+       "col": "回复问询函公告",
+       "art": "AN202606151823579667",
+       "url": "https://data.eastmoney.com/notices/detail/002471/AN202606151823579667.html"
+      }
+     ]
+    },
+    "industry": "输配电气",
+    "sector_net_yi": null,
+    "fwd_ret": -3.523489932885906,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 6.09 元压力位 2.18%"
+    ]
+   },
+   {
+    "code": "002849",
+    "name": "威星智能",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 20.32,
+    "avg_amt20_wan": 17026.9,
+    "rsi": 66.5,
+    "res_price": null,
+    "res_dist_pct": null,
+    "res_touch": null,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-09-05",
+       "title": "威星智能:关于特定股东减持股份的预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202609041829025110",
+       "url": "https://data.eastmoney.com/notices/detail/002849/AN202609041829025110.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-09-17",
+       "title": "威星智能:关于特定股东权益变动触及1%整数倍的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202609161829468006",
+       "url": "https://data.eastmoney.com/notices/detail/002849/AN202609161829468006.html"
+      }
+     ]
+    },
+    "industry": "仪器仪表",
+    "sector_net_yi": -1.69,
+    "fwd_ret": 2.9035433070866135,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：威星智能:关于特定股东减持股份的预披露公告"
+    ]
+   },
+   {
+    "code": "600606",
+    "name": "绿地控股",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 1.45,
+    "avg_amt20_wan": 17203.6,
+    "rsi": 68.9,
+    "res_price": 1.48,
+    "res_dist_pct": 2.07,
+    "res_touch": 16,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-09-05",
+       "title": "绿地控股:绿地控股关于公司及控股子公司逾期债务和新增诉讼的公告",
+       "col": "诉讼仲裁 其他",
+       "art": "AN202609041829019778",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202609041829019778.html"
+      },
+      {
+       "date": "2026-08-22",
+       "title": "绿地控股:绿地控股关于公司及控股子公司逾期债务和新增诉讼的公告",
+       "col": "诉讼仲裁 其他",
+       "art": "AN202608211828268983",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202608211828268983.html"
+      },
+      {
+       "date": "2026-08-15",
+       "title": "绿地控股:绿地控股关于公司及控股子公司逾期债务和新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608141827987775",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202608141827987775.html"
+      },
+      {
+       "date": "2026-07-30",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202607291827458091",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202607291827458091.html"
+      },
+      {
+       "date": "2026-07-21",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202607201827142446",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202607201827142446.html"
+      },
+      {
+       "date": "2026-07-09",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202607081826813721",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202607081826813721.html"
+      },
+      {
+       "date": "2026-06-19",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202606181823665079",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202606181823665079.html"
+      },
+      {
+       "date": "2026-06-06",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202606051823289160",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202606051823289160.html"
+      },
+      {
+       "date": "2026-05-23",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202605221822682573",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202605221822682573.html"
+      },
+      {
+       "date": "2026-05-13",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202605121822216162",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202605121822216162.html"
+      },
+      {
+       "date": "2026-04-29",
+       "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202604281821705251",
+       "url": "https://data.eastmoney.com/notices/detail/600606/AN202604281821705251.html"
+      }
+     ]
+    },
+    "industry": "房地产",
+    "sector_net_yi": 39.95,
+    "fwd_ret": 5.51724137931035,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 1.48 元压力位 2.07%"
+    ]
+   },
+   {
+    "code": "600621",
+    "name": "华鑫股份",
+    "strats": [
+     "Strategy2560Selection",
+     "TrendStartStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 14.1,
+    "avg_amt20_wan": 16592.1,
+    "rsi": 62.8,
+    "res_price": 14.278,
+    "res_dist_pct": 1.26,
+    "res_touch": 30,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "券商信托",
+    "sector_net_yi": null,
+    "fwd_ret": -0.6382978723404246,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 14.278 元压力位 1.26%"
+    ]
+   },
+   {
+    "code": "600640",
+    "name": "国脉文化",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 12.06,
+    "avg_amt20_wan": 8958.5,
+    "rsi": 67.9,
+    "res_price": 12.218,
+    "res_dist_pct": 1.31,
+    "res_touch": 18,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "文化传媒",
+    "sector_net_yi": -7.35,
+    "fwd_ret": 11.194029850746265,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 12.218 元压力位 1.31%"
+    ]
+   },
+   {
+    "code": "600769",
+    "name": "祥龙电业",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 16.24,
+    "avg_amt20_wan": 18036.1,
+    "rsi": 56.5,
+    "res_price": 16.38,
+    "res_dist_pct": 0.86,
+    "res_touch": 18,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "工程建设",
+    "sector_net_yi": -3.24,
+    "fwd_ret": -0.5541871921182258,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 16.38 元压力位 0.86%"
+    ]
+   },
+   {
+    "code": "600790",
+    "name": "轻纺城",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 3.63,
+    "avg_amt20_wan": 5983.1,
+    "rsi": 64.7,
+    "res_price": 3.7,
+    "res_dist_pct": 1.93,
+    "res_touch": 18,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-03-25",
+       "title": "轻纺城:轻纺城关于控股股东增持计划实施完毕暨增持股份结果的公告",
+       "col": "股东/实际控制人股份增持",
+       "art": "AN202603241820719687",
+       "url": "https://data.eastmoney.com/notices/detail/600790/AN202603241820719687.html"
+      }
+     ]
+    },
+    "industry": "商业百货",
+    "sector_net_yi": -8.92,
+    "fwd_ret": -2.203856749311297,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 3.7 元压力位 1.93%"
+    ]
+   },
+   {
+    "code": "605123",
+    "name": "派克新材",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 80.32000795050809,
+    "avg_amt20_wan": 11953.2,
+    "rsi": 53.4,
+    "res_price": 80.956,
+    "res_dist_pct": 0.79,
+    "res_touch": 17,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-05-28",
+       "title": "派克新材:关于无锡派克新材料科技股份有限公司向不特定对象发行可转换公司债券申请文件的审核问询函的回复",
+       "col": "回复问询函公告",
+       "art": "AN202605271822913980",
+       "url": "https://data.eastmoney.com/notices/detail/605123/AN202605271822913980.html"
+      },
+      {
+       "date": "2026-05-28",
+       "title": "派克新材:公证天业会计师事务所(特殊普通合伙)关于无锡派克新材料科技股份有限公司向不特定对象发行可转换公司债券申请文件的审核问询函的回复",
+       "col": "会计师事务所问询函回复公告",
+       "art": "AN202605271822913978",
+       "url": "https://data.eastmoney.com/notices/detail/605123/AN202605271822913978.html"
+      },
+      {
+       "date": "2026-05-28",
+       "title": "派克新材:关于公司向不特定对象发行可转换公司债券申请文件的审核问询函回复的提示性公告",
+       "col": "回复问询函公告",
+       "art": "AN202605271822913977",
+       "url": "https://data.eastmoney.com/notices/detail/605123/AN202605271822913977.html"
+      }
+     ]
+    },
+    "industry": "通用设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": 0.5353486142044075,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 80.956 元压力位 0.79%"
+    ]
+   },
+   {
+    "code": "002489",
+    "name": "浙江永强",
+    "strats": [
+     "ResistanceBreakoutStrategy"
+    ],
+    "score": 70,
+    "last_date": "2026-09-18",
+    "close": 3.13,
+    "avg_amt20_wan": 7936.7,
+    "rsi": 70.1,
+    "res_price": 3.17,
+    "res_dist_pct": 1.28,
+    "res_touch": 3,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-08-26",
+       "title": "浙江永强:关于实际控制人提前终止股份减持计划暨减持股份结果的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202608251828426067",
+       "url": "https://data.eastmoney.com/notices/detail/002489/AN202608251828426067.html"
+      },
+      {
+       "date": "2026-05-09",
+       "title": "浙江永强:关于实际控制人减持股份的预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202605081822080051",
+       "url": "https://data.eastmoney.com/notices/detail/002489/AN202605081822080051.html"
+      },
+      {
+       "date": "2026-04-21",
+       "title": "浙江永强:关于实际控制人提前终止股份减持计划暨减持股份结果的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202604201821352381",
+       "url": "https://data.eastmoney.com/notices/detail/002489/AN202604201821352381.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-06-12",
+       "title": "浙江永强:关于实际控制人减持股份触及1%整倍数的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606111823461196",
+       "url": "https://data.eastmoney.com/notices/detail/002489/AN202606111823461196.html"
+      }
+     ]
+    },
+    "industry": "家用轻工",
+    "sector_net_yi": -0.46,
+    "fwd_ret": -1.5974440894568633,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：浙江永强:关于实际控制人提前终止股份减持计划暨减持股份结果的公告",
+     "距上方 3.17 元压力位 1.28%"
+    ]
+   },
+   {
+    "code": "603276",
+    "name": "恒兴新材",
+    "strats": [
+     "ResistanceBreakoutStrategy"
+    ],
+    "score": 70,
+    "last_date": "2026-09-18",
+    "close": 17.95,
+    "avg_amt20_wan": 5548.7,
+    "rsi": 72.5,
+    "res_price": 18.24,
+    "res_dist_pct": 1.62,
+    "res_touch": 15,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-09-08",
+       "title": "恒兴新材:高级管理人员减持股份计划公告",
+       "col": "高管人员持股变动 股东/实际控制人股份减持",
+       "art": "AN202609071829102644",
+       "url": "https://data.eastmoney.com/notices/detail/603276/AN202609071829102644.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "化学原料",
+    "sector_net_yi": -2.31,
+    "fwd_ret": 1.1699164345403947,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：恒兴新材:高级管理人员减持股份计划公告",
+     "距上方 18.24 元压力位 1.62%"
+    ]
+   },
+   {
+    "code": "002338",
+    "name": "奥普光电",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 42.74,
+    "avg_amt20_wan": 14242.7,
+    "rsi": 53.7,
+    "res_price": 43.39,
+    "res_dist_pct": 1.52,
+    "res_touch": 12,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-06-04",
+       "title": "奥普光电:控股股东减持股份预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606031823214991",
+       "url": "https://data.eastmoney.com/notices/detail/002338/AN202606031823214991.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "仪器仪表",
+    "sector_net_yi": -1.69,
+    "fwd_ret": 5.6387459054749565,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：奥普光电:控股股东减持股份预披露公告",
+     "距上方 43.39 元压力位 1.52%"
+    ]
+   },
+   {
+    "code": "002453",
+    "name": "华软科技",
+    "strats": [
+     "ResistanceBreakoutStrategy",
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 5.34,
+    "avg_amt20_wan": 6171.4,
+    "rsi": 74.9,
+    "res_price": 5.41,
+    "res_dist_pct": 1.31,
+    "res_touch": 9,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "化学制品",
+    "sector_net_yi": -2.31,
+    "fwd_ret": -0.5617977528089935,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 5.41 元压力位 1.31%"
+    ]
+   },
+   {
+    "code": "603248",
+    "name": "锡华科技",
+    "strats": [
+     "ResistanceBreakoutStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 24.57,
+    "avg_amt20_wan": 10161.4,
+    "rsi": 82.1,
+    "res_price": 24.901,
+    "res_dist_pct": 1.35,
+    "res_touch": 2,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-06-16",
+       "title": "锡华科技:国泰海通关于江苏锡华新能源科技股份有限公司首次公开发行股票部分限售股上市流通的核查意见",
+       "col": "保荐/核查意见",
+       "art": "AN202606151823573296",
+       "url": "https://data.eastmoney.com/notices/detail/603248/AN202606151823573296.html"
+      },
+      {
+       "date": "2026-06-16",
+       "title": "锡华科技:江苏锡华新能源科技股份有限公司关于首次公开发行网下配售限售股上市流通的公告",
+       "col": "限售股份上市流通",
+       "art": "AN202606151823573303",
+       "url": "https://data.eastmoney.com/notices/detail/603248/AN202606151823573303.html"
+      }
+     ]
+    },
+    "industry": "风电设备",
+    "sector_net_yi": -16.99,
+    "fwd_ret": -2.8083028083028134,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "RSI 82.1 超买，禁止追涨，只观察回踩",
+     "距上方 24.901 元压力位 1.35%"
+    ]
+   },
+   {
+    "code": "603375",
+    "name": "盛景微",
+    "strats": [
+     "ResistanceBreakoutStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 51.69,
+    "avg_amt20_wan": 13153.9,
+    "rsi": 72.8,
+    "res_price": 52.632,
+    "res_dist_pct": 1.82,
+    "res_touch": 9,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "电子元件",
+    "sector_net_yi": 49.03,
+    "fwd_ret": -6.326175275681943,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 52.632 元压力位 1.82%"
+    ]
+   },
+   {
+    "code": "605100",
+    "name": "华丰股份",
+    "strats": [
+     "LimitUpSidewaysStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 33.81,
+    "avg_amt20_wan": 14085.9,
+    "rsi": 54.6,
+    "res_price": 34.44,
+    "res_dist_pct": 1.86,
+    "res_touch": 22,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "机械行业",
+    "sector_net_yi": -9.63,
+    "fwd_ret": 1.4196983141082427,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 34.44 元压力位 1.86%"
+    ]
+   },
+   {
+    "code": "000021",
+    "name": "深科技",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 36.95,
+    "avg_amt20_wan": 246542.4,
+    "rsi": 50.4,
+    "res_price": 37.43,
+    "res_dist_pct": 1.3,
+    "res_touch": 17,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "消费电子",
+    "sector_net_yi": 49.03,
+    "fwd_ret": 0.16238159675235497,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 37.43 元压力位 1.30%"
+    ]
+   },
+   {
+    "code": "001267",
+    "name": "汇绿生态",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 38.03,
+    "avg_amt20_wan": 114687.7,
+    "rsi": 52.1,
+    "res_price": 39.15,
+    "res_dist_pct": 2.95,
+    "res_touch": 14,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "工程建设",
+    "sector_net_yi": -3.24,
+    "fwd_ret": 0.4207204838285474,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 39.15 元压力位 2.95%"
+    ]
+   },
+   {
+    "code": "001309",
+    "name": "德明利",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 413.09,
+    "avg_amt20_wan": 484737.0,
+    "rsi": 48.8,
+    "res_price": 416.85,
+    "res_dist_pct": 0.91,
+    "res_touch": 17,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-09-14",
+       "title": "2大信会计师事务所(特殊普通合伙)《关于深圳市德明利技术股份有限公司申请向特定对象发行股票的审核问询函》之回复",
+       "col": "深主板再融资问询与回复",
+       "art": "AN202609141829367350",
+       "url": "https://data.eastmoney.com/notices/detail/001309/AN202609141829367350.html"
+      },
+      {
+       "date": "2026-09-14",
+       "title": "1关于深圳市德明利技术股份有限公司申请向特定对象发行股票的审核问询函的回复",
+       "col": "深主板再融资问询与回复",
+       "art": "AN202609141829367340",
+       "url": "https://data.eastmoney.com/notices/detail/001309/AN202609141829367340.html"
+      },
+      {
+       "date": "2026-07-28",
+       "title": "德明利:关于控股股东认购的2023年向特定对象发行股票限售股解除限售上市流通并承诺十二个月内不减持公司股票的提示性公告",
+       "col": "限售股份上市流通",
+       "art": "AN202607271827391048",
+       "url": "https://data.eastmoney.com/notices/detail/001309/AN202607271827391048.html"
+      },
+      {
+       "date": "2026-07-25",
+       "title": "德明利:关于控股股东自愿承诺不减持公司股票的公告",
+       "col": "其他",
+       "art": "AN202607241827322720",
+       "url": "https://data.eastmoney.com/notices/detail/001309/AN202607241827322720.html"
+      }
+     ]
+    },
+    "industry": "半导体",
+    "sector_net_yi": 49.03,
+    "fwd_ret": -0.36795855624681834,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 416.85 元压力位 0.91%"
+    ]
+   },
+   {
+    "code": "002156",
+    "name": "通富微电",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 61.38,
+    "avg_amt20_wan": 400303.3,
+    "rsi": 51.7,
+    "res_price": 62.23,
+    "res_dist_pct": 1.38,
+    "res_touch": 12,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-09-12",
+       "title": "通富微电:关于持股5%以上股东持股比例被动稀释触及1%整数倍的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202609111829275868",
+       "url": "https://data.eastmoney.com/notices/detail/002156/AN202609111829275868.html"
+      },
+      {
+       "date": "2026-06-02",
+       "title": "通富微电:关于通富微电子股份有限公司向特定对象发行股票的审核问询函中有关财务会计问题的专项说明",
+       "col": "专项说明/独立意见",
+       "art": "AN202606011823126705",
+       "url": "https://data.eastmoney.com/notices/detail/002156/AN202606011823126705.html"
+      },
+      {
+       "date": "2026-06-02",
+       "title": "通富微电:通富微电子股份有限公司与国泰海通证券股份有限公司关于通富微电子股份有限公司申请向特定对象发行股票的审核问询函的回复",
+       "col": "回复问询函公告",
+       "art": "AN202606011823126700",
+       "url": "https://data.eastmoney.com/notices/detail/002156/AN202606011823126700.html"
+      },
+      {
+       "date": "2026-06-02",
+       "title": "通富微电:关于申请向特定对象发行股票的审核问询函的回复及募集说明书等申请文件更新的提示性公告",
+       "col": "回复问询函公告",
+       "art": "AN202606011823126695",
+       "url": "https://data.eastmoney.com/notices/detail/002156/AN202606011823126695.html"
+      }
+     ]
+    },
+    "industry": "半导体",
+    "sector_net_yi": 49.03,
+    "fwd_ret": 3.4864776800260677,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 62.23 元压力位 1.38%"
+    ]
+   },
+   {
+    "code": "002786",
+    "name": "银宝山新",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 7.89,
+    "avg_amt20_wan": 5950.9,
+    "rsi": 53.7,
+    "res_price": 8.1,
+    "res_dist_pct": 2.66,
+    "res_touch": 32,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-06-03",
+       "title": "银宝山新:关于持股5%以上股东减持计划实施完毕的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606021823165814",
+       "url": "https://data.eastmoney.com/notices/detail/002786/AN202606021823165814.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-06-16",
+       "title": "银宝山新:关于诉讼、仲裁事项的进展公告",
+       "col": "诉讼仲裁",
+       "art": "AN202606151823573141",
+       "url": "https://data.eastmoney.com/notices/detail/002786/AN202606151823573141.html"
+      },
+      {
+       "date": "2026-06-04",
+       "title": "银宝山新:关于董事兼总经理增持公司股份计划实施完毕的公告",
+       "col": "股东/实际控制人股份增持",
+       "art": "AN202606031823203630",
+       "url": "https://data.eastmoney.com/notices/detail/002786/AN202606031823203630.html"
+      },
+      {
+       "date": "2026-06-02",
+       "title": "银宝山新:关于重大诉讼及其他诉讼、仲裁事项的进展公告",
+       "col": "诉讼仲裁",
+       "art": "AN202606011823125202",
+       "url": "https://data.eastmoney.com/notices/detail/002786/AN202606011823125202.html"
+      },
+      {
+       "date": "2026-04-29",
+       "title": "银宝山新:关于诉讼、仲裁事项的进展公告",
+       "col": "诉讼仲裁",
+       "art": "AN202604281821704578",
+       "url": "https://data.eastmoney.com/notices/detail/002786/AN202604281821704578.html"
+      }
+     ]
+    },
+    "industry": "专用设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -0.5069708491761729,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：银宝山新:关于持股5%以上股东减持计划实施完毕的公告",
+     "距上方 8.1 元压力位 2.66%"
+    ]
+   },
+   {
+    "code": "002885",
+    "name": "京泉华",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 28.5,
+    "avg_amt20_wan": 54341.6,
+    "rsi": 50.9,
+    "res_price": 29.16,
+    "res_dist_pct": 2.32,
+    "res_touch": 13,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-06-22",
+       "title": "京泉华:关于股东减持股份预披露的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606211823708643",
+       "url": "https://data.eastmoney.com/notices/detail/002885/AN202606211823708643.html"
+      },
+      {
+       "date": "2026-05-08",
+       "title": "京泉华:关于股东减持股份预披露的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202605071822038915",
+       "url": "https://data.eastmoney.com/notices/detail/002885/AN202605071822038915.html"
+      },
+      {
+       "date": "2026-02-04",
+       "title": "京泉华:关于持股5%以上股东减持计划期限届满的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202602031819655778",
+       "url": "https://data.eastmoney.com/notices/detail/002885/AN202602031819655778.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-09-11",
+       "title": "京泉华:关于持股5%以上股东权益变动触及1%整数倍的公告",
+       "col": "权益变动报告书",
+       "art": "AN202609101829233910",
+       "url": "https://data.eastmoney.com/notices/detail/002885/AN202609101829233910.html"
+      },
+      {
+       "date": "2026-06-17",
+       "title": "京泉华:关于股东股份变动暨部分股东权益变动触及1%整数倍的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202606161823609804",
+       "url": "https://data.eastmoney.com/notices/detail/002885/AN202606161823609804.html"
+      }
+     ]
+    },
+    "industry": "消费电子",
+    "sector_net_yi": 49.03,
+    "fwd_ret": -0.14035087719297948,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：京泉华:关于股东减持股份预披露的公告",
+     "距上方 29.16 元压力位 2.32%"
+    ]
+   },
+   {
+    "code": "003041",
+    "name": "真爱美家",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 42.02,
+    "avg_amt20_wan": 7032.7,
+    "rsi": 61.7,
+    "res_price": 42.96,
+    "res_dist_pct": 2.24,
+    "res_touch": 9,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-04-22",
+       "title": "真爱美家:关于广州探迹远擎科技合伙企业(有限合伙)要约收购期限届满暨股票停牌的公告",
+       "col": "停牌公告",
+       "art": "AN202604211821380032",
+       "url": "https://data.eastmoney.com/notices/detail/003041/AN202604211821380032.html"
+      }
+     ]
+    },
+    "industry": "纺织服装",
+    "sector_net_yi": -4.91,
+    "fwd_ret": 4.616849119466915,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 42.96 元压力位 2.24%"
+    ]
+   },
+   {
+    "code": "600933",
+    "name": "爱柯迪",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 14.03,
+    "avg_amt20_wan": 11965.9,
+    "rsi": 59.9,
+    "res_price": 14.35,
+    "res_dist_pct": 2.28,
+    "res_touch": 15,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "汽车行业",
+    "sector_net_yi": 5.51,
+    "fwd_ret": -0.498930862437623,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 14.35 元压力位 2.28%"
+    ]
+   },
+   {
+    "code": "603283",
+    "name": "赛腾股份",
+    "strats": [
+     "MultiPartyCannonStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 47.36,
+    "avg_amt20_wan": 74431.3,
+    "rsi": 53.3,
+    "res_price": 47.65,
+    "res_dist_pct": 0.61,
+    "res_touch": 18,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-01-08",
+       "title": "赛腾股份:苏州赛腾精密电子股份有限公司股东减持股份计划公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202601071816813049",
+       "url": "https://data.eastmoney.com/notices/detail/603283/AN202601071816813049.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-04-14",
+       "title": "赛腾股份:苏州赛腾精密电子股份有限公司股东减持股份结果公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202604131821151601",
+       "url": "https://data.eastmoney.com/notices/detail/603283/AN202604131821151601.html"
+      },
+      {
+       "date": "2026-04-11",
+       "title": "赛腾股份:苏州赛腾精密电子股份有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202604101821117034",
+       "url": "https://data.eastmoney.com/notices/detail/603283/AN202604101821117034.html"
+      },
+      {
+       "date": "2026-03-26",
+       "title": "赛腾股份:苏州赛腾精密电子股份有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202603251820743601",
+       "url": "https://data.eastmoney.com/notices/detail/603283/AN202603251820743601.html"
+      },
+      {
+       "date": "2026-02-28",
+       "title": "赛腾股份:苏州赛腾精密电子股份有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202602271820103343",
+       "url": "https://data.eastmoney.com/notices/detail/603283/AN202602271820103343.html"
+      }
+     ]
+    },
+    "industry": "专用设备",
+    "sector_net_yi": -9.63,
+    "fwd_ret": -3.1883445945945903,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "二级关注：赛腾股份:苏州赛腾精密电子股份有限公司股东减持股份计划公告",
+     "距上方 47.65 元压力位 0.61%"
+    ]
+   },
+   {
+    "code": "603345",
+    "name": "安井食品",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 79.48,
+    "avg_amt20_wan": 51372.0,
+    "rsi": 55.1,
+    "res_price": 80.5,
+    "res_dist_pct": 1.28,
+    "res_touch": 6,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "食品饮料",
+    "sector_net_yi": 3.95,
+    "fwd_ret": 0.2264720684448825,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 80.5 元压力位 1.28%"
+    ]
+   },
+   {
+    "code": "605507",
+    "name": "国邦医药",
+    "strats": [
+     "ResistanceBreakoutStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 18.17,
+    "avg_amt20_wan": 13783.4,
+    "rsi": 71.4,
+    "res_price": 18.4,
+    "res_dist_pct": 1.27,
+    "res_touch": 6,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "医药制造",
+    "sector_net_yi": -6.47,
+    "fwd_ret": 0.49532195927352696,
+    "exclude_reasons": [],
+    "watch_reasons": [
+     "距上方 18.4 元压力位 1.27%"
+    ]
+   }
+  ],
+  "exclude": [
+   {
+    "code": "000055",
+    "name": "方大集团",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 90,
+    "last_date": "2026-09-18",
+    "close": 3.75,
+    "avg_amt20_wan": 4544.6,
+    "rsi": 58.8,
+    "res_price": 3.81,
+    "res_dist_pct": 1.6,
+    "res_touch": 19,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "装修装饰",
+    "sector_net_yi": -3.24,
+    "fwd_ret": 0.266666666666661,
+    "exclude_reasons": [
+     "流动性不足（20日日均 4545 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": [
+     "距上方 3.81 元压力位 1.60%"
+    ]
+   },
+   {
+    "code": "002005",
+    "name": "德豪润达",
+    "strats": [
+     "GoldenTriangleStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 2.66,
+    "avg_amt20_wan": 4040.1,
+    "rsi": 68.7,
+    "res_price": 2.69,
+    "res_dist_pct": 1.13,
+    "res_touch": 6,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-09-08",
+       "title": "德豪润达:关于公司大股东减持计划时间届满暨减持股份结果公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202609071829101764",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202609071829101764.html"
+      },
+      {
+       "date": "2026-05-16",
+       "title": "ST德豪:关于公司大股东减持股份的预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202605151822353611",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202605151822353611.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-09-03",
+       "title": "德豪润达:关于大股东权益变动触及5%的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202609021828933878",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202609021828933878.html"
+      },
+      {
+       "date": "2026-07-29",
+       "title": "德豪润达:关于公司大股东权益变动触及1%整数倍的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202607281827420909",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607281827420909.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:北京中和谊资产评估有限公司对《关于对安徽德豪润达电气股份有限公司2025年年度报告的问询函》之核查意见",
+       "col": "保荐/核查意见",
+       "art": "AN202607101826881531",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881531.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:深圳亿通资产评估房地产土地估价有限公司对《关于对安徽德豪润达电气股份有限公司2025年年报的问询函》之核查意见",
+       "col": "保荐/核查意见",
+       "art": "AN202607101826881523",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881523.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:安徽德豪润达电气股份有限公司关于《2025年年度报告问询函》的回复之独立董事意见",
+       "col": "专项说明/独立意见",
+       "art": "AN202607101826881524",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881524.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:关于公司股票交易撤销其他风险警示暨停复牌的公告",
+       "col": "撤销其他特别处理 停牌公告 复牌公告",
+       "art": "AN202607101826881529",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881529.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:华兴会计师事务所对《关于对安徽德豪润达电气股份有限公司2025年年度报告的问询函》之核查意见",
+       "col": "保荐/核查意见",
+       "art": "AN202607101826881525",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881525.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:关于公司对深圳证券交易所2025年年报问询函回复的公告",
+       "col": "回复问询函公告",
+       "art": "AN202607101826881520",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881520.html"
+      },
+      {
+       "date": "2026-07-11",
+       "title": "ST德豪:北京国枫律师事务所对《关于对安徽德豪润达电气股份有限公司2025年年度报告的问询函》之核查意见",
+       "col": "保荐/核查意见",
+       "art": "AN202607101826881528",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881528.html"
+      },
+      {
+       "date": "2026-06-10",
+       "title": "ST德豪:关于公司大股东权益变动触及1%整数倍的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202606091823394685",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202606091823394685.html"
+      },
+      {
+       "date": "2026-05-21",
+       "title": "ST德豪:关于公司股票交易申请撤销其他风险警示的进展公告",
+       "col": "申请撤销风险警示及特别处理",
+       "art": "AN202605201822501238",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202605201822501238.html"
+      },
+      {
+       "date": "2026-04-28",
+       "title": "ST德豪:关于公司股票交易申请撤销其他风险警示的公告",
+       "col": "申请撤销风险警示及特别处理",
+       "art": "AN202604271821636987",
+       "url": "https://data.eastmoney.com/notices/detail/002005/AN202604271821636987.html"
+      }
+     ]
+    },
+    "industry": "家电行业",
+    "sector_net_yi": -4.43,
+    "fwd_ret": 0.7518796992481209,
+    "exclude_reasons": [
+     "流动性不足（20日日均 4040 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": [
+     "二级关注：德豪润达:关于公司大股东减持计划时间届满暨减持股份结果公告",
+     "距上方 2.69 元压力位 1.13%"
+    ]
+   },
+   {
+    "code": "603693",
+    "name": "江苏新能",
+    "strats": [
+     "LimitUpPullbackStrategy"
+    ],
+    "score": 85,
+    "last_date": "2026-09-18",
+    "close": 12.44,
+    "avg_amt20_wan": 14716.4,
+    "rsi": 56.7,
+    "res_price": 12.61,
+    "res_dist_pct": 1.37,
+    "res_touch": 20,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-05-13",
+       "title": "江苏新能:江苏新能关于控股子公司收到行政处罚决定书的公告",
+       "col": "其他",
+       "art": "AN202605121822214674",
+       "url": "https://data.eastmoney.com/notices/detail/603693/AN202605121822214674.html",
+       "kw": "行政处罚"
+      }
+     ],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "电力行业",
+    "sector_net_yi": -25.8,
+    "fwd_ret": -2.6527331189710615,
+    "exclude_reasons": [
+     "一级利空（行政处罚）：江苏新能:江苏新能关于控股子公司收到行政处罚决定书的公告"
+    ],
+    "watch_reasons": [
+     "距上方 12.61 元压力位 1.37%"
+    ]
+   },
+   {
+    "code": "600639",
+    "name": "浦东金桥",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 80,
+    "last_date": "2026-09-18",
+    "close": 9.85,
+    "avg_amt20_wan": 4088.3,
+    "rsi": 64.8,
+    "res_price": 9.9,
+    "res_dist_pct": 0.51,
+    "res_touch": 18,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "房地产",
+    "sector_net_yi": 39.95,
+    "fwd_ret": -2.030456852791871,
+    "exclude_reasons": [
+     "流动性不足（20日日均 4088 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": [
+     "距上方 9.9 元压力位 0.51%"
+    ]
+   },
+   {
+    "code": "000910",
+    "name": "大亚圣象",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 5.69,
+    "avg_amt20_wan": 2490.9,
+    "rsi": 62.3,
+    "res_price": 5.74,
+    "res_dist_pct": 0.88,
+    "res_touch": 4,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-07-07",
+       "title": "大亚圣象:关于公司董事、高级管理人员提前终止股份减持计划的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202607061826753506",
+       "url": "https://data.eastmoney.com/notices/detail/000910/AN202607061826753506.html"
+      },
+      {
+       "date": "2026-06-10",
+       "title": "大亚圣象:关于公司董事、高级管理人员减持股份的预披露公告",
+       "col": "高管人员持股变动 股东/实际控制人股份减持",
+       "art": "AN202606091823397073",
+       "url": "https://data.eastmoney.com/notices/detail/000910/AN202606091823397073.html"
+      },
+      {
+       "date": "2026-01-05",
+       "title": "大亚圣象:关于公司董事、高级管理人员减持计划实施完成的公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202601041814692781",
+       "url": "https://data.eastmoney.com/notices/detail/000910/AN202601041814692781.html"
+      },
+      {
+       "date": "2025-09-16",
+       "title": "大亚圣象:关于公司董事、高级管理人员减持股份的预披露公告",
+       "col": "高管人员持股变动 股东/实际控制人股份减持",
+       "art": "AN202509151744297591",
+       "url": "https://data.eastmoney.com/notices/detail/000910/AN202509151744297591.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "木业家具",
+    "sector_net_yi": -0.46,
+    "fwd_ret": 21.089630931458686,
+    "exclude_reasons": [
+     "流动性不足（20日日均 2491 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": [
+     "二级关注：大亚圣象:关于公司董事、高级管理人员提前终止股份减持计划的公告",
+     "距上方 5.74 元压力位 0.88%"
+    ]
+   },
+   {
+    "code": "600847",
+    "name": "万里股份",
+    "strats": [
+     "TrendStartStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 13.92,
+    "avg_amt20_wan": 3241.0,
+    "rsi": 65.0,
+    "res_price": 14.2,
+    "res_dist_pct": 2.01,
+    "res_touch": 9,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-07-15",
+       "title": "万里股份:万里股份2026年半年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202607141826961692",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202607141826961692.html",
+       "kw": "业绩预亏"
+      },
+      {
+       "date": "2026-01-20",
+       "title": "万里股份:万里股份2025年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202601191818108518",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202601191818108518.html",
+       "kw": "业绩预亏"
+      }
+     ],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-09-01",
+       "title": "万里股份:万里股份关于持股5%以上股东及其控制账户权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202608311828808427",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202608311828808427.html"
+      },
+      {
+       "date": "2026-08-26",
+       "title": "万里股份:万里股份关于持股5%以上股东及其控制账户权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202608251828418875",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202608251828418875.html"
+      },
+      {
+       "date": "2026-04-11",
+       "title": "万里股份:万里股份关于公司仲裁事项进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202604101821119344",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202604101821119344.html"
+      },
+      {
+       "date": "2026-03-27",
+       "title": "万里股份:万里股份关于控股股东诉讼事项进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202603261820768603",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202603261820768603.html"
+      },
+      {
+       "date": "2025-09-24",
+       "title": "万里股份:万里股份关于公司仲裁事项执行进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202509231749128303",
+       "url": "https://data.eastmoney.com/notices/detail/600847/AN202509231749128303.html"
+      }
+     ]
+    },
+    "industry": "电池",
+    "sector_net_yi": 49.03,
+    "fwd_ret": -4.094827586206899,
+    "exclude_reasons": [
+     "流动性不足（20日日均 3241 万，低于 5000 万门槛）",
+     "一级利空（业绩预亏）：万里股份:万里股份2026年半年度业绩预亏公告"
+    ],
+    "watch_reasons": [
+     "距上方 14.2 元压力位 2.01%"
+    ]
+   },
+   {
+    "code": "603232",
+    "name": "格尔软件",
+    "strats": [
+     "TrendStartStrategy",
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 16.31,
+    "avg_amt20_wan": 15517.2,
+    "rsi": 58.7,
+    "res_price": 16.7,
+    "res_dist_pct": 2.39,
+    "res_touch": 10,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-07-15",
+       "title": "格尔软件:格尔软件股份有限公司2026年半年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202607141826956916",
+       "url": "https://data.eastmoney.com/notices/detail/603232/AN202607141826956916.html",
+       "kw": "业绩预亏"
+      }
+     ],
+     "S2": [
+      {
+       "date": "2026-08-19",
+       "title": "格尔软件:格尔软件股份有限公司股东减持股份计划公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202608181828113582",
+       "url": "https://data.eastmoney.com/notices/detail/603232/AN202608181828113582.html"
+      }
+     ],
+     "S3": [
+      {
+       "date": "2026-08-04",
+       "title": "格尔软件:格尔软件股份有限公司关于诉讼进展的公告",
+       "col": "诉讼仲裁",
+       "art": "AN202608031827585494",
+       "url": "https://data.eastmoney.com/notices/detail/603232/AN202608031827585494.html"
+      }
+     ]
+    },
+    "industry": "软件服务",
+    "sector_net_yi": -91.75,
+    "fwd_ret": -0.5518087063151432,
+    "exclude_reasons": [
+     "一级利空（业绩预亏）：格尔软件:格尔软件股份有限公司2026年半年度业绩预亏公告"
+    ],
+    "watch_reasons": [
+     "二级关注：格尔软件:格尔软件股份有限公司股东减持股份计划公告",
+     "距上方 16.7 元压力位 2.39%"
+    ]
+   },
+   {
+    "code": "603759",
+    "name": "海天股份",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 75,
+    "last_date": "2026-09-18",
+    "close": 7.8,
+    "avg_amt20_wan": 4110.7,
+    "rsi": 60.0,
+    "res_price": 7.85,
+    "res_dist_pct": 0.64,
+    "res_touch": 5,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-05-23",
+       "title": "海天股份:关于子公司提起上诉案件受理立案暨诉讼的进展公告",
+       "col": "其他",
+       "art": "AN202605221822689191",
+       "url": "https://data.eastmoney.com/notices/detail/603759/AN202605221822689191.html"
+      }
+     ]
+    },
+    "industry": "公用事业",
+    "sector_net_yi": -1.71,
+    "fwd_ret": 0.2564102564102623,
+    "exclude_reasons": [
+     "流动性不足（20日日均 4111 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": [
+     "距上方 7.85 元压力位 0.64%"
+    ]
+   },
+   {
+    "code": "002836",
+    "name": "新宏泽",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 11.92,
+    "avg_amt20_wan": 4391.2,
+    "rsi": 71.7,
+    "res_price": 11.988,
+    "res_dist_pct": 0.57,
+    "res_touch": 4,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [
+      {
+       "date": "2026-06-23",
+       "title": "新宏泽:关于控股股东拟减持股份的预披露公告",
+       "col": "股东/实际控制人股份减持",
+       "art": "AN202606221823745757",
+       "url": "https://data.eastmoney.com/notices/detail/002836/AN202606221823745757.html"
+      }
+     ],
+     "S3": []
+    },
+    "industry": "造纸印刷",
+    "sector_net_yi": -4.59,
+    "fwd_ret": -6.54362416107382,
+    "exclude_reasons": [
+     "流动性不足（20日日均 4391 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": [
+     "二级关注：新宏泽:关于控股股东拟减持股份的预披露公告",
+     "距上方 11.988 元压力位 0.57%"
+    ]
+   },
+   {
+    "code": "600088",
+    "name": "中视传媒",
+    "strats": [
+     "StrongWashWeakToStrongStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 15.76,
+    "avg_amt20_wan": 31001.3,
+    "rsi": 72.2,
+    "res_price": 15.95,
+    "res_dist_pct": 1.21,
+    "res_touch": 9,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-07-15",
+       "title": "中视传媒:中视传媒股份有限公司2026年半年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202607141826955275",
+       "url": "https://data.eastmoney.com/notices/detail/600088/AN202607141826955275.html",
+       "kw": "业绩预亏"
+      },
+      {
+       "date": "2026-01-23",
+       "title": "中视传媒:中视传媒股份有限公司2025年年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202601221818276522",
+       "url": "https://data.eastmoney.com/notices/detail/600088/AN202601221818276522.html",
+       "kw": "业绩预亏"
+      }
+     ],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "文化传媒",
+    "sector_net_yi": -7.35,
+    "fwd_ret": -3.743654822335025,
+    "exclude_reasons": [
+     "一级利空（业绩预亏）：中视传媒:中视传媒股份有限公司2026年半年度业绩预亏公告"
+    ],
+    "watch_reasons": [
+     "距上方 15.95 元压力位 1.21%"
+    ]
+   },
+   {
+    "code": "600246",
+    "name": "万通发展",
+    "strats": [],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 13.7,
+    "avg_amt20_wan": 128936.4,
+    "rsi": 57.4,
+    "res_price": 13.98,
+    "res_dist_pct": 2.04,
+    "res_touch": 7,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-07-15",
+       "title": "万通发展:2026年半年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202607141826962226",
+       "url": "https://data.eastmoney.com/notices/detail/600246/AN202607141826962226.html",
+       "kw": "业绩预亏"
+      }
+     ],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-05-09",
+       "title": "万通发展:关于控股股东的一致行动人所持部分股份完成非交易过户暨权益变动触及1%刻度的提示性公告",
+       "col": "权益变动报告书",
+       "art": "AN202605081822078624",
+       "url": "https://data.eastmoney.com/notices/detail/600246/AN202605081822078624.html"
+      }
+     ]
+    },
+    "industry": "房地产",
+    "sector_net_yi": 39.95,
+    "fwd_ret": 6.8613138686131485,
+    "exclude_reasons": [
+     "一级利空（业绩预亏）：万通发展:2026年半年度业绩预亏公告"
+    ],
+    "watch_reasons": [
+     "距上方 13.98 元压力位 2.04%"
+    ]
+   },
+   {
+    "code": "600719",
+    "name": "大连热电",
+    "strats": [
+     "WBottomStrategy"
+    ],
+    "score": 65,
+    "last_date": "2026-09-18",
+    "close": 8.42,
+    "avg_amt20_wan": 10473.1,
+    "rsi": 70.7,
+    "res_price": 9.09,
+    "res_dist_pct": 7.96,
+    "res_touch": 9,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-01-17",
+       "title": "大连热电:大连热电股份有限公司2025年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202601161817721714",
+       "url": "https://data.eastmoney.com/notices/detail/600719/AN202601161817721714.html",
+       "kw": "业绩预亏"
+      },
+      {
+       "date": "2026-01-10",
+       "title": "大连热电:临2026-001大连热电股份有限公司2025年年度业绩预亏的提示性公告",
+       "col": "业绩预告",
+       "art": "AN202601091816887827",
+       "url": "https://data.eastmoney.com/notices/detail/600719/AN202601091816887827.html",
+       "kw": "业绩预亏"
+      }
+     ],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-05-16",
+       "title": "大连热电:大连热电股份有限公司关于2026年第一次临时股东会更正补充公告",
+       "col": "其他",
+       "art": "AN202605151822344569",
+       "url": "https://data.eastmoney.com/notices/detail/600719/AN202605151822344569.html"
+      }
+     ]
+    },
+    "industry": "电力行业",
+    "sector_net_yi": -25.8,
+    "fwd_ret": -4.156769596199521,
+    "exclude_reasons": [
+     "一级利空（业绩预亏）：大连热电:大连热电股份有限公司2025年度业绩预亏公告"
+    ],
+    "watch_reasons": []
+   },
+   {
+    "code": "001238",
+    "name": "浙江正特",
+    "strats": [
+     "Strategy2560Selection"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 26.31,
+    "avg_amt20_wan": 1443.2,
+    "rsi": 61.5,
+    "res_price": 27.27,
+    "res_dist_pct": 3.65,
+    "res_touch": 5,
+    "ann_raw": [],
+    "ann": {
+     "S1": [],
+     "S2": [],
+     "S3": []
+    },
+    "industry": "装修建材",
+    "sector_net_yi": -3.24,
+    "fwd_ret": -0.6841505131128838,
+    "exclude_reasons": [
+     "流动性不足（20日日均 1443 万，低于 5000 万门槛）"
+    ],
+    "watch_reasons": []
+   },
+   {
+    "code": "600448",
+    "name": "华纺股份",
+    "strats": [
+     "MultiGoldenCrossStrategy"
+    ],
+    "score": 60,
+    "last_date": "2026-09-18",
+    "close": 3.54,
+    "avg_amt20_wan": 5813.3,
+    "rsi": 75.3,
+    "res_price": 3.59,
+    "res_dist_pct": 1.41,
+    "res_touch": 12,
+    "ann_raw": [],
+    "ann": {
+     "S1": [
+      {
+       "date": "2026-07-15",
+       "title": "华纺股份:2026年半年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202607141826958011",
+       "url": "https://data.eastmoney.com/notices/detail/600448/AN202607141826958011.html",
+       "kw": "业绩预亏"
+      },
+      {
+       "date": "2026-01-31",
+       "title": "华纺股份:2025年年度业绩预亏公告",
+       "col": "业绩预告",
+       "art": "AN202601301818580703",
+       "url": "https://data.eastmoney.com/notices/detail/600448/AN202601301818580703.html",
+       "kw": "业绩预亏"
+      }
+     ],
+     "S2": [],
+     "S3": [
+      {
+       "date": "2026-07-14",
+       "title": "华纺股份:会计师关于华纺股份有限公司2025年年报问询函的回复",
+       "col": "回复问询函公告",
+       "art": "AN202607131826933497",
+       "url": "https://data.eastmoney.com/notices/detail/600448/AN202607131826933497.html"
+      },
+      {
+       "date": "2026-07-14",
+       "title": "华纺股份:关于《上海证券交易所关于2025年年度报告信息披露监管问询函》的复函",
+       "col": "回复问询函公告",
+       "art": "AN202607131826933502",
+       "url": "https://data.eastmoney.com/notices/detail/600448/AN202607131826933502.html"
+      }
+     ]
+    },
+    "industry": "纺织服装",
+    "sector_net_yi": -4.91,
+    "fwd_ret": 1.12994350282486,
+    "exclude_reasons": [
+     "一级利空（业绩预亏）：华纺股份:2026年半年度业绩预亏公告"
+    ],
+    "watch_reasons": [
+     "RSI 75.3 超买，禁止追涨，只观察回踩",
+     "距上方 3.59 元压力位 1.41%"
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "code": "002137",
+   "name": "实益达",
+   "strats": [
+    "WBottomStrategy",
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 95,
+   "last_date": "2026-09-18",
+   "close": 8.67,
+   "avg_amt20_wan": 21152.5,
+   "rsi": 66.6,
+   "res_price": 8.81,
+   "res_dist_pct": 1.61,
+   "res_touch": 13,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-07-14",
+      "title": "实益达:关于控股股东及其一致行动人减持股份预披露的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202607131826935907",
+      "url": "https://data.eastmoney.com/notices/detail/002137/AN202607131826935907.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "电子元件",
+   "sector_net_yi": 49.03,
+   "fwd_ret": -1.9607843137254894,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：实益达:关于控股股东及其一致行动人减持股份预披露的公告",
+    "距上方 8.81 元压力位 1.61%"
+   ]
+  },
+  {
+   "code": "000055",
+   "name": "方大集团",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 90,
+   "last_date": "2026-09-18",
+   "close": 3.75,
+   "avg_amt20_wan": 4544.6,
+   "rsi": 58.8,
+   "res_price": 3.81,
+   "res_dist_pct": 1.6,
+   "res_touch": 19,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "装修装饰",
+   "sector_net_yi": -3.24,
+   "fwd_ret": 0.266666666666661,
+   "exclude_reasons": [
+    "流动性不足（20日日均 4545 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": [
+    "距上方 3.81 元压力位 1.60%"
+   ]
+  },
+  {
+   "code": "000782",
+   "name": "恒申新材",
+   "strats": [
+    "GoldenTriangleStrategy"
+   ],
+   "score": 90,
+   "last_date": "2026-09-18",
+   "close": 8.12,
+   "avg_amt20_wan": 11504.6,
+   "rsi": 61.4,
+   "res_price": 8.2,
+   "res_dist_pct": 0.99,
+   "res_touch": 17,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-09-15",
+      "title": "恒申新材:关于持股5%以上股东部分股份被司法拍卖的进展公告",
+      "col": "诉讼仲裁 收购出售资产/股权",
+      "art": "AN202609141829372208",
+      "url": "https://data.eastmoney.com/notices/detail/000782/AN202609141829372208.html"
+     },
+     {
+      "date": "2026-09-12",
+      "title": "恒申新材:关于持股5%以上股东部分股份被司法拍卖的提示性公告",
+      "col": "诉讼仲裁 收购出售资产/股权",
+      "art": "AN202609111829275817",
+      "url": "https://data.eastmoney.com/notices/detail/000782/AN202609111829275817.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "化纤行业",
+   "sector_net_yi": -2.29,
+   "fwd_ret": 1.8472906403940934,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：恒申新材:关于持股5%以上股东部分股份被司法拍卖的进展公告",
+    "距上方 8.2 元压力位 0.99%"
+   ]
+  },
+  {
+   "code": "002388",
+   "name": "新亚制程",
+   "strats": [
+    "GoldenTriangleStrategy"
+   ],
+   "score": 90,
+   "last_date": "2026-09-18",
+   "close": 7.23,
+   "avg_amt20_wan": 25641.8,
+   "rsi": 68.6,
+   "res_price": 7.35,
+   "res_dist_pct": 1.66,
+   "res_touch": 2,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-08-27",
+      "title": "新亚制程:关于诉讼进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608261828491601",
+      "url": "https://data.eastmoney.com/notices/detail/002388/AN202608261828491601.html"
+     },
+     {
+      "date": "2026-08-07",
+      "title": "新亚制程:关于公司涉及诉讼暨诉讼进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608061827720616",
+      "url": "https://data.eastmoney.com/notices/detail/002388/AN202608061827720616.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "新亚制程:关于诉讼进展暨终审判决的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202607101826876085",
+      "url": "https://data.eastmoney.com/notices/detail/002388/AN202607101826876085.html"
+     },
+     {
+      "date": "2026-07-08",
+      "title": "新亚制程:关于诉讼进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202607071826776811",
+      "url": "https://data.eastmoney.com/notices/detail/002388/AN202607071826776811.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "新亚制程:关于子公司新增诉讼、达成调解暨逾期事项签署还款协议的公告",
+      "col": "签订协议 诉讼仲裁",
+      "art": "AN202606171823641970",
+      "url": "https://data.eastmoney.com/notices/detail/002388/AN202606171823641970.html"
+     }
+    ]
+   },
+   "industry": "电子元件",
+   "sector_net_yi": 49.03,
+   "fwd_ret": 9.958506224066387,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 7.35 元压力位 1.66%"
+   ]
+  },
+  {
+   "code": "002806",
+   "name": "华锋股份",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 90,
+   "last_date": "2026-09-18",
+   "close": 15.02,
+   "avg_amt20_wan": 10108.7,
+   "rsi": 55.3,
+   "res_price": 15.63,
+   "res_dist_pct": 4.06,
+   "res_touch": 8,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "汽车零部件",
+   "sector_net_yi": 5.51,
+   "fwd_ret": 2.3968042609853613,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "A"
+  },
+  {
+   "code": "603155",
+   "name": "新亚强",
+   "strats": [
+    "WBottomStrategy"
+   ],
+   "score": 90,
+   "last_date": "2026-09-18",
+   "close": 15.09,
+   "avg_amt20_wan": 15431.0,
+   "rsi": 60.0,
+   "res_price": 15.3,
+   "res_dist_pct": 1.39,
+   "res_touch": 6,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-06-23",
+      "title": "新亚强:关于持股5%以上股东减持计划期限届满暨减持股份结果公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606221823745518",
+      "url": "https://data.eastmoney.com/notices/detail/603155/AN202606221823745518.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-05-19",
+      "title": "新亚强:关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202605181822409383",
+      "url": "https://data.eastmoney.com/notices/detail/603155/AN202605181822409383.html"
+     }
+    ]
+   },
+   "industry": "化工行业",
+   "sector_net_yi": -2.31,
+   "fwd_ret": 1.3253810470510223,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：新亚强:关于持股5%以上股东减持计划期限届满暨减持股份结果公告",
+    "距上方 15.3 元压力位 1.39%"
+   ]
+  },
+  {
+   "code": "002005",
+   "name": "德豪润达",
+   "strats": [
+    "GoldenTriangleStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 2.66,
+   "avg_amt20_wan": 4040.1,
+   "rsi": 68.7,
+   "res_price": 2.69,
+   "res_dist_pct": 1.13,
+   "res_touch": 6,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-09-08",
+      "title": "德豪润达:关于公司大股东减持计划时间届满暨减持股份结果公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202609071829101764",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202609071829101764.html"
+     },
+     {
+      "date": "2026-05-16",
+      "title": "ST德豪:关于公司大股东减持股份的预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202605151822353611",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202605151822353611.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-09-03",
+      "title": "德豪润达:关于大股东权益变动触及5%的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202609021828933878",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202609021828933878.html"
+     },
+     {
+      "date": "2026-07-29",
+      "title": "德豪润达:关于公司大股东权益变动触及1%整数倍的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202607281827420909",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607281827420909.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:北京中和谊资产评估有限公司对《关于对安徽德豪润达电气股份有限公司2025年年度报告的问询函》之核查意见",
+      "col": "保荐/核查意见",
+      "art": "AN202607101826881531",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881531.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:深圳亿通资产评估房地产土地估价有限公司对《关于对安徽德豪润达电气股份有限公司2025年年报的问询函》之核查意见",
+      "col": "保荐/核查意见",
+      "art": "AN202607101826881523",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881523.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:安徽德豪润达电气股份有限公司关于《2025年年度报告问询函》的回复之独立董事意见",
+      "col": "专项说明/独立意见",
+      "art": "AN202607101826881524",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881524.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:关于公司股票交易撤销其他风险警示暨停复牌的公告",
+      "col": "撤销其他特别处理 停牌公告 复牌公告",
+      "art": "AN202607101826881529",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881529.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:华兴会计师事务所对《关于对安徽德豪润达电气股份有限公司2025年年度报告的问询函》之核查意见",
+      "col": "保荐/核查意见",
+      "art": "AN202607101826881525",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881525.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:关于公司对深圳证券交易所2025年年报问询函回复的公告",
+      "col": "回复问询函公告",
+      "art": "AN202607101826881520",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881520.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "ST德豪:北京国枫律师事务所对《关于对安徽德豪润达电气股份有限公司2025年年度报告的问询函》之核查意见",
+      "col": "保荐/核查意见",
+      "art": "AN202607101826881528",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202607101826881528.html"
+     },
+     {
+      "date": "2026-06-10",
+      "title": "ST德豪:关于公司大股东权益变动触及1%整数倍的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202606091823394685",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202606091823394685.html"
+     },
+     {
+      "date": "2026-05-21",
+      "title": "ST德豪:关于公司股票交易申请撤销其他风险警示的进展公告",
+      "col": "申请撤销风险警示及特别处理",
+      "art": "AN202605201822501238",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202605201822501238.html"
+     },
+     {
+      "date": "2026-04-28",
+      "title": "ST德豪:关于公司股票交易申请撤销其他风险警示的公告",
+      "col": "申请撤销风险警示及特别处理",
+      "art": "AN202604271821636987",
+      "url": "https://data.eastmoney.com/notices/detail/002005/AN202604271821636987.html"
+     }
+    ]
+   },
+   "industry": "家电行业",
+   "sector_net_yi": -4.43,
+   "fwd_ret": 0.7518796992481209,
+   "exclude_reasons": [
+    "流动性不足（20日日均 4040 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": [
+    "二级关注：德豪润达:关于公司大股东减持计划时间届满暨减持股份结果公告",
+    "距上方 2.69 元压力位 1.13%"
+   ]
+  },
+  {
+   "code": "002120",
+   "name": "韵达股份",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 6.97,
+   "avg_amt20_wan": 19817.5,
+   "rsi": 62.4,
+   "res_price": 7.02,
+   "res_dist_pct": 0.72,
+   "res_touch": 24,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-07-07",
+      "title": "韵达股份:关于控股股东及其一致行动人权益变动触及1%整数倍的公告",
+      "col": "权益变动报告书",
+      "art": "AN202607061826752009",
+      "url": "https://data.eastmoney.com/notices/detail/002120/AN202607061826752009.html"
+     }
+    ]
+   },
+   "industry": "交运物流",
+   "sector_net_yi": null,
+   "fwd_ret": -1.4347202295552317,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 7.02 元压力位 0.72%"
+   ]
+  },
+  {
+   "code": "002232",
+   "name": "启明信息",
+   "strats": [
+    "ResistanceBreakoutStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 15.48,
+   "avg_amt20_wan": 11592.9,
+   "rsi": 57.2,
+   "res_price": 15.89,
+   "res_dist_pct": 2.65,
+   "res_touch": 6,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "互联网服务",
+   "sector_net_yi": -91.75,
+   "fwd_ret": 0.9043927648578732,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 15.89 元压力位 2.65%"
+   ]
+  },
+  {
+   "code": "002285",
+   "name": "世联行",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 2.89,
+   "avg_amt20_wan": 27518.8,
+   "rsi": 70.1,
+   "res_price": 3.05,
+   "res_dist_pct": 5.54,
+   "res_touch": 12,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-07-09",
+      "title": "世联行:关于累计诉讼情况的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202607081826816975",
+      "url": "https://data.eastmoney.com/notices/detail/002285/AN202607081826816975.html"
+     }
+    ]
+   },
+   "industry": "房地产服务",
+   "sector_net_yi": 39.95,
+   "fwd_ret": 10.726643598615919,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "B"
+  },
+  {
+   "code": "002762",
+   "name": "金发拉比",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 10.18,
+   "avg_amt20_wan": 7923.7,
+   "rsi": 60.5,
+   "res_price": 10.53,
+   "res_dist_pct": 3.44,
+   "res_touch": 7,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-08-27",
+      "title": "金发拉比:关于强制执行暨仲裁事项的进展公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608261828476542",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202608261828476542.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "*ST金比:2026-033号关于对深圳证券交易所2025年年报问询函回复的公告",
+      "col": "回复问询函公告",
+      "art": "AN202606171823640711",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640711.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "*ST金比:关于对深圳证券交易所2025年年报问询函(二)回复的公告",
+      "col": "回复问询函公告",
+      "art": "AN202606171823640704",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640704.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "*ST金比:2026-032号关于公司股票交易撤销退市风险警示暨停复牌的公告",
+      "col": "撤销退市风险警示 停牌公告 复牌公告 其它风险提示公告",
+      "art": "AN202606171823640716",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640716.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "*ST金比:关于对深圳证券交易所2025年年报问询函(二)回复之附件关于商誉减值测试说明",
+      "col": "回复问询函公告",
+      "art": "AN202606171823640706",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640706.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "*ST金比:华兴会计师事务所(特殊普通合伙)关于对金发拉比妇婴童用品股份有限公司2025年年报问询函的回复",
+      "col": "会计师事务所问询函回复公告",
+      "art": "AN202606171823640709",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640709.html"
+     },
+     {
+      "date": "2026-06-18",
+      "title": "*ST金比:华兴会计师事务所(特殊普通合伙)关于对金发拉比妇婴童用品股份有限公司2025年年报问询函(二)的回复",
+      "col": "会计师事务所问询函回复公告",
+      "art": "AN202606171823640707",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202606171823640707.html"
+     },
+     {
+      "date": "2026-05-20",
+      "title": "*ST金比:关于向深交所申请撤销退市风险警示的进展公告",
+      "col": "申请撤销风险警示及特别处理 其它风险提示公告",
+      "art": "AN202605191822444058",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202605191822444058.html"
+     },
+     {
+      "date": "2026-04-16",
+      "title": "*ST金比:关于申请撤销退市风险警示的公告",
+      "col": "申请撤销风险警示及特别处理 其它风险提示公告",
+      "art": "AN202604151821246807",
+      "url": "https://data.eastmoney.com/notices/detail/002762/AN202604151821246807.html"
+     }
+    ]
+   },
+   "industry": "纺织服装",
+   "sector_net_yi": -4.91,
+   "fwd_ret": 2.5540275049115895,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "C"
+  },
+  {
+   "code": "600261",
+   "name": "阳光照明",
+   "strats": [
+    "Strategy2560Selection",
+    "TrendStartStrategy",
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 3.51,
+   "avg_amt20_wan": 5027.2,
+   "rsi": 69.8,
+   "res_price": 3.538,
+   "res_dist_pct": 0.81,
+   "res_touch": 17,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-04-21",
+      "title": "阳光照明:阳光照明2025年度商誉减值测试报告",
+      "col": "其他",
+      "art": "AN202604201821341202",
+      "url": "https://data.eastmoney.com/notices/detail/600261/AN202604201821341202.html"
+     }
+    ]
+   },
+   "industry": "家电行业",
+   "sector_net_yi": -4.43,
+   "fwd_ret": -1.4245014245014196,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 3.538 元压力位 0.81%"
+   ]
+  },
+  {
+   "code": "600545",
+   "name": "卓郎智能",
+   "strats": [
+    "WBottomStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 4.55,
+   "avg_amt20_wan": 38993.0,
+   "rsi": 55.4,
+   "res_price": 4.62,
+   "res_dist_pct": 1.54,
+   "res_touch": 8,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-08-08",
+      "title": "卓郎智能:关于上海证券交易所对公司2025年年度报告的信息披露监管问询函回复的公告",
+      "col": "回复问询函公告",
+      "art": "AN202608071827754794",
+      "url": "https://data.eastmoney.com/notices/detail/600545/AN202608071827754794.html"
+     },
+     {
+      "date": "2026-08-08",
+      "title": "卓郎智能:天衡会计师事务所(特殊普通合伙)关于卓郎智能技术股份有限公司2025年年度报告的信息披露监管工作函的回复",
+      "col": "会计师事务所问询函回复公告 会计师事务所关注函回复公告 监管工作函回复公告",
+      "art": "AN202608071827754793",
+      "url": "https://data.eastmoney.com/notices/detail/600545/AN202608071827754793.html"
+     },
+     {
+      "date": "2026-07-18",
+      "title": "卓郎智能:关于控股股东被动减持股份结果的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202607171827061813",
+      "url": "https://data.eastmoney.com/notices/detail/600545/AN202607171827061813.html"
+     },
+     {
+      "date": "2026-07-01",
+      "title": "卓郎智能:关于控股股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202606301826599549",
+      "url": "https://data.eastmoney.com/notices/detail/600545/AN202606301826599549.html"
+     },
+     {
+      "date": "2026-06-23",
+      "title": "卓郎智能:关于控股股东被动减持股份的提示性公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606221823741222",
+      "url": "https://data.eastmoney.com/notices/detail/600545/AN202606221823741222.html"
+     }
+    ]
+   },
+   "industry": "专用设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -1.098901098901095,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 4.62 元压力位 1.54%"
+   ]
+  },
+  {
+   "code": "600593",
+   "name": "大连圣亚",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 44.15,
+   "avg_amt20_wan": 23762.2,
+   "rsi": 66.1,
+   "res_price": 46.23,
+   "res_dist_pct": 4.71,
+   "res_touch": 1,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-08-29",
+      "title": "大连圣亚:关于诉讼、仲裁进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608281828630827",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202608281828630827.html"
+     },
+     {
+      "date": "2026-07-14",
+      "title": "大连圣亚:关于向特定对象发行股票申请文件的审核问询函回复及募集说明书等文件更新的提示性公告",
+      "col": "回复问询函公告",
+      "art": "AN202607131826932917",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202607131826932917.html"
+     },
+     {
+      "date": "2026-07-14",
+      "title": "大连圣亚:广东司农会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复",
+      "col": "会计师事务所问询函回复公告",
+      "art": "AN202607131826932926",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202607131826932926.html"
+     },
+     {
+      "date": "2026-07-14",
+      "title": "大连圣亚:关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函的回复(修订稿)",
+      "col": "回复问询函公告",
+      "art": "AN202607131826932919",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202607131826932919.html"
+     },
+     {
+      "date": "2026-06-12",
+      "title": "7-2立信中联会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复(大连圣亚旅游控股股份有限公司)",
+      "col": "沪主板再融资问询与回复",
+      "art": "AN202606121823517913",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202606121823517913.html"
+     },
+     {
+      "date": "2026-06-03",
+      "title": "大连圣亚:关于向特定对象发行股票申请文件的审核问询函回复及募集说明书等文件更新的提示性公告",
+      "col": "回复问询函公告",
+      "art": "AN202606021823166669",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202606021823166669.html"
+     },
+     {
+      "date": "2026-06-03",
+      "title": "大连圣亚:关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函的回复(修订稿)",
+      "col": "回复问询函公告",
+      "art": "AN202606021823166671",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202606021823166671.html"
+     },
+     {
+      "date": "2026-06-03",
+      "title": "大连圣亚:立信中联会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复",
+      "col": "会计师事务所问询函回复公告",
+      "art": "AN202606021823166666",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202606021823166666.html"
+     },
+     {
+      "date": "2026-04-23",
+      "title": "大连圣亚:关于向特定对象发行股票申请文件的审核问询函回复及募集说明书等申请文件更新的提示性公告",
+      "col": "回复问询函公告",
+      "art": "AN202604221821461524",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202604221821461524.html"
+     },
+     {
+      "date": "2026-04-23",
+      "title": "大连圣亚:立信中联会计师事务所(特殊普通合伙)《关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函》的回复",
+      "col": "会计师事务所问询函回复公告",
+      "art": "AN202604221821461529",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202604221821461529.html"
+     },
+     {
+      "date": "2026-04-23",
+      "title": "大连圣亚:关于大连圣亚旅游控股股份有限公司向特定对象发行股票申请文件的审核问询函的回复",
+      "col": "回复问询函公告",
+      "art": "AN202604221821461525",
+      "url": "https://data.eastmoney.com/notices/detail/600593/AN202604221821461525.html"
+     }
+    ]
+   },
+   "industry": "旅游酒店",
+   "sector_net_yi": -4.11,
+   "fwd_ret": 6.727066817667042,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "B"
+  },
+  {
+   "code": "603693",
+   "name": "江苏新能",
+   "strats": [
+    "LimitUpPullbackStrategy"
+   ],
+   "score": 85,
+   "last_date": "2026-09-18",
+   "close": 12.44,
+   "avg_amt20_wan": 14716.4,
+   "rsi": 56.7,
+   "res_price": 12.61,
+   "res_dist_pct": 1.37,
+   "res_touch": 20,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-05-13",
+      "title": "江苏新能:江苏新能关于控股子公司收到行政处罚决定书的公告",
+      "col": "其他",
+      "art": "AN202605121822214674",
+      "url": "https://data.eastmoney.com/notices/detail/603693/AN202605121822214674.html",
+      "kw": "行政处罚"
+     }
+    ],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "电力行业",
+   "sector_net_yi": -25.8,
+   "fwd_ret": -2.6527331189710615,
+   "exclude_reasons": [
+    "一级利空（行政处罚）：江苏新能:江苏新能关于控股子公司收到行政处罚决定书的公告"
+   ],
+   "watch_reasons": [
+    "距上方 12.61 元压力位 1.37%"
+   ]
+  },
+  {
+   "code": "000719",
+   "name": "中原传媒",
+   "strats": [
+    "GoldenCrossNotGreenStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 12.24,
+   "avg_amt20_wan": 6315.3,
+   "rsi": 52.2,
+   "res_price": 12.31,
+   "res_dist_pct": 0.57,
+   "res_touch": 47,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "文化传媒",
+   "sector_net_yi": -7.35,
+   "fwd_ret": 0.8986928104575118,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 12.31 元压力位 0.57%"
+   ]
+  },
+  {
+   "code": "002298",
+   "name": "中电鑫龙",
+   "strats": [
+    "GoldenCrossNotGreenStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 9.0,
+   "avg_amt20_wan": 29085.2,
+   "rsi": 60.6,
+   "res_price": 9.36,
+   "res_dist_pct": 4.0,
+   "res_touch": 7,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-08-25",
+      "title": "中电鑫龙:关于董事减持股份预披露的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202608241828371314",
+      "url": "https://data.eastmoney.com/notices/detail/002298/AN202608241828371314.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "电网设备",
+   "sector_net_yi": null,
+   "fwd_ret": -0.33333333333332626,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：中电鑫龙:关于董事减持股份预披露的公告"
+   ]
+  },
+  {
+   "code": "002803",
+   "name": "吉宏股份",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 20.49,
+   "avg_amt20_wan": 19761.5,
+   "rsi": 56.8,
+   "res_price": 20.77,
+   "res_dist_pct": 1.37,
+   "res_touch": 14,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-05-30",
+      "title": "吉宏股份:关于公司及相关人员收到厦门证监局行政监管措施决定书的公告",
+      "col": "其他",
+      "art": "AN202605291823029356",
+      "url": "https://data.eastmoney.com/notices/detail/002803/AN202605291823029356.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-07-22",
+      "title": "吉宏股份:关于控股股东、实际控制人及其一致行动人持股比例被动稀释触及1%及5%整数倍的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202607211827211784",
+      "url": "https://data.eastmoney.com/notices/detail/002803/AN202607211827211784.html"
+     }
+    ]
+   },
+   "industry": "文化传媒",
+   "sector_net_yi": -7.35,
+   "fwd_ret": 2.8794533918984864,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：吉宏股份:关于公司及相关人员收到厦门证监局行政监管措施决定书的公",
+    "距上方 20.77 元压力位 1.37%"
+   ]
+  },
+  {
+   "code": "600449",
+   "name": "宁夏建材",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 13.26,
+   "avg_amt20_wan": 15717.2,
+   "rsi": 58.4,
+   "res_price": 13.56,
+   "res_dist_pct": 2.26,
+   "res_touch": 15,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-08-15",
+      "title": "宁夏建材:宁夏建材关于2026年第三次临时股东会补充公告",
+      "col": "其他",
+      "art": "AN202608141827990774",
+      "url": "https://data.eastmoney.com/notices/detail/600449/AN202608141827990774.html"
+     }
+    ]
+   },
+   "industry": "水泥建材",
+   "sector_net_yi": 2.98,
+   "fwd_ret": -1.2066365007541489,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 13.56 元压力位 2.26%"
+   ]
+  },
+  {
+   "code": "600590",
+   "name": "泰豪科技",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 8.7,
+   "avg_amt20_wan": 19709.0,
+   "rsi": 51.8,
+   "res_price": 9.05,
+   "res_dist_pct": 4.02,
+   "res_touch": 12,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-08-25",
+      "title": "泰豪科技:关于持股5%以上股东减持计划实施完毕暨减持结果的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202608241828360653",
+      "url": "https://data.eastmoney.com/notices/detail/600590/AN202608241828360653.html"
+     },
+     {
+      "date": "2026-05-26",
+      "title": "泰豪科技:关于持股5%以上股东减持股份计划公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202605251822860737",
+      "url": "https://data.eastmoney.com/notices/detail/600590/AN202605251822860737.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-07-31",
+      "title": "泰豪科技:关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202607301827490160",
+      "url": "https://data.eastmoney.com/notices/detail/600590/AN202607301827490160.html"
+     },
+     {
+      "date": "2026-07-11",
+      "title": "泰豪科技:关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202607101826872504",
+      "url": "https://data.eastmoney.com/notices/detail/600590/AN202607101826872504.html"
+     },
+     {
+      "date": "2026-06-27",
+      "title": "泰豪科技:关于持股5%以上股东权益变动触及5%整数倍的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202606261824750615",
+      "url": "https://data.eastmoney.com/notices/detail/600590/AN202606261824750615.html"
+     }
+    ]
+   },
+   "industry": "输配电气",
+   "sector_net_yi": null,
+   "fwd_ret": -0.9195402298850583,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：泰豪科技:关于持股5%以上股东减持计划实施完毕暨减持结果的公告"
+   ]
+  },
+  {
+   "code": "600639",
+   "name": "浦东金桥",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 9.85,
+   "avg_amt20_wan": 4088.3,
+   "rsi": 64.8,
+   "res_price": 9.9,
+   "res_dist_pct": 0.51,
+   "res_touch": 18,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "房地产",
+   "sector_net_yi": 39.95,
+   "fwd_ret": -2.030456852791871,
+   "exclude_reasons": [
+    "流动性不足（20日日均 4088 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": [
+    "距上方 9.9 元压力位 0.51%"
+   ]
+  },
+  {
+   "code": "603212",
+   "name": "赛伍技术",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 11.82,
+   "avg_amt20_wan": 8524.7,
+   "rsi": 56.2,
+   "res_price": 11.89,
+   "res_dist_pct": 0.59,
+   "res_touch": 22,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "光伏设备",
+   "sector_net_yi": -16.99,
+   "fwd_ret": 1.0152284263959324,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 11.89 元压力位 0.59%"
+   ]
+  },
+  {
+   "code": "603626",
+   "name": "科森科技",
+   "strats": [
+    "GoldenTriangleStrategy",
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 80,
+   "last_date": "2026-09-18",
+   "close": 23.42,
+   "avg_amt20_wan": 102541.1,
+   "rsi": 64.7,
+   "res_price": 24.07,
+   "res_dist_pct": 2.78,
+   "res_touch": 13,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-07-23",
+      "title": "科森科技:关于控股股东部分股份补充质押的公告",
+      "col": "股份质押、冻结",
+      "art": "AN202607221827257267",
+      "url": "https://data.eastmoney.com/notices/detail/603626/AN202607221827257267.html"
+     }
+    ]
+   },
+   "industry": "消费电子",
+   "sector_net_yi": 49.03,
+   "fwd_ret": -2.092228864218625,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 24.07 元压力位 2.78%"
+   ]
+  },
+  {
+   "code": "000410",
+   "name": "沈阳机床",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 5.57,
+   "avg_amt20_wan": 9881.1,
+   "rsi": 64.3,
+   "res_price": 5.66,
+   "res_dist_pct": 1.62,
+   "res_touch": 8,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "机械行业",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -4.129263913824064,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 5.66 元压力位 1.62%"
+   ]
+  },
+  {
+   "code": "000509",
+   "name": "华塑控股",
+   "strats": [
+    "TrendStartStrategy",
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 3.77,
+   "avg_amt20_wan": 8188.8,
+   "rsi": 67.0,
+   "res_price": 3.83,
+   "res_dist_pct": 1.59,
+   "res_touch": 7,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-08-18",
+      "title": "华塑控股:2026-052号关于大股东减持计划期限届满及实施情况的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202608171828059155",
+      "url": "https://data.eastmoney.com/notices/detail/000509/AN202608171828059155.html"
+     },
+     {
+      "date": "2026-04-20",
+      "title": "华塑控股:大股东减持股份预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202604191821321226",
+      "url": "https://data.eastmoney.com/notices/detail/000509/AN202604191821321226.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-08-14",
+      "title": "华塑控股:关于提起重大诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608131827943445",
+      "url": "https://data.eastmoney.com/notices/detail/000509/AN202608131827943445.html"
+     },
+     {
+      "date": "2026-05-28",
+      "title": "华塑控股:关于持股5%以上股东股份变动比例触及1%整数倍的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202605271822917582",
+      "url": "https://data.eastmoney.com/notices/detail/000509/AN202605271822917582.html"
+     }
+    ]
+   },
+   "industry": "光学光电子",
+   "sector_net_yi": 49.03,
+   "fwd_ret": 5.570291777188328,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：华塑控股:2026-052号关于大股东减持计划期限届满及实施情况",
+    "距上方 3.83 元压力位 1.59%"
+   ]
+  },
+  {
+   "code": "000880",
+   "name": "潍柴重机",
+   "strats": [
+    "GoldenCrossNotGreenStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 26.68,
+   "avg_amt20_wan": 36300.2,
+   "rsi": 63.8,
+   "res_price": 27.0,
+   "res_dist_pct": 1.2,
+   "res_touch": 13,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "机械行业",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -3.37331334332833,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 27.0 元压力位 1.20%"
+   ]
+  },
+  {
+   "code": "000910",
+   "name": "大亚圣象",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 5.69,
+   "avg_amt20_wan": 2490.9,
+   "rsi": 62.3,
+   "res_price": 5.74,
+   "res_dist_pct": 0.88,
+   "res_touch": 4,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-07-07",
+      "title": "大亚圣象:关于公司董事、高级管理人员提前终止股份减持计划的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202607061826753506",
+      "url": "https://data.eastmoney.com/notices/detail/000910/AN202607061826753506.html"
+     },
+     {
+      "date": "2026-06-10",
+      "title": "大亚圣象:关于公司董事、高级管理人员减持股份的预披露公告",
+      "col": "高管人员持股变动 股东/实际控制人股份减持",
+      "art": "AN202606091823397073",
+      "url": "https://data.eastmoney.com/notices/detail/000910/AN202606091823397073.html"
+     },
+     {
+      "date": "2026-01-05",
+      "title": "大亚圣象:关于公司董事、高级管理人员减持计划实施完成的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202601041814692781",
+      "url": "https://data.eastmoney.com/notices/detail/000910/AN202601041814692781.html"
+     },
+     {
+      "date": "2025-09-16",
+      "title": "大亚圣象:关于公司董事、高级管理人员减持股份的预披露公告",
+      "col": "高管人员持股变动 股东/实际控制人股份减持",
+      "art": "AN202509151744297591",
+      "url": "https://data.eastmoney.com/notices/detail/000910/AN202509151744297591.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "木业家具",
+   "sector_net_yi": -0.46,
+   "fwd_ret": 21.089630931458686,
+   "exclude_reasons": [
+    "流动性不足（20日日均 2491 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": [
+    "二级关注：大亚圣象:关于公司董事、高级管理人员提前终止股份减持计划的公告",
+    "距上方 5.74 元压力位 0.88%"
+   ]
+  },
+  {
+   "code": "001324",
+   "name": "长青科技",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 20.67,
+   "avg_amt20_wan": 9584.4,
+   "rsi": 57.8,
+   "res_price": 20.99,
+   "res_dist_pct": 1.55,
+   "res_touch": 24,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-07-07",
+      "title": "长青科技:关于股东股份减持计划时间届满暨减持结果的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202607061826752928",
+      "url": "https://data.eastmoney.com/notices/detail/001324/AN202607061826752928.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-08-22",
+      "title": "长青科技:关于提前终止实施公司2024年员工持股计划的公告",
+      "col": "员工持股计划",
+      "art": "AN202608211828277890",
+      "url": "https://data.eastmoney.com/notices/detail/001324/AN202608211828277890.html"
+     },
+     {
+      "date": "2026-05-15",
+      "title": "长青科技:关于合计持股5%以上股东及其一致行动人权益变动触及1%整数倍的公告",
+      "col": "权益变动报告书",
+      "art": "AN202605141822317414",
+      "url": "https://data.eastmoney.com/notices/detail/001324/AN202605141822317414.html"
+     },
+     {
+      "date": "2026-05-08",
+      "title": "长青科技:关于合计持股5%以上股东及其一致行动人权益变动触及1%整数倍的公告",
+      "col": "权益变动报告书",
+      "art": "AN202605071822028864",
+      "url": "https://data.eastmoney.com/notices/detail/001324/AN202605071822028864.html"
+     }
+    ]
+   },
+   "industry": "交运设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": 4.692791485244309,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：长青科技:关于股东股份减持计划时间届满暨减持结果的公告",
+    "距上方 20.99 元压力位 1.55%"
+   ]
+  },
+  {
+   "code": "001356",
+   "name": "富岭股份",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 9.59,
+   "avg_amt20_wan": 5942.9,
+   "rsi": 59.6,
+   "res_price": 9.87,
+   "res_dist_pct": 2.92,
+   "res_touch": 3,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-09-09",
+      "title": "富岭股份:关于持股5%以上股东减持股份触及1%整数倍暨减持计划时间届满的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202609081829137385",
+      "url": "https://data.eastmoney.com/notices/detail/001356/AN202609081829137385.html"
+     },
+     {
+      "date": "2026-05-19",
+      "title": "富岭股份:关于持股5%以上股东减持股份的预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202605181822408188",
+      "url": "https://data.eastmoney.com/notices/detail/001356/AN202605181822408188.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-09-01",
+      "title": "富岭股份:关于持股5%以上股东减持股份触及5%整数倍的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202608311828827582",
+      "url": "https://data.eastmoney.com/notices/detail/001356/AN202608311828827582.html"
+     }
+    ]
+   },
+   "industry": "塑料制品",
+   "sector_net_yi": -4.96,
+   "fwd_ret": -0.4171011470281454,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：富岭股份:关于持股5%以上股东减持股份触及1%整数倍暨减持计划时",
+    "距上方 9.87 元压力位 2.92%"
+   ]
+  },
+  {
+   "code": "001360",
+   "name": "南矿集团",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 20.56,
+   "avg_amt20_wan": 12943.3,
+   "rsi": 65.0,
+   "res_price": 21.18,
+   "res_dist_pct": 3.02,
+   "res_touch": 23,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-06-10",
+      "title": "南矿集团:关于公司董事、高级管理人员减持股份计划期限届满未减持公司股份的公告",
+      "col": "高管人员持股变动 股东/实际控制人股份减持",
+      "art": "AN202606091823397110",
+      "url": "https://data.eastmoney.com/notices/detail/001360/AN202606091823397110.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "专用设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": 2.4319066147859925,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：南矿集团:关于公司董事、高级管理人员减持股份计划期限届满未减持公"
+   ]
+  },
+  {
+   "code": "002290",
+   "name": "禾盛新材",
+   "strats": [
+    "GoldenCrossNotGreenStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 67.22,
+   "avg_amt20_wan": 40867.6,
+   "rsi": 55.4,
+   "res_price": 68.46,
+   "res_dist_pct": 1.84,
+   "res_touch": 12,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "家电行业",
+   "sector_net_yi": -4.43,
+   "fwd_ret": 15.813745908955662,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 68.46 元压力位 1.84%"
+   ]
+  },
+  {
+   "code": "002471",
+   "name": "中超控股",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 5.96,
+   "avg_amt20_wan": 25506.0,
+   "rsi": 60.4,
+   "res_price": 6.09,
+   "res_dist_pct": 2.18,
+   "res_touch": 7,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-06-16",
+      "title": "中超控股:关于江苏中超控股股份有限公司申请向特定对象发行股票的审核问询函之回复(豁免版)",
+      "col": "回复问询函公告",
+      "art": "AN202606151823579665",
+      "url": "https://data.eastmoney.com/notices/detail/002471/AN202606151823579665.html"
+     },
+     {
+      "date": "2026-06-16",
+      "title": "中超控股:关于2023年度向特定对象发行股票审核问询函回复及募集说明书等申请文件更新的提示性公告",
+      "col": "回复问询函公告",
+      "art": "AN202606151823579667",
+      "url": "https://data.eastmoney.com/notices/detail/002471/AN202606151823579667.html"
+     }
+    ]
+   },
+   "industry": "输配电气",
+   "sector_net_yi": null,
+   "fwd_ret": -3.523489932885906,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 6.09 元压力位 2.18%"
+   ]
+  },
+  {
+   "code": "002730",
+   "name": "电光科技",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 24.1,
+   "avg_amt20_wan": 23192.9,
+   "rsi": 55.5,
+   "res_price": 25.13,
+   "res_dist_pct": 4.27,
+   "res_touch": 5,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "专用设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -5.0622406639004245,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "B"
+  },
+  {
+   "code": "002849",
+   "name": "威星智能",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 20.32,
+   "avg_amt20_wan": 17026.9,
+   "rsi": 66.5,
+   "res_price": null,
+   "res_dist_pct": null,
+   "res_touch": null,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-09-05",
+      "title": "威星智能:关于特定股东减持股份的预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202609041829025110",
+      "url": "https://data.eastmoney.com/notices/detail/002849/AN202609041829025110.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-09-17",
+      "title": "威星智能:关于特定股东权益变动触及1%整数倍的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202609161829468006",
+      "url": "https://data.eastmoney.com/notices/detail/002849/AN202609161829468006.html"
+     }
+    ]
+   },
+   "industry": "仪器仪表",
+   "sector_net_yi": -1.69,
+   "fwd_ret": 2.9035433070866135,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：威星智能:关于特定股东减持股份的预披露公告"
+   ]
+  },
+  {
+   "code": "600606",
+   "name": "绿地控股",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 1.45,
+   "avg_amt20_wan": 17203.6,
+   "rsi": 68.9,
+   "res_price": 1.48,
+   "res_dist_pct": 2.07,
+   "res_touch": 16,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-09-05",
+      "title": "绿地控股:绿地控股关于公司及控股子公司逾期债务和新增诉讼的公告",
+      "col": "诉讼仲裁 其他",
+      "art": "AN202609041829019778",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202609041829019778.html"
+     },
+     {
+      "date": "2026-08-22",
+      "title": "绿地控股:绿地控股关于公司及控股子公司逾期债务和新增诉讼的公告",
+      "col": "诉讼仲裁 其他",
+      "art": "AN202608211828268983",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202608211828268983.html"
+     },
+     {
+      "date": "2026-08-15",
+      "title": "绿地控股:绿地控股关于公司及控股子公司逾期债务和新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608141827987775",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202608141827987775.html"
+     },
+     {
+      "date": "2026-07-30",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202607291827458091",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202607291827458091.html"
+     },
+     {
+      "date": "2026-07-21",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202607201827142446",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202607201827142446.html"
+     },
+     {
+      "date": "2026-07-09",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202607081826813721",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202607081826813721.html"
+     },
+     {
+      "date": "2026-06-19",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202606181823665079",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202606181823665079.html"
+     },
+     {
+      "date": "2026-06-06",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202606051823289160",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202606051823289160.html"
+     },
+     {
+      "date": "2026-05-23",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202605221822682573",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202605221822682573.html"
+     },
+     {
+      "date": "2026-05-13",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202605121822216162",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202605121822216162.html"
+     },
+     {
+      "date": "2026-04-29",
+      "title": "绿地控股:绿地控股关于公司及控股子公司新增诉讼的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202604281821705251",
+      "url": "https://data.eastmoney.com/notices/detail/600606/AN202604281821705251.html"
+     }
+    ]
+   },
+   "industry": "房地产",
+   "sector_net_yi": 39.95,
+   "fwd_ret": 5.51724137931035,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 1.48 元压力位 2.07%"
+   ]
+  },
+  {
+   "code": "600621",
+   "name": "华鑫股份",
+   "strats": [
+    "Strategy2560Selection",
+    "TrendStartStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 14.1,
+   "avg_amt20_wan": 16592.1,
+   "rsi": 62.8,
+   "res_price": 14.278,
+   "res_dist_pct": 1.26,
+   "res_touch": 30,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "券商信托",
+   "sector_net_yi": null,
+   "fwd_ret": -0.6382978723404246,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 14.278 元压力位 1.26%"
+   ]
+  },
+  {
+   "code": "600640",
+   "name": "国脉文化",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 12.06,
+   "avg_amt20_wan": 8958.5,
+   "rsi": 67.9,
+   "res_price": 12.218,
+   "res_dist_pct": 1.31,
+   "res_touch": 18,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "文化传媒",
+   "sector_net_yi": -7.35,
+   "fwd_ret": 11.194029850746265,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 12.218 元压力位 1.31%"
+   ]
+  },
+  {
+   "code": "600769",
+   "name": "祥龙电业",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 16.24,
+   "avg_amt20_wan": 18036.1,
+   "rsi": 56.5,
+   "res_price": 16.38,
+   "res_dist_pct": 0.86,
+   "res_touch": 18,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "工程建设",
+   "sector_net_yi": -3.24,
+   "fwd_ret": -0.5541871921182258,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 16.38 元压力位 0.86%"
+   ]
+  },
+  {
+   "code": "600790",
+   "name": "轻纺城",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 3.63,
+   "avg_amt20_wan": 5983.1,
+   "rsi": 64.7,
+   "res_price": 3.7,
+   "res_dist_pct": 1.93,
+   "res_touch": 18,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-03-25",
+      "title": "轻纺城:轻纺城关于控股股东增持计划实施完毕暨增持股份结果的公告",
+      "col": "股东/实际控制人股份增持",
+      "art": "AN202603241820719687",
+      "url": "https://data.eastmoney.com/notices/detail/600790/AN202603241820719687.html"
+     }
+    ]
+   },
+   "industry": "商业百货",
+   "sector_net_yi": -8.92,
+   "fwd_ret": -2.203856749311297,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 3.7 元压力位 1.93%"
+   ]
+  },
+  {
+   "code": "600847",
+   "name": "万里股份",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 13.92,
+   "avg_amt20_wan": 3241.0,
+   "rsi": 65.0,
+   "res_price": 14.2,
+   "res_dist_pct": 2.01,
+   "res_touch": 9,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-07-15",
+      "title": "万里股份:万里股份2026年半年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202607141826961692",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202607141826961692.html",
+      "kw": "业绩预亏"
+     },
+     {
+      "date": "2026-01-20",
+      "title": "万里股份:万里股份2025年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202601191818108518",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202601191818108518.html",
+      "kw": "业绩预亏"
+     }
+    ],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-09-01",
+      "title": "万里股份:万里股份关于持股5%以上股东及其控制账户权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202608311828808427",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202608311828808427.html"
+     },
+     {
+      "date": "2026-08-26",
+      "title": "万里股份:万里股份关于持股5%以上股东及其控制账户权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202608251828418875",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202608251828418875.html"
+     },
+     {
+      "date": "2026-04-11",
+      "title": "万里股份:万里股份关于公司仲裁事项进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202604101821119344",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202604101821119344.html"
+     },
+     {
+      "date": "2026-03-27",
+      "title": "万里股份:万里股份关于控股股东诉讼事项进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202603261820768603",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202603261820768603.html"
+     },
+     {
+      "date": "2025-09-24",
+      "title": "万里股份:万里股份关于公司仲裁事项执行进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202509231749128303",
+      "url": "https://data.eastmoney.com/notices/detail/600847/AN202509231749128303.html"
+     }
+    ]
+   },
+   "industry": "电池",
+   "sector_net_yi": 49.03,
+   "fwd_ret": -4.094827586206899,
+   "exclude_reasons": [
+    "流动性不足（20日日均 3241 万，低于 5000 万门槛）",
+    "一级利空（业绩预亏）：万里股份:万里股份2026年半年度业绩预亏公告"
+   ],
+   "watch_reasons": [
+    "距上方 14.2 元压力位 2.01%"
+   ]
+  },
+  {
+   "code": "603232",
+   "name": "格尔软件",
+   "strats": [
+    "TrendStartStrategy",
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 16.31,
+   "avg_amt20_wan": 15517.2,
+   "rsi": 58.7,
+   "res_price": 16.7,
+   "res_dist_pct": 2.39,
+   "res_touch": 10,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-07-15",
+      "title": "格尔软件:格尔软件股份有限公司2026年半年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202607141826956916",
+      "url": "https://data.eastmoney.com/notices/detail/603232/AN202607141826956916.html",
+      "kw": "业绩预亏"
+     }
+    ],
+    "S2": [
+     {
+      "date": "2026-08-19",
+      "title": "格尔软件:格尔软件股份有限公司股东减持股份计划公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202608181828113582",
+      "url": "https://data.eastmoney.com/notices/detail/603232/AN202608181828113582.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-08-04",
+      "title": "格尔软件:格尔软件股份有限公司关于诉讼进展的公告",
+      "col": "诉讼仲裁",
+      "art": "AN202608031827585494",
+      "url": "https://data.eastmoney.com/notices/detail/603232/AN202608031827585494.html"
+     }
+    ]
+   },
+   "industry": "软件服务",
+   "sector_net_yi": -91.75,
+   "fwd_ret": -0.5518087063151432,
+   "exclude_reasons": [
+    "一级利空（业绩预亏）：格尔软件:格尔软件股份有限公司2026年半年度业绩预亏公告"
+   ],
+   "watch_reasons": [
+    "二级关注：格尔软件:格尔软件股份有限公司股东减持股份计划公告",
+    "距上方 16.7 元压力位 2.39%"
+   ]
+  },
+  {
+   "code": "603759",
+   "name": "海天股份",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 7.8,
+   "avg_amt20_wan": 4110.7,
+   "rsi": 60.0,
+   "res_price": 7.85,
+   "res_dist_pct": 0.64,
+   "res_touch": 5,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-05-23",
+      "title": "海天股份:关于子公司提起上诉案件受理立案暨诉讼的进展公告",
+      "col": "其他",
+      "art": "AN202605221822689191",
+      "url": "https://data.eastmoney.com/notices/detail/603759/AN202605221822689191.html"
+     }
+    ]
+   },
+   "industry": "公用事业",
+   "sector_net_yi": -1.71,
+   "fwd_ret": 0.2564102564102623,
+   "exclude_reasons": [
+    "流动性不足（20日日均 4111 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": [
+    "距上方 7.85 元压力位 0.64%"
+   ]
+  },
+  {
+   "code": "605123",
+   "name": "派克新材",
+   "strats": [
+    "TrendStartStrategy"
+   ],
+   "score": 75,
+   "last_date": "2026-09-18",
+   "close": 80.32000795050809,
+   "avg_amt20_wan": 11953.2,
+   "rsi": 53.4,
+   "res_price": 80.956,
+   "res_dist_pct": 0.79,
+   "res_touch": 17,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-05-28",
+      "title": "派克新材:关于无锡派克新材料科技股份有限公司向不特定对象发行可转换公司债券申请文件的审核问询函的回复",
+      "col": "回复问询函公告",
+      "art": "AN202605271822913980",
+      "url": "https://data.eastmoney.com/notices/detail/605123/AN202605271822913980.html"
+     },
+     {
+      "date": "2026-05-28",
+      "title": "派克新材:公证天业会计师事务所(特殊普通合伙)关于无锡派克新材料科技股份有限公司向不特定对象发行可转换公司债券申请文件的审核问询函的回复",
+      "col": "会计师事务所问询函回复公告",
+      "art": "AN202605271822913978",
+      "url": "https://data.eastmoney.com/notices/detail/605123/AN202605271822913978.html"
+     },
+     {
+      "date": "2026-05-28",
+      "title": "派克新材:关于公司向不特定对象发行可转换公司债券申请文件的审核问询函回复的提示性公告",
+      "col": "回复问询函公告",
+      "art": "AN202605271822913977",
+      "url": "https://data.eastmoney.com/notices/detail/605123/AN202605271822913977.html"
+     }
+    ]
+   },
+   "industry": "通用设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": 0.5353486142044075,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 80.956 元压力位 0.79%"
+   ]
+  },
+  {
+   "code": "002489",
+   "name": "浙江永强",
+   "strats": [
+    "ResistanceBreakoutStrategy"
+   ],
+   "score": 70,
+   "last_date": "2026-09-18",
+   "close": 3.13,
+   "avg_amt20_wan": 7936.7,
+   "rsi": 70.1,
+   "res_price": 3.17,
+   "res_dist_pct": 1.28,
+   "res_touch": 3,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-08-26",
+      "title": "浙江永强:关于实际控制人提前终止股份减持计划暨减持股份结果的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202608251828426067",
+      "url": "https://data.eastmoney.com/notices/detail/002489/AN202608251828426067.html"
+     },
+     {
+      "date": "2026-05-09",
+      "title": "浙江永强:关于实际控制人减持股份的预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202605081822080051",
+      "url": "https://data.eastmoney.com/notices/detail/002489/AN202605081822080051.html"
+     },
+     {
+      "date": "2026-04-21",
+      "title": "浙江永强:关于实际控制人提前终止股份减持计划暨减持股份结果的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202604201821352381",
+      "url": "https://data.eastmoney.com/notices/detail/002489/AN202604201821352381.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-06-12",
+      "title": "浙江永强:关于实际控制人减持股份触及1%整倍数的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606111823461196",
+      "url": "https://data.eastmoney.com/notices/detail/002489/AN202606111823461196.html"
+     }
+    ]
+   },
+   "industry": "家用轻工",
+   "sector_net_yi": -0.46,
+   "fwd_ret": -1.5974440894568633,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：浙江永强:关于实际控制人提前终止股份减持计划暨减持股份结果的公告",
+    "距上方 3.17 元压力位 1.28%"
+   ]
+  },
+  {
+   "code": "603276",
+   "name": "恒兴新材",
+   "strats": [
+    "ResistanceBreakoutStrategy"
+   ],
+   "score": 70,
+   "last_date": "2026-09-18",
+   "close": 17.95,
+   "avg_amt20_wan": 5548.7,
+   "rsi": 72.5,
+   "res_price": 18.24,
+   "res_dist_pct": 1.62,
+   "res_touch": 15,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-09-08",
+      "title": "恒兴新材:高级管理人员减持股份计划公告",
+      "col": "高管人员持股变动 股东/实际控制人股份减持",
+      "art": "AN202609071829102644",
+      "url": "https://data.eastmoney.com/notices/detail/603276/AN202609071829102644.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "化学原料",
+   "sector_net_yi": -2.31,
+   "fwd_ret": 1.1699164345403947,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：恒兴新材:高级管理人员减持股份计划公告",
+    "距上方 18.24 元压力位 1.62%"
+   ]
+  },
+  {
+   "code": "002338",
+   "name": "奥普光电",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 42.74,
+   "avg_amt20_wan": 14242.7,
+   "rsi": 53.7,
+   "res_price": 43.39,
+   "res_dist_pct": 1.52,
+   "res_touch": 12,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-06-04",
+      "title": "奥普光电:控股股东减持股份预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606031823214991",
+      "url": "https://data.eastmoney.com/notices/detail/002338/AN202606031823214991.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "仪器仪表",
+   "sector_net_yi": -1.69,
+   "fwd_ret": 5.6387459054749565,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：奥普光电:控股股东减持股份预披露公告",
+    "距上方 43.39 元压力位 1.52%"
+   ]
+  },
+  {
+   "code": "002453",
+   "name": "华软科技",
+   "strats": [
+    "ResistanceBreakoutStrategy",
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 5.34,
+   "avg_amt20_wan": 6171.4,
+   "rsi": 74.9,
+   "res_price": 5.41,
+   "res_dist_pct": 1.31,
+   "res_touch": 9,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "化学制品",
+   "sector_net_yi": -2.31,
+   "fwd_ret": -0.5617977528089935,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 5.41 元压力位 1.31%"
+   ]
+  },
+  {
+   "code": "002836",
+   "name": "新宏泽",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 11.92,
+   "avg_amt20_wan": 4391.2,
+   "rsi": 71.7,
+   "res_price": 11.988,
+   "res_dist_pct": 0.57,
+   "res_touch": 4,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-06-23",
+      "title": "新宏泽:关于控股股东拟减持股份的预披露公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606221823745757",
+      "url": "https://data.eastmoney.com/notices/detail/002836/AN202606221823745757.html"
+     }
+    ],
+    "S3": []
+   },
+   "industry": "造纸印刷",
+   "sector_net_yi": -4.59,
+   "fwd_ret": -6.54362416107382,
+   "exclude_reasons": [
+    "流动性不足（20日日均 4391 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": [
+    "二级关注：新宏泽:关于控股股东拟减持股份的预披露公告",
+    "距上方 11.988 元压力位 0.57%"
+   ]
+  },
+  {
+   "code": "600088",
+   "name": "中视传媒",
+   "strats": [
+    "StrongWashWeakToStrongStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 15.76,
+   "avg_amt20_wan": 31001.3,
+   "rsi": 72.2,
+   "res_price": 15.95,
+   "res_dist_pct": 1.21,
+   "res_touch": 9,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-07-15",
+      "title": "中视传媒:中视传媒股份有限公司2026年半年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202607141826955275",
+      "url": "https://data.eastmoney.com/notices/detail/600088/AN202607141826955275.html",
+      "kw": "业绩预亏"
+     },
+     {
+      "date": "2026-01-23",
+      "title": "中视传媒:中视传媒股份有限公司2025年年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202601221818276522",
+      "url": "https://data.eastmoney.com/notices/detail/600088/AN202601221818276522.html",
+      "kw": "业绩预亏"
+     }
+    ],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "文化传媒",
+   "sector_net_yi": -7.35,
+   "fwd_ret": -3.743654822335025,
+   "exclude_reasons": [
+    "一级利空（业绩预亏）：中视传媒:中视传媒股份有限公司2026年半年度业绩预亏公告"
+   ],
+   "watch_reasons": [
+    "距上方 15.95 元压力位 1.21%"
+   ]
+  },
+  {
+   "code": "600246",
+   "name": "万通发展",
+   "strats": [],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 13.7,
+   "avg_amt20_wan": 128936.4,
+   "rsi": 57.4,
+   "res_price": 13.98,
+   "res_dist_pct": 2.04,
+   "res_touch": 7,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-07-15",
+      "title": "万通发展:2026年半年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202607141826962226",
+      "url": "https://data.eastmoney.com/notices/detail/600246/AN202607141826962226.html",
+      "kw": "业绩预亏"
+     }
+    ],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-05-09",
+      "title": "万通发展:关于控股股东的一致行动人所持部分股份完成非交易过户暨权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202605081822078624",
+      "url": "https://data.eastmoney.com/notices/detail/600246/AN202605081822078624.html"
+     }
+    ]
+   },
+   "industry": "房地产",
+   "sector_net_yi": 39.95,
+   "fwd_ret": 6.8613138686131485,
+   "exclude_reasons": [
+    "一级利空（业绩预亏）：万通发展:2026年半年度业绩预亏公告"
+   ],
+   "watch_reasons": [
+    "距上方 13.98 元压力位 2.04%"
+   ]
+  },
+  {
+   "code": "600630",
+   "name": "龙头股份",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 8.29,
+   "avg_amt20_wan": 9657.0,
+   "rsi": 73.7,
+   "res_price": 9.076,
+   "res_dist_pct": 9.48,
+   "res_touch": 8,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "纺织服装",
+   "sector_net_yi": -4.91,
+   "fwd_ret": 14.354644149577823,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "B"
+  },
+  {
+   "code": "600719",
+   "name": "大连热电",
+   "strats": [
+    "WBottomStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 8.42,
+   "avg_amt20_wan": 10473.1,
+   "rsi": 70.7,
+   "res_price": 9.09,
+   "res_dist_pct": 7.96,
+   "res_touch": 9,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-01-17",
+      "title": "大连热电:大连热电股份有限公司2025年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202601161817721714",
+      "url": "https://data.eastmoney.com/notices/detail/600719/AN202601161817721714.html",
+      "kw": "业绩预亏"
+     },
+     {
+      "date": "2026-01-10",
+      "title": "大连热电:临2026-001大连热电股份有限公司2025年年度业绩预亏的提示性公告",
+      "col": "业绩预告",
+      "art": "AN202601091816887827",
+      "url": "https://data.eastmoney.com/notices/detail/600719/AN202601091816887827.html",
+      "kw": "业绩预亏"
+     }
+    ],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-05-16",
+      "title": "大连热电:大连热电股份有限公司关于2026年第一次临时股东会更正补充公告",
+      "col": "其他",
+      "art": "AN202605151822344569",
+      "url": "https://data.eastmoney.com/notices/detail/600719/AN202605151822344569.html"
+     }
+    ]
+   },
+   "industry": "电力行业",
+   "sector_net_yi": -25.8,
+   "fwd_ret": -4.156769596199521,
+   "exclude_reasons": [
+    "一级利空（业绩预亏）：大连热电:大连热电股份有限公司2025年度业绩预亏公告"
+   ],
+   "watch_reasons": []
+  },
+  {
+   "code": "603248",
+   "name": "锡华科技",
+   "strats": [
+    "ResistanceBreakoutStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 24.57,
+   "avg_amt20_wan": 10161.4,
+   "rsi": 82.1,
+   "res_price": 24.901,
+   "res_dist_pct": 1.35,
+   "res_touch": 2,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-06-16",
+      "title": "锡华科技:国泰海通关于江苏锡华新能源科技股份有限公司首次公开发行股票部分限售股上市流通的核查意见",
+      "col": "保荐/核查意见",
+      "art": "AN202606151823573296",
+      "url": "https://data.eastmoney.com/notices/detail/603248/AN202606151823573296.html"
+     },
+     {
+      "date": "2026-06-16",
+      "title": "锡华科技:江苏锡华新能源科技股份有限公司关于首次公开发行网下配售限售股上市流通的公告",
+      "col": "限售股份上市流通",
+      "art": "AN202606151823573303",
+      "url": "https://data.eastmoney.com/notices/detail/603248/AN202606151823573303.html"
+     }
+    ]
+   },
+   "industry": "风电设备",
+   "sector_net_yi": -16.99,
+   "fwd_ret": -2.8083028083028134,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "RSI 82.1 超买，禁止追涨，只观察回踩",
+    "距上方 24.901 元压力位 1.35%"
+   ]
+  },
+  {
+   "code": "603375",
+   "name": "盛景微",
+   "strats": [
+    "ResistanceBreakoutStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 51.69,
+   "avg_amt20_wan": 13153.9,
+   "rsi": 72.8,
+   "res_price": 52.632,
+   "res_dist_pct": 1.82,
+   "res_touch": 9,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "电子元件",
+   "sector_net_yi": 49.03,
+   "fwd_ret": -6.326175275681943,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 52.632 元压力位 1.82%"
+   ]
+  },
+  {
+   "code": "605100",
+   "name": "华丰股份",
+   "strats": [
+    "LimitUpSidewaysStrategy"
+   ],
+   "score": 65,
+   "last_date": "2026-09-18",
+   "close": 33.81,
+   "avg_amt20_wan": 14085.9,
+   "rsi": 54.6,
+   "res_price": 34.44,
+   "res_dist_pct": 1.86,
+   "res_touch": 22,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "机械行业",
+   "sector_net_yi": -9.63,
+   "fwd_ret": 1.4196983141082427,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 34.44 元压力位 1.86%"
+   ]
+  },
+  {
+   "code": "000021",
+   "name": "深科技",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 36.95,
+   "avg_amt20_wan": 246542.4,
+   "rsi": 50.4,
+   "res_price": 37.43,
+   "res_dist_pct": 1.3,
+   "res_touch": 17,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "消费电子",
+   "sector_net_yi": 49.03,
+   "fwd_ret": 0.16238159675235497,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 37.43 元压力位 1.30%"
+   ]
+  },
+  {
+   "code": "001238",
+   "name": "浙江正特",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 26.31,
+   "avg_amt20_wan": 1443.2,
+   "rsi": 61.5,
+   "res_price": 27.27,
+   "res_dist_pct": 3.65,
+   "res_touch": 5,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "装修建材",
+   "sector_net_yi": -3.24,
+   "fwd_ret": -0.6841505131128838,
+   "exclude_reasons": [
+    "流动性不足（20日日均 1443 万，低于 5000 万门槛）"
+   ],
+   "watch_reasons": []
+  },
+  {
+   "code": "001267",
+   "name": "汇绿生态",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 38.03,
+   "avg_amt20_wan": 114687.7,
+   "rsi": 52.1,
+   "res_price": 39.15,
+   "res_dist_pct": 2.95,
+   "res_touch": 14,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "工程建设",
+   "sector_net_yi": -3.24,
+   "fwd_ret": 0.4207204838285474,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 39.15 元压力位 2.95%"
+   ]
+  },
+  {
+   "code": "001309",
+   "name": "德明利",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 413.09,
+   "avg_amt20_wan": 484737.0,
+   "rsi": 48.8,
+   "res_price": 416.85,
+   "res_dist_pct": 0.91,
+   "res_touch": 17,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-09-14",
+      "title": "2大信会计师事务所(特殊普通合伙)《关于深圳市德明利技术股份有限公司申请向特定对象发行股票的审核问询函》之回复",
+      "col": "深主板再融资问询与回复",
+      "art": "AN202609141829367350",
+      "url": "https://data.eastmoney.com/notices/detail/001309/AN202609141829367350.html"
+     },
+     {
+      "date": "2026-09-14",
+      "title": "1关于深圳市德明利技术股份有限公司申请向特定对象发行股票的审核问询函的回复",
+      "col": "深主板再融资问询与回复",
+      "art": "AN202609141829367340",
+      "url": "https://data.eastmoney.com/notices/detail/001309/AN202609141829367340.html"
+     },
+     {
+      "date": "2026-07-28",
+      "title": "德明利:关于控股股东认购的2023年向特定对象发行股票限售股解除限售上市流通并承诺十二个月内不减持公司股票的提示性公告",
+      "col": "限售股份上市流通",
+      "art": "AN202607271827391048",
+      "url": "https://data.eastmoney.com/notices/detail/001309/AN202607271827391048.html"
+     },
+     {
+      "date": "2026-07-25",
+      "title": "德明利:关于控股股东自愿承诺不减持公司股票的公告",
+      "col": "其他",
+      "art": "AN202607241827322720",
+      "url": "https://data.eastmoney.com/notices/detail/001309/AN202607241827322720.html"
+     }
+    ]
+   },
+   "industry": "半导体",
+   "sector_net_yi": 49.03,
+   "fwd_ret": -0.36795855624681834,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 416.85 元压力位 0.91%"
+   ]
+  },
+  {
+   "code": "002156",
+   "name": "通富微电",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 61.38,
+   "avg_amt20_wan": 400303.3,
+   "rsi": 51.7,
+   "res_price": 62.23,
+   "res_dist_pct": 1.38,
+   "res_touch": 12,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-09-12",
+      "title": "通富微电:关于持股5%以上股东持股比例被动稀释触及1%整数倍的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202609111829275868",
+      "url": "https://data.eastmoney.com/notices/detail/002156/AN202609111829275868.html"
+     },
+     {
+      "date": "2026-06-02",
+      "title": "通富微电:关于通富微电子股份有限公司向特定对象发行股票的审核问询函中有关财务会计问题的专项说明",
+      "col": "专项说明/独立意见",
+      "art": "AN202606011823126705",
+      "url": "https://data.eastmoney.com/notices/detail/002156/AN202606011823126705.html"
+     },
+     {
+      "date": "2026-06-02",
+      "title": "通富微电:通富微电子股份有限公司与国泰海通证券股份有限公司关于通富微电子股份有限公司申请向特定对象发行股票的审核问询函的回复",
+      "col": "回复问询函公告",
+      "art": "AN202606011823126700",
+      "url": "https://data.eastmoney.com/notices/detail/002156/AN202606011823126700.html"
+     },
+     {
+      "date": "2026-06-02",
+      "title": "通富微电:关于申请向特定对象发行股票的审核问询函的回复及募集说明书等申请文件更新的提示性公告",
+      "col": "回复问询函公告",
+      "art": "AN202606011823126695",
+      "url": "https://data.eastmoney.com/notices/detail/002156/AN202606011823126695.html"
+     }
+    ]
+   },
+   "industry": "半导体",
+   "sector_net_yi": 49.03,
+   "fwd_ret": 3.4864776800260677,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 62.23 元压力位 1.38%"
+   ]
+  },
+  {
+   "code": "002685",
+   "name": "华东重机",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 5.66,
+   "avg_amt20_wan": 13351.9,
+   "rsi": 58.8,
+   "res_price": 5.84,
+   "res_dist_pct": 3.18,
+   "res_touch": 5,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-05-13",
+      "title": "华东重机:关于华东光能科技(徐州)有限公司提起诉讼情况的进展公告",
+      "col": "诉讼仲裁",
+      "art": "AN202605121822216270",
+      "url": "https://data.eastmoney.com/notices/detail/002685/AN202605121822216270.html"
+     }
+    ]
+   },
+   "industry": "机械行业",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -0.1766784452296782,
+   "exclude_reasons": [],
+   "watch_reasons": [],
+   "grade": "C"
+  },
+  {
+   "code": "002786",
+   "name": "银宝山新",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 7.89,
+   "avg_amt20_wan": 5950.9,
+   "rsi": 53.7,
+   "res_price": 8.1,
+   "res_dist_pct": 2.66,
+   "res_touch": 32,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-06-03",
+      "title": "银宝山新:关于持股5%以上股东减持计划实施完毕的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606021823165814",
+      "url": "https://data.eastmoney.com/notices/detail/002786/AN202606021823165814.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-06-16",
+      "title": "银宝山新:关于诉讼、仲裁事项的进展公告",
+      "col": "诉讼仲裁",
+      "art": "AN202606151823573141",
+      "url": "https://data.eastmoney.com/notices/detail/002786/AN202606151823573141.html"
+     },
+     {
+      "date": "2026-06-04",
+      "title": "银宝山新:关于董事兼总经理增持公司股份计划实施完毕的公告",
+      "col": "股东/实际控制人股份增持",
+      "art": "AN202606031823203630",
+      "url": "https://data.eastmoney.com/notices/detail/002786/AN202606031823203630.html"
+     },
+     {
+      "date": "2026-06-02",
+      "title": "银宝山新:关于重大诉讼及其他诉讼、仲裁事项的进展公告",
+      "col": "诉讼仲裁",
+      "art": "AN202606011823125202",
+      "url": "https://data.eastmoney.com/notices/detail/002786/AN202606011823125202.html"
+     },
+     {
+      "date": "2026-04-29",
+      "title": "银宝山新:关于诉讼、仲裁事项的进展公告",
+      "col": "诉讼仲裁",
+      "art": "AN202604281821704578",
+      "url": "https://data.eastmoney.com/notices/detail/002786/AN202604281821704578.html"
+     }
+    ]
+   },
+   "industry": "专用设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -0.5069708491761729,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：银宝山新:关于持股5%以上股东减持计划实施完毕的公告",
+    "距上方 8.1 元压力位 2.66%"
+   ]
+  },
+  {
+   "code": "002885",
+   "name": "京泉华",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 28.5,
+   "avg_amt20_wan": 54341.6,
+   "rsi": 50.9,
+   "res_price": 29.16,
+   "res_dist_pct": 2.32,
+   "res_touch": 13,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-06-22",
+      "title": "京泉华:关于股东减持股份预披露的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202606211823708643",
+      "url": "https://data.eastmoney.com/notices/detail/002885/AN202606211823708643.html"
+     },
+     {
+      "date": "2026-05-08",
+      "title": "京泉华:关于股东减持股份预披露的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202605071822038915",
+      "url": "https://data.eastmoney.com/notices/detail/002885/AN202605071822038915.html"
+     },
+     {
+      "date": "2026-02-04",
+      "title": "京泉华:关于持股5%以上股东减持计划期限届满的公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202602031819655778",
+      "url": "https://data.eastmoney.com/notices/detail/002885/AN202602031819655778.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-09-11",
+      "title": "京泉华:关于持股5%以上股东权益变动触及1%整数倍的公告",
+      "col": "权益变动报告书",
+      "art": "AN202609101829233910",
+      "url": "https://data.eastmoney.com/notices/detail/002885/AN202609101829233910.html"
+     },
+     {
+      "date": "2026-06-17",
+      "title": "京泉华:关于股东股份变动暨部分股东权益变动触及1%整数倍的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202606161823609804",
+      "url": "https://data.eastmoney.com/notices/detail/002885/AN202606161823609804.html"
+     }
+    ]
+   },
+   "industry": "消费电子",
+   "sector_net_yi": 49.03,
+   "fwd_ret": -0.14035087719297948,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：京泉华:关于股东减持股份预披露的公告",
+    "距上方 29.16 元压力位 2.32%"
+   ]
+  },
+  {
+   "code": "003041",
+   "name": "真爱美家",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 42.02,
+   "avg_amt20_wan": 7032.7,
+   "rsi": 61.7,
+   "res_price": 42.96,
+   "res_dist_pct": 2.24,
+   "res_touch": 9,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-04-22",
+      "title": "真爱美家:关于广州探迹远擎科技合伙企业(有限合伙)要约收购期限届满暨股票停牌的公告",
+      "col": "停牌公告",
+      "art": "AN202604211821380032",
+      "url": "https://data.eastmoney.com/notices/detail/003041/AN202604211821380032.html"
+     }
+    ]
+   },
+   "industry": "纺织服装",
+   "sector_net_yi": -4.91,
+   "fwd_ret": 4.616849119466915,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 42.96 元压力位 2.24%"
+   ]
+  },
+  {
+   "code": "600448",
+   "name": "华纺股份",
+   "strats": [
+    "MultiGoldenCrossStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 3.54,
+   "avg_amt20_wan": 5813.3,
+   "rsi": 75.3,
+   "res_price": 3.59,
+   "res_dist_pct": 1.41,
+   "res_touch": 12,
+   "ann_raw": [],
+   "ann": {
+    "S1": [
+     {
+      "date": "2026-07-15",
+      "title": "华纺股份:2026年半年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202607141826958011",
+      "url": "https://data.eastmoney.com/notices/detail/600448/AN202607141826958011.html",
+      "kw": "业绩预亏"
+     },
+     {
+      "date": "2026-01-31",
+      "title": "华纺股份:2025年年度业绩预亏公告",
+      "col": "业绩预告",
+      "art": "AN202601301818580703",
+      "url": "https://data.eastmoney.com/notices/detail/600448/AN202601301818580703.html",
+      "kw": "业绩预亏"
+     }
+    ],
+    "S2": [],
+    "S3": [
+     {
+      "date": "2026-07-14",
+      "title": "华纺股份:会计师关于华纺股份有限公司2025年年报问询函的回复",
+      "col": "回复问询函公告",
+      "art": "AN202607131826933497",
+      "url": "https://data.eastmoney.com/notices/detail/600448/AN202607131826933497.html"
+     },
+     {
+      "date": "2026-07-14",
+      "title": "华纺股份:关于《上海证券交易所关于2025年年度报告信息披露监管问询函》的复函",
+      "col": "回复问询函公告",
+      "art": "AN202607131826933502",
+      "url": "https://data.eastmoney.com/notices/detail/600448/AN202607131826933502.html"
+     }
+    ]
+   },
+   "industry": "纺织服装",
+   "sector_net_yi": -4.91,
+   "fwd_ret": 1.12994350282486,
+   "exclude_reasons": [
+    "一级利空（业绩预亏）：华纺股份:2026年半年度业绩预亏公告"
+   ],
+   "watch_reasons": [
+    "RSI 75.3 超买，禁止追涨，只观察回踩",
+    "距上方 3.59 元压力位 1.41%"
+   ]
+  },
+  {
+   "code": "600933",
+   "name": "爱柯迪",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 14.03,
+   "avg_amt20_wan": 11965.9,
+   "rsi": 59.9,
+   "res_price": 14.35,
+   "res_dist_pct": 2.28,
+   "res_touch": 15,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "汽车行业",
+   "sector_net_yi": 5.51,
+   "fwd_ret": -0.498930862437623,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 14.35 元压力位 2.28%"
+   ]
+  },
+  {
+   "code": "603283",
+   "name": "赛腾股份",
+   "strats": [
+    "MultiPartyCannonStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 47.36,
+   "avg_amt20_wan": 74431.3,
+   "rsi": 53.3,
+   "res_price": 47.65,
+   "res_dist_pct": 0.61,
+   "res_touch": 18,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [
+     {
+      "date": "2026-01-08",
+      "title": "赛腾股份:苏州赛腾精密电子股份有限公司股东减持股份计划公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202601071816813049",
+      "url": "https://data.eastmoney.com/notices/detail/603283/AN202601071816813049.html"
+     }
+    ],
+    "S3": [
+     {
+      "date": "2026-04-14",
+      "title": "赛腾股份:苏州赛腾精密电子股份有限公司股东减持股份结果公告",
+      "col": "股东/实际控制人股份减持",
+      "art": "AN202604131821151601",
+      "url": "https://data.eastmoney.com/notices/detail/603283/AN202604131821151601.html"
+     },
+     {
+      "date": "2026-04-11",
+      "title": "赛腾股份:苏州赛腾精密电子股份有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202604101821117034",
+      "url": "https://data.eastmoney.com/notices/detail/603283/AN202604101821117034.html"
+     },
+     {
+      "date": "2026-03-26",
+      "title": "赛腾股份:苏州赛腾精密电子股份有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202603251820743601",
+      "url": "https://data.eastmoney.com/notices/detail/603283/AN202603251820743601.html"
+     },
+     {
+      "date": "2026-02-28",
+      "title": "赛腾股份:苏州赛腾精密电子股份有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+      "col": "权益变动报告书",
+      "art": "AN202602271820103343",
+      "url": "https://data.eastmoney.com/notices/detail/603283/AN202602271820103343.html"
+     }
+    ]
+   },
+   "industry": "专用设备",
+   "sector_net_yi": -9.63,
+   "fwd_ret": -3.1883445945945903,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "二级关注：赛腾股份:苏州赛腾精密电子股份有限公司股东减持股份计划公告",
+    "距上方 47.65 元压力位 0.61%"
+   ]
+  },
+  {
+   "code": "603345",
+   "name": "安井食品",
+   "strats": [
+    "Strategy2560Selection"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 79.48,
+   "avg_amt20_wan": 51372.0,
+   "rsi": 55.1,
+   "res_price": 80.5,
+   "res_dist_pct": 1.28,
+   "res_touch": 6,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "食品饮料",
+   "sector_net_yi": 3.95,
+   "fwd_ret": 0.2264720684448825,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 80.5 元压力位 1.28%"
+   ]
+  },
+  {
+   "code": "605507",
+   "name": "国邦医药",
+   "strats": [
+    "ResistanceBreakoutStrategy"
+   ],
+   "score": 60,
+   "last_date": "2026-09-18",
+   "close": 18.17,
+   "avg_amt20_wan": 13783.4,
+   "rsi": 71.4,
+   "res_price": 18.4,
+   "res_dist_pct": 1.27,
+   "res_touch": 6,
+   "ann_raw": [],
+   "ann": {
+    "S1": [],
+    "S2": [],
+    "S3": []
+   },
+   "industry": "医药制造",
+   "sector_net_yi": -6.47,
+   "fwd_ret": 0.49532195927352696,
+   "exclude_reasons": [],
+   "watch_reasons": [
+    "距上方 18.4 元压力位 1.27%"
+   ]
+  }
+ ]
+}
