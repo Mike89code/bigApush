@@ -1,0 +1,153 @@
+name: A股六层过滤推送(v4)
+
+# 每日收盘后跑「六层机械过滤」，经 Server酱 推送 v4 风格复盘到微信。
+# 前置：Settings → Secrets → Actions 里要有 SERVERCHAN_KEY（SCT 开头）。
+# 数据：复用仓库自带的 main.py 刷新 data/stock_selection.db（qt.gtimg.cn 快线）。
+on:
+  schedule:
+    - cron: '0 2 * * 1-5'    # 北京 10:00 第一班（守到 15:10）
+    - cron: '0 4 * * 1-5'    # 北京 12:00 第二班
+    - cron: '0 6 * * 1-5'    # 北京 14:00 第三班
+    - cron: '25 7 * * 1-5'   # 北京 15:25 兜底（万一前面全被丢）
+  workflow_dispatch:
+
+# 同一组的运行排队执行，避免多个时间点重复推送
+concurrency:
+  group: v4-sixlayer
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: read         # 读取 artifact 列表，判断"今天是不是已经推过 v4"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      TZ: Asia/Shanghai
+    steps:
+      # ---------- 1) 今天是不是已经推送过 v4 了？（多时间点防重复） ----------
+      - name: 检查今天是否已推送(v4)
+        id: guard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime
+          API = "https://api.github.com/repos/${{ github.repository }}"
+          today = datetime.now().strftime("%Y-%m-%d")     # 本 job 已设 TZ=Asia/Shanghai
+          mark = "v4推送成功-" + today
+          tok = os.environ["GH_TOKEN"]
+          found = False
+          for page in (1, 2, 3):
+              req = urllib.request.Request(
+                  API + "/actions/artifacts?per_page=100&page=%d" % page,
+                  headers={"Authorization": "Bearer " + tok,
+                           "Accept": "application/vnd.github+json",
+                           "User-Agent": "guard"})
+              d = json.loads(urllib.request.urlopen(req, timeout=30).read())
+              arts = d.get("artifacts", [])
+              if any(mark in a["name"] for a in arts):
+                  found = True
+                  break
+              if len(arts) < 100:
+                  break
+          print("[检查] 今天(%s)是否已推送v4: %s" % (today, found))
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write("skip=%d\n" % (1 if found else 0))
+          PY
+
+      # ---------- 2) 守到 15:10 再跑（手动触发不等待，立刻跑） ----------
+      - name: 等收盘 15:10（抵消 GitHub 定时延迟）
+        id: wait
+        if: steps.guard.outputs.skip != '1' && github.event_name == 'schedule'
+        timeout-minutes: 340
+        run: |
+          python3 - <<'PY'
+          import os, time
+          from datetime import datetime
+          CAP = 5 * 3600 + 20 * 60          # 最多等 5h20m（留出刷新+推送时间）
+          now = datetime.now()
+          target = now.replace(hour=15, minute=10, second=0, microsecond=0)
+          wait = int((target - now).total_seconds())
+          if wait <= 0:
+              giveup = 0
+              print("[等待] 现在 %s，已过 15:10，直接开始" % now.strftime("%H:%M"))
+          elif wait > CAP:
+              giveup = 1
+              print("[等待] 现在 %s，还要等 %.1f 小时太久了，本次放弃（交给后面的时间点）"
+                    % (now.strftime("%H:%M"), wait / 3600.0))
+          else:
+              giveup = 0
+              print("[等待] 现在 %s，守到 15:10 再跑（等 %.1f 小时）"
+                    % (now.strftime("%H:%M"), wait / 3600.0), flush=True)
+              while True:
+                  left = int((target - datetime.now()).total_seconds())
+                  if left <= 0:
+                      break
+                  time.sleep(min(left, 600))
+              print("[等待] 到点，开始", flush=True)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write("giveup=%d\n" % giveup)
+          PY
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+      - uses: actions/cache@v4
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+        with:
+          path: data
+          key: db-${{ github.run_id }}
+          restore-keys: db-
+      - name: 初始化数据（只在第一次跑）
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+        timeout-minutes: 80
+        run: |
+          [ -f data/stock_selection.db ] || python main.py init
+      - name: 刷新今日选股数据（main.py run）
+        id: refresh
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+        timeout-minutes: 50
+        env:
+          TZ: Asia/Shanghai
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+        run: |
+          python main.py run
+      - name: 六层过滤 + 推送(v4)
+        id: v4
+        if: steps.guard.outputs.skip != '1' && steps.wait.outputs.giveup != '1'
+        timeout-minutes: 30
+        env:
+          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+        run: |
+          python sixlayer/run_v4.py
+          PV=$?
+          echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          if [ "$PV" -eq 0 ] && ls sixlayer/微信推送-v4风格-*.md >/dev/null 2>&1; then
+            echo "pushed=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "pushed=0" >> "$GITHUB_OUTPUT"
+          fi
+      - name: 保存报告（保留 30 天）
+        if: steps.guard.outputs.skip != '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: >-
+            ${{
+              steps.v4.outputs.pushed == '1'
+                && format('v4推送成功-{0}', steps.v4.outputs.date)
+                || format('v4报告-{0}', steps.v4.outputs.date)
+            }}-${{ github.run_number }}
+          path: |
+            sixlayer/微信推送-v4风格-*.md
+            sixlayer/bt_*.json
+          retention-days: 30
