@@ -27,10 +27,15 @@ def send(key, md):
     if not md or not os.path.exists(md):
         return (None, "找不到文案 md: %s" % md)
     text = open(md, encoding="utf-8").read()
+    # 标题优先取 v5 的 🔍 日报标题行，其次 # 标题行，最后兜底
     title = "A股六层过滤复盘"
     for ln in text.splitlines():
-        if ln.strip().startswith("#"):
-            title = ln.strip().lstrip("#").strip()
+        t = ln.strip()
+        if t.startswith("🔍"):
+            title = t.lstrip("🔍").strip().strip("*")
+            break
+        if t.startswith("#"):
+            title = t.lstrip("#").strip()
             break
     if len(text) > 28000:
         text = text[:27800] + "\n\n……内容过长已截断"
