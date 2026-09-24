@@ -132,7 +132,7 @@ def main():
         rd = d.get("res_dist_pct")
         gtxt = {"A": "A·无瑕疵", "B": "B·轻微", "C": "C·跟踪"}.get(g, g)
         rdtxt = sig(rd, 1) if rd is not None else "—"
-        L.append(f"| {i} | {d['code']} {d['name']} | **{d.get('score')}** | {gtxt} | "
+        L.append(f"| {i} | {d['code']} {d['name']} | **{d.get('score') if d.get('score') is not None else '—'}** | {gtxt} | "
                  f"{cn_strats(d.get('strats'))} | {d.get('industry') or '—'} | "
                  f"{sig(d.get('rsi'), 1)}% | {rdtxt} | {op_line(d)} ｜ {risk} |")
     L.append("")
@@ -188,9 +188,11 @@ def main():
     L.append("")
     top = low[0] if low else None
     if top:
-        L.append("① 最值得看：**%s %s**（%s，%d 分，%s档）—— %s" % (
+        sc = top.get("score")
+        sc_txt = ("%d 分" % sc) if sc is not None else "无评分"
+        L.append("① 最值得看：**%s %s**（%s，%s，%s档）—— %s" % (
             top["code"], top["name"], cn_strats(top.get("strats")),
-            top.get("score"), top.get("grade"), op_line(top)))
+            sc_txt, top.get("grade"), op_line(top)))
     if len(low) > 1:
         L.append("② 其余 %d 只均 B 档（单项轻微瑕疵），等回踩或资金转向再评估。" % (len(low) - 1))
     if watch:
