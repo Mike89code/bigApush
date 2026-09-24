@@ -125,6 +125,26 @@ def indicators(code, cutoff):
     amts = [closes[len(closes)-1-i] * vols[len(vols)-1-i] * 100 for i in range(n20)]
     avg_amt = sum(amts) / n20 if amts else 0
     rsi = calc_rsi(closes)
+    # 量比：当日量 / 20日均量（>1.5 放量，<0.8 缩量）
+    v20 = sum(vols[-20:]) / len(vols[-20:]) if vols else None
+    vol_ratio = round(vols[-1] / v20, 2) if (v20 and v20 > 0) else None
+    # 20 日涨幅（相对强度基准的分子）
+    pct20 = round((closes[-1] / closes[-21] - 1) * 100, 2) if len(closes) >= 21 else None
+    # 近 20 日跌停检测（主板 10% 板：pct ≤ -9.8%；创业/科创 20% 板：≤ -19.8%）
+    board = 20 if code.startswith(("30", "68")) else 10
+    lim = -9.8 if board == 10 else -19.8
+    hit_ld = False
+    for r in rows[-20:]:
+        if r[3] and r[1]:  # high, open 存在才算 pct
+            prev_close = None
+            i = rows.index(r)
+            if i > 0:
+                prev_close = rows[i-1][4]
+            if prev_close:
+                pct = (r[4] / prev_close - 1) * 100
+                if pct <= lim:
+                    hit_ld = True
+                    break
     # 压力位：近 120 日高于现价的最近前高 + ±2% 触碰次数
     win = rows[-120:]
     above = [(r[1], r[2]) for r in win if r[2] > cur * 1.005]
@@ -132,14 +152,213 @@ def indicators(code, cutoff):
         res_price = above[-1][1]
         res_dist = (res_price - cur) / cur * 100
         touch = sum(1 for r in win if abs(r[2] - res_price) / res_price <= 0.02)
+        # 测量幅度法第二目标（突破位 + 形态高度；形态高度≈前高-近20日最低）
+        low20 = min(r[3] for r in rows[-20:])
+        meas_target = round(res_price + (res_price - low20), 3)
     else:
         res_price = res_dist = touch = None
+        meas_target = None
     return {"last_date": rows[-1][0], "close": cur,
             "avg_amt20_wan": round(avg_amt / 1e4, 1),
             "rsi": round(rsi, 1) if rsi is not None else None,
+            "ma5": round(sum(closes[-5:]) / 5, 3) if len(closes) >= 5 else None,
+            "ma10": round(sum(closes[-10:]) / 10, 3) if len(closes) >= 10 else None,
+            "vol_ratio": vol_ratio, "pct20": pct20,
+            "kline_n": len(rows), "hit_limit_down": hit_ld,
             "res_price": round(res_price, 3) if res_price else None,
             "res_dist_pct": round(res_dist, 2) if res_dist is not None else None,
-            "res_touch": touch}
+            "res_touch": touch,
+            "meas_target": meas_target}
+
+
+# ================= 评级（v5.4：纯由评分推导，消灭"68分A级/75分C级"倒挂） =================
+def grade_from_score(score):
+    """≥90 A ｜ 75~89 B ｜ 60~74 C ｜ <60 D。"""
+    if score is None:
+        return "C"
+    if score >= 90:
+        return "A"
+    if score >= 75:
+        return "B"
+    if score >= 60:
+        return "C"
+    return "D"
+
+
+# ================= 量比 × 形态解读（v5.3 核心：量比好坏取决于形态） =================
+# strategy_key: (lo, hi, kind)   kind: breakout=缩量是硬伤 / pullback=缩量是健康洗盘 / neutral
+VOL_RULES = {
+    "ResistanceBreakoutStrategy": (1.5, 3.0, "breakout"),   # 阻力突破：1.5~3.0 倍
+    "MultiGoldenCrossStrategy": (1.0, 2.0, "breakout"),     # 多金叉：温和放量最佳
+    "GoldenTriangleStrategy": (0.5, 0.9, "pullback"),       # 金三角：缩量回踩=洗盘结束
+    "Strategy2560Selection": (0.8, 1.2, "neutral"),         # 2560：中性
+    "LimitUpPullbackStrategy": (0.3, 0.8, "pullback"),      # 涨停回踩：回踩缩量健康
+    "LimitUpSidewaysStrategy": (0.8, 1.5, "neutral"),       # 涨停横盘
+    "WBottomStrategy": (1.2, 2.5, "breakout"),              # W底：破颈线要放量
+    "TrendStartStrategy": (0.8, 2.0, "neutral"),
+    "StrongWashWeakToStrongStrategy": (1.0, 2.5, "breakout"),
+    "MultiPartyCannonStrategy": (1.0, 2.5, "breakout"),     # 多炮
+    "ImmortalGuidanceStrategy": (0.5, 1.2, "pullback"),     # 仙人指路：缩量回档健康
+    "TrendResonanceReversalStrategy": (0.8, 2.0, "neutral"),
+    "TrendAccelerationInflectionStrategy": (0.8, 2.0, "neutral"),
+    "GoldenCrossNotGreenStrategy": (0.8, 2.0, "neutral"),
+}
+DEFAULT_VOL_RULE = (0.8, 2.0, "neutral")
+
+
+def vol_check(d):
+    """量比分形态解读。返回 (verdict, txt)；verdict: good/warn/bad/None。"""
+    vr = d.get("vol_ratio")
+    if vr is None:
+        return None, ""
+    rule = None
+    for s in (d.get("strats") or []):
+        if s in VOL_RULES:
+            rule = VOL_RULES[s]
+            break
+    if rule is None:
+        rule = DEFAULT_VOL_RULE
+    lo, hi, kind = rule
+    if lo <= vr <= hi:
+        return "good", "量比 %.2f ✅符合形态" % vr
+    if vr < lo:
+        if kind == "pullback":
+            return "good", "量比 %.2f ✅缩量整理健康" % vr
+        if kind == "breakout":
+            return "bad", "量比 %.2f ❌突破未放量，待确认" % vr
+        return "warn", "量比 %.2f ⚠️偏缩量" % vr
+    # vr > hi
+    if vr > hi * 1.5:
+        return "warn", "量比 %.2f ⚠️异常巨量，防对倒" % vr
+    if kind == "pullback":
+        return "warn", "量比 %.2f ⚠️回踩放量，防出货" % vr
+    return "good", "量比 %.2f 🔥放量" % vr
+
+
+# ================= 六层过滤评分（v5.3 核心：因子真实参与决策） =================
+def s6_score(d):
+    """六层过滤自己的 0-100 评分（advice_log 的 score 从未有值，此前排序/展示都是空的）。
+
+    构成（基准 60）：
+      形态   双策略共振 +8 / 单策略 +4
+      RSI    40~65 +6；66~70 +3
+      RS超额 >+2pp +8；0~+2pp +4；-2~0pp 0；<-2pp -8
+      量比   分形态：符合 +6；异常(bad) -6；warn 0
+      行业   净流入 +4 / 净流出 -4 / 缺失 0
+      压力位 距离<2% -4；2~5% +2；无上方压力 +4
+      流动性 日均≥2亿 +4；≥1亿 +2
+    """
+    s = 60.0
+    s += 8 if len(d.get("strats") or []) >= 2 else 4
+    rsi = d.get("rsi")
+    if rsi is not None:
+        if 40 <= rsi <= 65:
+            s += 6
+        elif 65 < rsi <= 70:
+            s += 3
+    ex = d.get("rs_excess")
+    if ex is not None:
+        if ex > 2:
+            s += 8 + min(6, (ex - 2) * 3)   # 连续加分：超额越多分越高，封顶 +14
+        elif ex >= 0:
+            s += 4
+        elif ex < -2:
+            s -= 8
+    v, _ = vol_check(d)
+    if v == "good":
+        s += 6
+    elif v == "bad":
+        s -= 6
+    sn = d.get("sector_net_yi")
+    if sn is not None:
+        s += 4 if sn > 0 else -4
+    rd = d.get("res_dist_pct")
+    if rd is None:
+        s += 4
+    elif rd < 2:
+        s -= 4
+    elif rd <= 5:
+        s += 2
+    amt = d.get("avg_amt20_wan") or 0
+    if amt >= 20000:
+        s += 4
+    elif amt >= 10000:
+        s += 2
+    return round(max(0, min(100, s)))
+
+
+# ================= 相对强度基准（沪深300 20日涨幅） =================
+IDX_CACHE = os.path.join(HERE, "idx_pct20.json")
+
+def idx_pct20(date):
+    """沪深300 近 20 日涨幅（%，截至 date 当日）。腾讯 fqkline，双域名兜底。"""
+    cache = {}
+    if os.path.exists(IDX_CACHE):
+        try:
+            cache = json.load(open(IDX_CACHE, encoding="utf-8"))
+        except Exception:
+            cache = {}
+    if cache.get(date) is not None:
+        return cache[date]
+    hosts = ["https://web.ifzq.gtimg.cn", "https://proxy.finance.qq.com"]
+    pct = None
+    for h in hosts:
+        try:
+            u = (h + "/appstock/app/fqkline/get?param=sh000300,day,,,25,qfq")
+            req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15, context=ctx) as r:
+                d = json.loads(r.read().decode("utf-8", "replace"))
+            days = (d.get("data", {}).get("sh000300", {})
+                    .get("qfqday") or d.get("data", {}).get("sh000300", {}).get("day"))
+            if days and len(days) >= 21:
+                c_new = float(days[-1][2])
+                c_old = float(days[-21][2])
+                if c_old:
+                    pct = round((c_new / c_old - 1) * 100, 2)
+            break
+        except Exception:
+            continue
+    if pct is not None:
+        cache[date] = pct
+        with open(IDX_CACHE, "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+    return pct
+
+
+# ================= 总市值（qt.gtimg.cn 批量实时行情） =================
+def fetch_market_caps(codes):
+    """批量取总市值（亿）。返回 {code: 亿 or None}；网络失败返回 {}。"""
+    out = {}
+    qs = []
+    for c in codes:
+        pre = "sh" if c.startswith(("6", "9")) else ("bj" if c[0] in "48" else "sz")
+        qs.append(pre + c)
+    for i in range(0, len(qs), 30):
+        batch = qs[i:i + 30]
+        try:
+            u = "https://qt.gtimg.cn/q=" + ",".join(batch)
+            req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15, context=ctx) as r:
+                t = r.read().decode("gbk", "replace")
+            for line in t.strip().split(";"):
+                line = line.strip()
+                if "~" not in line:
+                    continue
+                seg = line.split("~")
+                code = seg[2] if len(seg) > 2 else ""
+                mv = None
+                if len(seg) > 45:
+                    try:
+                        v = float(seg[45])
+                        if 5 < v < 100000:   # 合理性检查（亿）
+                            mv = v
+                    except ValueError:
+                        pass
+                if code:
+                    out[code] = mv
+        except Exception:
+            continue
+    return out
 
 # ================= 名单 =================
 def build_pool(date):
