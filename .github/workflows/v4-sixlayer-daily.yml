@@ -38,23 +38,29 @@ jobs:
           from datetime import datetime
           API = "https://api.github.com/repos/${{ github.repository }}"
           today = datetime.now().strftime("%Y-%m-%d")     # 本 job 已设 TZ=Asia/Shanghai
-          mark = "v4推送成功-" + today
+          my_id = "${{ github.run_id }}"
           tok = os.environ["GH_TOKEN"]
           found = False
           for page in (1, 2, 3):
               req = urllib.request.Request(
-                  API + "/actions/artifacts?per_page=100&page=%d" % page,
+                  API + "/actions/runs?per_page=100&page=%d" % page,
                   headers={"Authorization": "Bearer " + tok,
                            "Accept": "application/vnd.github+json",
                            "User-Agent": "guard"})
               d = json.loads(urllib.request.urlopen(req, timeout=30).read())
-              arts = d.get("artifacts", [])
-              if any(mark in a["name"] for a in arts):
-                  found = True
+              runs = d.get("workflow_runs", [])
+              for r in runs:
+                  # 今天已有本 workflow 的成功 run（排除自己）→ 跳过本班
+                  if (str(r["id"]) != my_id
+                          and r["name"].startswith("A股六层过滤")
+                          and r["status"] == "completed"
+                          and r["conclusion"] == "success"
+                          and r["created_at"][:10] == today):
+                      found = True
+                      break
+              if found or len(runs) < 100:
                   break
-              if len(arts) < 100:
-                  break
-          print("[检查] 今天(%s)是否已推送v4: %s" % (today, found))
+          print("[检查] 今天(%s)是否已有成功的v4 run: %s" % (today, found))
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
               f.write("skip=%d\n" % (1 if found else 0))
           PY
