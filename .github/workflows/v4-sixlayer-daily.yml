@@ -137,7 +137,7 @@ jobs:
           python sixlayer/run_v4.py
           PV=$?
           echo "date=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
-          if [ "$PV" -eq 0 ] && ls sixlayer/微信推送-v4风格-*.md >/dev/null 2>&1; then
+          if [ "$PV" -eq 0 ] && ls sixlayer/微信推送-v*风格-*.md >/dev/null 2>&1; then
             echo "pushed=1" >> "$GITHUB_OUTPUT"
           else
             echo "pushed=0" >> "$GITHUB_OUTPUT"
