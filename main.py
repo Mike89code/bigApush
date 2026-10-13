@@ -145,6 +145,17 @@ class QuantSystem:
 
         # 执行更新
         print("\n🔄 执行数据更新...")
+        # 快车道：腾讯批量行情（收盘后快照=当日收盘），全市场约 1-2 分钟
+        try:
+            from utils.tencent_fastlane import fast_update_today
+            stats = fast_update_today(max_stocks=max_stocks)
+            if stats.get('ok'):
+                print(f"\n✓ 数据更新完成（快车道 {stats['updated']}/{stats['total']} 只，"
+                      f"耗时 {stats['elapsed']}秒）")
+                return
+            print(f"  ⚠️ 快车道覆盖率不足（{stats['updated']}/{stats['total']}），回退旧通道...")
+        except Exception as _fl_err:
+            print(f"  ⚠️ 快车道失败（{_fl_err}），回退旧通道...")
         self.fetcher.init_full_data(max_stocks=max_stocks, incremental=True)
         print("\n✓ 数据更新完成")
 

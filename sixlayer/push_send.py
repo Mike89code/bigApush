@@ -16,7 +16,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def find_md():
-    fs = sorted(glob.glob(os.path.join(HERE, "微信推送-v4风格-*.md")))
+    # v4 / v5 风格文案都匹配（按日期取最新一份）
+    fs = sorted(glob.glob(os.path.join(HERE, "微信推送-v*风格-*.md")))
     return fs[-1] if fs else None
 
 

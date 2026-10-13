@@ -153,6 +153,6 @@ jobs:
                 || format('v4报告-{0}', steps.v4.outputs.date)
             }}-${{ github.run_number }}
           path: |
-            sixlayer/微信推送-v4风格-*.md
+            sixlayer/微信推送-v*风格-*.md
             sixlayer/bt_*.json
           retention-days: 30
